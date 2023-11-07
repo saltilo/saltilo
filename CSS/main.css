@@ -38,14 +38,14 @@ img {
   flex-direction: row;
   align-items: center;
   margin-top: 2%;
-  margin-left: 60px;
   justify-content: space-between;
   height: 55px;
+  width: 900px;
 }
 
 .top-nav a {
   text-decoration: none;
-  color: rgb(210, 210, 210);
+  color: rgb(230, 230, 230);
   font-weight: bold;
   font-size: 18px;
 }
@@ -53,22 +53,31 @@ img {
 .name {
   display: flex;
   flex-direction: row;
-  margin-left: 20%;
+  margin-left: 16%;
   margin-right: 60%;
 }
 
 .links-nav {
   display: flex;
-  flex-direction: row;
-  margin-left: 15%;
+  display: row;
+  margin-left: 10%;
+  margin-right: 30%;
 }
 
 .links-nav a {
-  margin-right: 30px;
+  display: flex;
+  display: row;
+  margin-left: 10%;
+  margin-right: 30%;
+}
+
+.links-nav img {
+  max-width: 25px;
+  max-height: 25px;
 }
 
 .top-nav a:hover {
-  color: black;
+  color: #ffcc00;
 }
 
 .header-title {
@@ -88,7 +97,7 @@ img {
 .header-button {
   display: inline-block;
   text-align: center;
-  border: 3px solid #e48d03;
+  border: 3px solid #ffcc00;
   border-radius: 50px;
   height: 50px;
   width: 150px;
@@ -98,7 +107,7 @@ img {
   margin-left: 10%;
 
   color: #333333;
-  background-color: #e48d03;
+  background-color: #ffcc00;
 
   line-height: 44px;
   font-weight: 700;
@@ -111,8 +120,8 @@ img {
 
 .header-button:hover {
   color: white;
-  background-color: #e48d03;
-  border: 3px solid #e48d03;
+  background-color: #ffcc00;
+  border: 3px solid #ffcc00;
 }
 
 .portfolio {
@@ -140,7 +149,7 @@ img {
   background-color: white;
   border-radius: 15px;
   max-width: 580px;
-  box-shadow: 0px 10px 40px rgba(127, 124, 108, 0.35);
+  box-shadow: 0px 5px 6px rgba(127, 124, 108, 0.35);
   transition: transform 0.2s ease-in;
 }
 
@@ -186,7 +195,7 @@ img {
 .footer {
   padding-top: 45px;
   padding-bottom: 50px;
-  background: radial-gradient(at top, #f4d36f, #e48d03);
+  background: rgb(212, 212, 212);
   color: #333333;
 }
 
@@ -199,7 +208,7 @@ img {
 .footer-copyright {
   flex-grow: 1;
   max-width: 250px;
-  color: #4f2b01;
+  color: #333333;
   line-height: 1.3;
   font-size: 14px;
 }
@@ -259,14 +268,14 @@ img {
 
 .footer-button:hover {
   background-color: #333333;
-  color: #e48d03;
+  color: #cfcfcf;
 }
 
 .footer-contact p {
   margin: 15px 0;
   font-size: 14px;
   line-height: 1.3;
-  color: #4f2b01;
+  color: #333333;
 }
 
 /* Project */
