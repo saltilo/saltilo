@@ -4,6 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var links = document.querySelectorAll('a');
+
+      for (var i = 0; i < links.length; i++) {
+        var link = links[i];
+        var href = link.getAttribute('href');
+
+        if (href.startsWith("http") || href.startsWith("www")) {
+          // Внешняя ссылка
+          link.setAttribute('target', '_blank');
+        } else {
+          // Внутренняя ссылка
+          link.setAttribute('target', '');
+        }
+      }
+    });
+  </script>
   <title>Сайт-портфолио</title>
 </head>
 
@@ -15,23 +33,19 @@
 
 <body>
 
-
   <header>
+
     <div class="header">
       <nav>
-        <div class="top-nav">
-          <div class="name"><a href="index.html">Кристина Тульцева</a></div>
+        <div class="header-module">
+          <a class="name-logo" href="index.html">Кристина Тульцева</a>
           <div class="links-nav">
             <a href="about.html">Обо мне</a>
             <a class=scroll-to-portfolio href="#portfolio">Портфолио</a>
             <a href="mailto:k.tultseva@gmail.com"><img src="./Img/header/email.png" alt="email"></a>
-            <div class="burger"></div>
+
           </div>
-
-
-
         </div>
-
       </nav>
       <h1 class="header-title">Редактор, верстальщик, UX-writer</h1>
       <a class="scroll-to-portfolio header-button" href="#portfolio">Портфолио</a>
