@@ -4,6 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var links = document.querySelectorAll('a');
+
+      for (var i = 0; i < links.length; i++) {
+        var link = links[i];
+        var href = link.getAttribute('href');
+
+        if (href.startsWith("http") || href.startsWith("www")) {
+          // Внешняя ссылка
+          link.setAttribute('target', '_blank');
+        } else {
+          // Внутренняя ссылка
+          link.setAttribute('target', '');
+        }
+      }
+    });
+  </script>
   <title>Редактор</title>
 </head>
 <link rel="stylesheet" href="./CSS/main.css">
@@ -14,127 +32,303 @@
 
 <body>
   <header>
-    <div class="top-nav">
-      <nav>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="/about.html">Обо мне</a></li>
-          <li><a class=scroll-to-portfolio href="index.html#portfolio">Портфолио</a></li>
-          <li><a href="mailto:k.tultseva@gmail.com">Связаться</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav>
+      <div class="header-module-pgs">
+        <a class="name-logo" href="index.html">Кристина Тульцева</a>
+        <div class="links-nav">
+          <a href="about.html">Обо мне</a>
+          <a class=scroll-to-portfolio href="index.html#portfolio">Портфолио</a>
+          <a href="mailto:k.tultseva@gmail.com"><img src="./Img/header/email.png" alt="email"></a>
+
+        </div>
+      </div>
+    </nav>
   </header>
 
   <div class="block">
 
     <div class="head-h2-row">
       <h2 class="header-h2">Редактор книг</h2>
+
       <div class="head-h2-description">
+        <div class="text-text">
+          <p>С 2018 года сотрудничаю с издательством <a href="https://www.piter.com/">«Питер»</a>. Сначала в роли
+            штатного
+            ведущего редактора, потом в качестве редактора-фрилансера.</p>
+          <p> Редактирование переводной книги — это вам не жук чихнул. Нужно не только проверить орфографию
+            и пунктуацию,
+            но и сверить перевод с оригиналом, составить терминологический глоссарий, исправить стилистические ошибки и
+            огрехи перевода <s>и не умереть.</s></p>
+          <p>Можно ли заменить хорошего редактора бездушной нейросейтью? Не думаю.</p>
 
-        <p>С 2018 года сотрудничаю с издательством <a href="https://www.piter.com/">«Питер»</a>. Сначала в роли штатного
-          ведущего редактора, потом в качестве фрилансера.</p>
-        <p> Редактирование переводной книги — это вам не жук чихнул. Нужно не только проверить орфографию и пунктуацию,
-          но и сверить перевод с оригиналом, составить терминологический глоссарий, исправить стилистические ошибки и
-          огрехи перевода <s>и не умереть.</s></p>
-        <p>Если книга не переводная, то нужно еще поработать с автором — деликатно указать на недостатки стиля и
-          постараться сделать так, чтобы автор сам все исправил.</p>
-        <p>Можно ли заменить хорошего редактора бездушной нейросейтью? Не думаю.</p>
-
-        <p>Ниже — книги, которые мне довелось редактировать. Еще больше проектов — <a
-            href=" https://goo.su/9EA">здесь</a>.
-
+          <p>Здесь малая часть книг, которые мне довелось редактировать. Еще больше проектов по <a
+              href=" https://goo.su/9EA">ссылке</a>.
+        </div>
+        <div class="animation">
+          <img src="/books.gif" alt="">
+        </div>
       </div>
+
     </div>
   </div>
-  <div class="author">
-    <div class="head-h3-row">
-      <h3>Компьютерная литература</h3>
+  <section>
+    <h3 class="head-h3-row">Компьютерная литература</h3>
 
-    </div>
     <div class="container">
       <div class="books-sect">
 
-        <div class="book">
-          <img src="https://static.insales-cdn.com/images/products/1/1043/744145939/44612058.jpg" alt="">
-          <p class="book-auth">Харшани Т. </p>
-          <a href="https://www.piter.com/collection/all/product/100-oshibok-go-i-kak-ih-izbezhat" class="book-title">100
-            ошибок Go и как их избежать</a>
+        <div class="card-book">
+          <a href="https://www.piter.com/collection/all/product/100-oshibok-go-i-kak-ih-izbezhat"
+            class="card-book-link">
+            <img class="card-book-img"
+              src="https://static.insales-cdn.com/images/products/1/1043/744145939/44612058.jpg" alt="Верстальщик">
+            <h3 class="card-book-title">100
+              ошибок Go и как их избежать</h3>
+            <p class="book-auth">Харшани Т. </p>
+          </a>
+        </div>
 
+        <div class="card-book">
+          <a href="https://www.piter.com/collection/all/product/proizvoditelnost-sistem" class="card-book-link">
+            <img class="card-book-img"
+              src="https://static.insales-cdn.com/images/products/1/4840/662967016/44611818.jpg" alt="">
+            <h3 class="card-book-title">Производительность систем</h3>
+            <p class="book-auth">Брендан Грегг</p>
+          </a>
         </div>
-        <div class="book">
-          <img src="https://static.insales-cdn.com/images/products/1/4840/662967016/44611818.jpg" alt="">
-          <p class="book-auth">Брендан Грегг</p>
-          <a href="https://www.piter.com/collection/all/product/proizvoditelnost-sistem"
-            class="book-title">Производительность систем</a>
+
+        <div class="card-book">
+          <a href="https://www.piter.com/collection/all/product/upravlenie-proektami-s-nulya" class="card-book-link">
+            <img class="card-book-img" src="https://static.insales-cdn.com/images/products/1/182/587022518/44611622.jpg"
+              alt="">
+            <h3 class="card-book-title">Управление
+              проектами с нуля</h3>
+            <p class="book-auth">Хорин Г.</p>
+          </a>
         </div>
-        <div class="book">
-          <img src="https://static.insales-cdn.com/images/products/1/182/587022518/44611622.jpg" alt="">
-          <p class="book-auth">Хорин Г.</p>
-          <a href="https://www.piter.com/collection/all/product/upravlenie-proektami-s-nulya"
-            class="book-title">Управление
-            проектами с нуля</a>
-        </div>
-        <div class="book">
-          <img src="https://static.insales-cdn.com/images/products/1/4857/539947769/44612945.jpg" alt="">
-          <p class="book-auth">Фило В. , Пиктет М.</p>
+        <div class="card-book">
           <a href="https://www.piter.com/collection/all/product/teoreticheskiy-minimum-po-computer-science-seti-kriptografiya-i-data-science"
-            class="book-title">Теоретический минимум по Computer Science. Сети, криптография и data science</a>
+            class="card-book-link">
+            <img class="card-book-img"
+              src="https://static.insales-cdn.com/images/products/1/4857/539947769/44612945.jpg" alt="">
+            <h3 class="card-book-title">Сети, криптография и Data Science
+            </h3>
+            <p class="book-auth">Фило В., Пиктет М.</p>
+          </a>
+        </div>
 
+
+        <div class="card-book">
+          <a href="https://www.piter.com/collection/all/product/python-ekspress-kurs-3-e-izd" class="card-book-link">
+            <img class="card-book-img"
+              src="https://static.insales-cdn.com/images/products/1/1536/184600064/44610908.jpg" alt="Верстальщик">
+            <h3 class="card-book-title">Python. Экспресс-курс. 3-е изд.</h3>
+            <p class="book-auth">Седер Н.</p>
+          </a>
+        </div>
+
+        <div class="card-book">
+          <a href="https://www.piter.com/collection/all/product/python-bystryy-start" class="card-book-link">
+            <img class="card-book-img"
+              src="https://static.insales-cdn.com/images/products/1/5040/401118128/44611800.jpg" alt="chan">
+            <h3 class="card-book-title">Python: быстрый старт</h3>
+            <p class="book-auth">Чан Д.</p>
+          </a>
+        </div>
+
+        <div class="card-book">
+          <a href="https://www.piter.com/collection/all/product/izuchaem-python-programmirovanie-igr-vizualizatsiya-dannyh-veb-prilozheniya-3-e-izd"
+            class="card-book-link">
+            <img class="card-book-img"
+              src="https://static.insales-cdn.com/images/products/1/6243/277706851/44611528.jpg" alt="matiz">
+            <h3 class="card-book-title">Изучаем Python: программирование игр, визуализация данных, веб-приложения</h3>
+            <p class="book-auth">Мэтиз Э.</p>
+          </a>
+        </div>
+
+        <div class="card-book">
+          <a href="https://www.piter.com/collection/all/product/glubokoe-obuchenie-na-python-2-e-mezhd-izdanie"
+            class="card-book-link">
+            <img class="card-book-img"
+              src="https://static.insales-cdn.com/images/products/1/2610/591055410/44611909.jpg" alt="sholle">
+            <h3 class="card-book-title">
+              Глубокое обучение на Python. 2-е межд. издание</h3>
+            <p class="book-auth">Шолле Ф.</p>
+          </a>
+        </div>
+
+        <div class="card-book">
+          <a href="https://www.piter.com/collection/all/product/vy-poka-esche-ne-znaete-js-poznakomtes-javascript-2-e-izd"
+            class="card-book-link">
+            <img class="card-book-img"
+              src="https://static.insales-cdn.com/images/products/1/2404/464267620/44611875.jpg" alt="simpson">
+            <h3 class="card-book-title">
+              {Вы пока еще не знаете JS} Познакомьтесь, JavaScript. 2-е изд.
+            </h3>
+            <p class="book-auth">Симпсон К.</p>
+          </a>
+        </div>
+
+        <div class="card-book">
+          <a href="https://www.piter.com/collection/all/product/professionalnyy-typescript-razrabotka-masshtabiruemyh-javascript-prilozheniy"
+            class="card-book-link">
+            <img class="card-book-img"
+              src="https://static.insales-cdn.com/images/products/1/1326/340231470/44611651.jpg" alt="cherniy">
+            <h3 class="card-book-title">Профессиональный TypeScript. Разработка масштабируемых JavaScript-приложений
+            </h3>
+            <p class="book-auth">Черный Б.</p>
+          </a>
+        </div>
+
+        <div class="card-book">
+          <a href="https://www.piter.com/collection/all/product/javascript-s-nulya" class="card-book-link">
+            <img class="card-book-img"
+              src="https://static.insales-cdn.com/images/products/1/2400/417876320/44611701.jpg" alt="kirupa">
+            <h3 class="card-book-title">JavaScript с нуля: гайд для новичков</h3>
+            <p class="book-auth">Чиннатхамби К.</p>
+          </a>
+        </div>
+
+        <div class="card-book">
+          <a href="https://www.piter.com/collection/all/product/angular-i-typescript-saytostroenie-dlya-professionalov"
+            class="card-book-link">
+            <img class="card-book-img" src="https://static.insales-cdn.com/images/products/1/555/143565355/44610496.jpg"
+              alt="">
+            <h3 class="card-book-title">
+              Angular и TypeScript. Сайтостроение для профессионалов</h3>
+            <p class="book-auth">Файн Я., Моисеев А.</p>
+          </a>
         </div>
 
       </div>
-      <div class="books-sect">
 
-        <div class="book">
-          <img src="https://static.insales-cdn.com/images/products/1/1043/744145939/44612058.jpg" alt="">
-          <p class="book-auth">Харшани Т. </p>
-          <a href="https://www.piter.com/collection/all/product/100-oshibok-go-i-kak-ih-izbezhat"
-            class="book-title">Реальные проекты на Python, Keras и
-            TensorFlow</a>
 
-        </div>
-        <div class="book">
-          <img src="https://static.insales-cdn.com/images/products/1/4840/662967016/44611818.jpg" alt="">
-          <p class="book-auth">Брендан Грегг</p>
-          <a href="https://www.piter.com/collection/all/product/proizvoditelnost-sistem"
-            class="book-title">Производительность систем</a>
-        </div>
-        <div class="book">
-          <img src="https://static.insales-cdn.com/images/products/1/182/587022518/44611622.jpg" alt="">
-          <p class="book-auth">Хорин Г.</p>
-          <a href="https://www.piter.com/collection/all/product/upravlenie-proektami-s-nulya"
-            class="book-title">Управление
-            проектами с нуля</a>
-        </div>
-        <div class="book">
-          <img src="https://static.insales-cdn.com/images/products/1/4857/539947769/44612945.jpg" alt="">
-          <p class="book-auth">Фило В. , Пиктет М.</p>
-          <a href="https://www.piter.com/collection/all/product/teoreticheskiy-minimum-po-computer-science-seti-kriptografiya-i-data-science"
-            class="book-title">Теоретический минимум по Computer Science. Сети, криптография и data science</a>
 
-        </div>
 
+    </div>
+  </section>
+
+
+  <h3 class="head-h3-row">Научно-популярная литература</h3>
+  <div class="container">
+    <div class="books-sect">
+
+      <div class="card-book">
+        <a href="https://www.piter.com/collection/all/product/naperegonki-s-epidemiey-antibiotiki-protiv-superbakteriy"
+          class="card-book-link">
+          <img class="card-book-img" src="https://static.insales-cdn.com/images/products/1/1697/306538145/44611557.jpg"
+            alt="Верстальщик">
+          <h3 class="card-book-title">Наперегонки с эпидемией. Антибиотики против супербактерий
+          </h3>
+          <p class="book-auth">Маккарти М.</p>
+        </a>
+      </div>
+      <div class="card-book">
+        <a href="https://www.piter.com/collection/all/product/kvantovye-miry-i-vozniknovenie-prostranstva-vremeni"
+          class="card-book-link">
+          <img class="card-book-img" src="https://static.insales-cdn.com/images/products/1/6080/460093376/44611530.jpg"
+            alt="Верстальщик">
+          <h3 class="card-book-title">
+            Квантовые миры и возникновение пространства-времени</h3>
+          <p class="book-auth">Кэрролл Ш.</p>
+        </a>
+      </div>
+      <div class="card-book">
+        <a href="https://www.piter.com/collection/all/product/dnk-istoriya-geneticheskoy-revolyutsii"
+          class="card-book-link">
+          <img class="card-book-img" src="https://static.insales-cdn.com/images/products/1/3924/181972820/44610549.jpg"
+            alt="Верстальщик">
+          <h3 class="card-book-title">ДНК. История генетической революции</h3>
+          <p class="book-auth">Уотсон Д.</p>
+        </a>
+      </div>
+      <div class="card-book">
+        <a href="https://www.piter.com/collection/all/product/geneticheskiy-detektiv-ot-issledovaniya-ribosomy-k-nobelevskoy-premii"
+          class="card-book-link">
+          <img class="card-book-img" src="https://static.insales-cdn.com/images/products/1/6104/286210008/44611174.jpg"
+            alt="Верстальщик">
+          <h3 class="card-book-title">
+            От исследования рибосомы к Нобелевской премии
+          </h3>
+          <p class="book-auth">Рамакришнан В.</p>
+        </a>
       </div>
 
     </div>
 
-    <h3>Научно-популярная литература</h3>
-    <div class="container"></div>
-
   </div>
 
-  <h3>Деловая литература</h3>
+
+  </div>
+  <h3 class="head-h3-row">Деловая литература</h3>
   <div class="container">
+    <div class="books-sect">
 
+      <div class="card-book">
+        <a href="https://www.piter.com/collection/all/product/dizayn-myshlenie-kanvasy-i-uprazhneniya-polnyy-nabor-instrumentov"
+          class="card-book-link">
+          <img class="card-book-img" src="https://static.insales-cdn.com/images/products/1/3449/485264761/44611843.jpg"
+            alt="Верстальщик">
+          <h3 class="card-book-title">Дизайн-мышление: канвасы и упражнения. Полный набор инструментов</h3>
+          <p class="book-auth">Леврик М., Линк П., Лейфер Л.</p>
+        </a>
+      </div>
+      <div class="card-book">
+        <a href="https://www.piter.com/collection/all/product/kopirayting-sila-ubezhdeniya" class="card-book-link">
+          <img class="card-book-img" src="https://static.insales-cdn.com/images/products/1/4659/345223731/44611575.jpg"
+            alt="Верстальщик">
+          <h3 class="card-book-title">Копирайтинг: сила убеждения</h3>
+          <p class="book-auth">Панда П.</p>
+        </a>
+      </div>
+      <div class="card-book">
+        <a href="https://www.piter.com/collection/all/product/motivatsiya-torgovyh-komand" class="card-book-link">
+          <img class="card-book-img" src="https://static.insales-cdn.com/images/products/1/2140/310151260/44611672.jpg"
+            alt="Верстальщик">
+          <h3 class="card-book-title">
+            Мотивация торговых команд</h3>
+          <p>Бусыгин О. В.</p>
+        </a>
+      </div>
+      <div class="card-book">
+        <a href="https://www.piter.com/collection/all/product/investitsiya-na-milliard-kak-uvelichit-pribyl-sokratit-rashody-i-obygrat-uorrena-baffeta"
+          class="card-book-link">
+          <img class="card-book-img" src="https://static.insales-cdn.com/images/products/1/76/197328972/44611100.jpg"
+            alt="Верстальщик">
+          <h3 class="card-book-title">Инвестиция на миллиард.
+          </h3>
+          <p>Черных А. Л.</p>
+        </a>
+      </div>
+    </div>
   </div>
 
   </div>
 
-  <a href="index.html" class="project-btn-back">← ВЕРНУТЬСЯ НА ГЛАВНУЮ</a>
 
   </div>
   </div>
+  <section class="end">
+    <a class="btn-port" href="index.html">
+      <div class="btn-abt">
+
+        <span class="btn-text">
+          На главную
+        </span>
+        <span class="btn-text">→</span>
+
+      </div>
+    </a>
+
+    <a class="btn-port" href="index.html#portfolio">
+      <div class="btn-abt">
+        <span class="btn-text">
+          Портфолио
+        </span>
+        <span class="btn-text">→</span>
+      </div>
+    </a>
+  </section>
   <div class="footer">
     <div class="container">
 
