@@ -4,8 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var links = document.querySelectorAll('a');
+
+      for (var i = 0; i < links.length; i++) {
+        var link = links[i];
+        var href = link.getAttribute('href');
+
+        if (href.startsWith("http") || href.startsWith("www")) {
+          // Внешняя ссылка
+          link.setAttribute('target', '_blank');
+        } else {
+          // Внутренняя ссылка
+          link.setAttribute('target', '');
+        }
+      }
+    });
+  </script>
+  <title>Обо мне</title>
 </head>
-<title>Обо мне</title>
+
 <link rel="stylesheet" href="./CSS/main.css">
 <link rel="stylesheet" href="./CSS/media.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,88 +33,106 @@
 
 <body>
   <header>
-    <div class="top-nav-about">
-      <nav>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a class=scroll-to-portfolio href="index.html#portfolio">Портфолио</a></li>
-          <li><a href="mailto:k.tultseva@gmail.com">Связаться</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav>
+      <div class="header-module-pgs">
+        <a class="name-logo" href="index.html">Кристина Тульцева</a>
+        <div class="links-nav">
+          <a class=scroll-to-portfolio href="index.html#portfolio">Портфолио</a>
+          <a href="mailto:k.tultseva@gmail.com"><img src="./Img/header/email.png" alt="email"></a>
+
+        </div>
+      </div>
+    </nav>
   </header>
-
   <section class="about-main">
-    <div class="foto-me">
+    <div class="abt-me">
       <h2 class="header-h2-abt">Будем знакомы!</h2>
-      <img src="./Img/about/me.jpeg" alt="kristina">
-    </div>
+      <div class="text-abt">
+        <div class="text-text">
+          <p>
+            Привет! Меня зовут Кристина, мне 35 лет, и я родом из Санкт-Петербурга.</p>
 
-    <div class="text-abt">
+          <p>
+          <h3>Чем я могу вам помочь</h3>
+          <p>Вы смело можете ко мне обратиться, если вам нужно:
+          <ul>
+            <li>Поработать над текстами интерфейса сайта или приложения</li>
+            <li>Сверстать сайт по макету</li>
+            <li>Перевести и отредактировать техническую статью</li>
+            <li>Написать статью на Хабр, VC или Т—Ж</li>
+            <li>Настроить работу продуктовой редакции</li>
+          </ul>
+          </p>
 
+          <h3>Где и кем работала</h3>
+          Работаю с текстами уже более 8 лет.
+          <p>Была лидом продуктовой редакции <a href="https://jugru.org/">JUG Ru Group</a> — эта компания проводит
+            конференции для
+            айтишников. Занималась UX-текстами сайтов конференций и внутренних продуктов, писала пользовательскую
+            документацию,
+            маркетинговые тексты, редактировала описания докладов и менеджерила ребят-копирайтеров. Также
+            работала
+            над созданием редполитики и ToV компании. Кейсы про UX можно посмотреть <a href="https://goo.su/jJkczL">
+              здесь</a>.</p>
+          <p>Выпускала книги для программистов в издательстве <a href="https://www.piter.com/">«Питер»</a>, вычитывала
+            технические переводы и переводила сама.
+          <p>Работала в <a href="https://normdocs.ru/">«Нормдокс»</a> — IT-компании, занимающейся поставками зарубежных
+            стандартов и научной документации.</p>
+          <p>Сейчас работаю в одной зарубежной компании-разрабтчике, где пишу UX-тексты на русском и английском языках.
+          </p>
+          <h3>Где и чему училась</h3>
+          <p>Еще в школе увлеклась версткой, когда в блокноте прописывала код сайта и потом загружала все на
+            бесплатный хостинг narod.ru. Олдфаги здесь?</p>
+          <p>По образованию издательский работник. Окончила <a
+              href="https://sutd.ru/education/faculties/szip/">СЗИП</a>.</p>
+          <p>Училась на
+            Python-разработчика на курсах профессиональной переподготовки в питерском Политехе.</p>
+          <p>Изучала современную верстку на «ВебКадеми» и других ресурсах, верстала сайты для друзей. Также хожу на
+            митапы по UX.</p>
+          <p>В планах — выучиться на фронтенд-разработчика.</p>
 
-
-      <p>
-        Привет! Меня зовут Кристина, мне 35 лет.</p>
-
-      <p>
-        Версткой сайтов увлеклась еще в школе, когда в блокноте прописывала код сайта и потом загружала все на
-        бесплатный хостинг narod.ru.</p>
-
-      <p>По образованию издательский работник. Также училась  на
-        Python-разработчика на курсах профессиональной переподготовки в питерском Политехе.</p>
-
-      <p>Работала в продуктовой редакции <a href="https://jugru.org/">JUG Ru Group</a> — эта компания проводит конференции для
-        айтишников. Там занималась UX-текстами сайтов конференций и внутренних продуктов, писала пользовательскую
-        документацию,
-        маркетинговые тексты, статьи на Хабр, редактировала описания докладов и менеджерила ребят-копирайтеров. Также
-        работала
-        над созданием редполитики и ToV компании. Кейсы про UX можно посмотреть <a href="https://goo.su/jJkczL">
-          здесь</a>.</p>
-
-      <span class="imptnt">Суммарно работаю с текстами уже более 8 лет.</span>
-
-
-      <p>Выпускала книги для программистов в издательстве «Питер», вычитывала
-        технические переводы и переводила сама. Много читаю, люблю нон-фикшн, читаю на английском языке. Хожу на
-        митапы
-        по UX, занимаюсь самообразованием и <s>дочь маминой подруги</s> люблю узнавать новое.</p>
-
-      <p>Люблю путешествия, электронную музыку и шахматы. Играю на варгане, мечтаю когда-нибудь побывать в Исландии.
-      </p>
-
-
+          <h3>Немного не о работе</h3>
+          <p>Много читаю, люблю нон-фикшн, занимаюсь самообразованием и <s>дочь маминой подруги</s> люблю узнавать
+            новое.</p>Люблю путешествия,
+          электронную музыку и шахматы. Играю на варгане, мечтаю когда-нибудь побывать в Исландии.
+          </p>
+        </div>
+        <div class="quote">
+          <img src="./Img/about/me.jpeg" alt="kris">
+          <span class="auf"><span class="qt">❝</span> Хороший текст — лучше, чем плохой текст! Ауф! ☝️</span>
+        </div>
+      </div>
     </div>
   </section>
-  <a class="btn-port" href="htmldev.html">
-    <div class="btn-abt">
+  <section>
+    <a class="btn-port" href="htmldev.html">
+      <div class="btn-abt">
 
-      <span>
-        Сайты и веб-проекты
-      </span>
-      <span>→</span>
+        <span class="btn-text">
+          Сайты и веб-проекты
+        </span>
+        <span class="btn-text">→</span>
 
-    </div>
-  </a>
+      </div>
+    </a>
 
-  <a class="btn-port" href="editor.html">
-    <div class="btn-abt">
-      <span>
-        Редактура
-      </span>
-      <span>→</span>
-    </div>
-  </a>
-  <a class="btn-port" href="author.html">
-    <div class="btn-abt">
-      <span>
-        Статьи
-      </span>
-      <span>→</span>
-    </div>
-  </a>
-  </div>
-
+    <a class="btn-port" href="editor.html">
+      <div class="btn-abt">
+        <span class="btn-text">
+          Редактура
+        </span>
+        <span class="btn-text">→</span>
+      </div>
+    </a>
+    <a class="btn-port" href="author.html">
+      <div class="btn-abt">
+        <span class="btn-text">
+          Статьи
+        </span>
+        <span class="btn-text">→</span>
+      </div>
+    </a>
+  </section>
 
 
   <div class="footer">
