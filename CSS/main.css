@@ -8,6 +8,7 @@ img {
 }
 
 .container {
+  position: relative;
   max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
@@ -328,25 +329,49 @@ img {
 .head-h2-description {
   display: flex;
   flex-direction: row;
-  font-size: 16px;
-  color: #333333;
 }
 
-.head-h2-description a {
-  color: #333333;
-  text-decoration: none;
-  box-shadow: inset 0 -1px #4e2e09;
+.content {
+  display: flex;
+  flex-basis: 80%;
 }
-.animation {
-  max-width: 300%;
-  max-height: 300%;
-  justify-content: right;
+
+.article-1 {
+  display: inline;
+  left: 0;
+}
+
+.artc-menu {
+  flex-basis: 25%;
+}
+
+.menu-body {
+  position: sticky;
+  top: 0;
+}
+
+.menu-pnt {
+  border: 1px solid #4b4b4b;
+  border-radius: 100px;
+  padding: 8px 16px;
+  line-height: 20px;
+  font-size: 12px;
+  margin: 5%;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.menu-pnt a {
+  text-decoration: none;
+  color: #333333;
 }
 
 .animation img {
-  max-width: 300%;
-  max-height: 300%;
-  justify-content: right;
+  position: relative;
+  left: 20%;
+  bottom: 18%;
+  max-width: 180%;
+  max-height: 180%;
 }
 
 .header-button-hbr {
@@ -382,19 +407,23 @@ img {
   color: #333333;
 }
 
+.header-h3 {
+  font-weight: 700;
+  font-size: 36px;
+}
+
 .row-article-1 {
   display: flex;
   flex-direction: row;
   padding-top: 15px;
   padding-bottom: 15px;
-  margin-right: 20%;
+  margin-right: 7%;
 }
 
 .row-article-1 img {
-  width: 200px;
-  aspect-ratio: auto 180 / 134;
-  height: 134px;
-  border-radius: 5px;
+  width: 160px;
+  height: 114px;
+  border-radius: 20px;
   border-style: solid;
   border-width: 1px;
   border-color: silver;
@@ -402,7 +431,7 @@ img {
 
 .head-article-1 a {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
   color: #333333;
 }
@@ -465,45 +494,38 @@ img {
   color: #5a5a5a;
 }
 
-.abt-me {
-  max-width: 900px;
-  margin-top: 15%;
-  margin-bottom: 10%;
+.text-text {
+  max-width: 80%;
+  font-size: 15px;
+  line-height: 140%;
+  padding-right: 13%;
+  color: #333333;
 }
 
-.text-abt {
-  display: flex;
-  flex-direction: row;
+.text-text h3 {
+  margin-top: 7%;
 }
-.text-text {
-  max-width: 800px;
-  margin-right: 25%;
-  font-size: 15px;
-  line-height: 130%;
+
+.text-text a {
+  color: #333333;
+  text-decoration: none;
+  box-shadow: inset 0 -1px #bf9900;
 }
 
 .auf {
   font-size: 18px;
   line-height: 140%;
 }
-.qt {
-  font-size: 40px;
-}
 
-.text-abt img {
+.quote img {
   max-width: 200px;
   max-height: 200px;
   border-radius: 50%;
   border: 5px solid #ffcc00;
 }
 
-.text-abt a {
-  color: #333333;
-  text-decoration: none;
-  box-shadow: inset 0 -1px #e48d03;
-}
-
 .header-h2-abt {
+  color: #333333;
   font-size: 55px;
   margin-top: 25px;
 }
