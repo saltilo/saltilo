@@ -334,6 +334,7 @@ img {
 .content {
   display: flex;
   flex-basis: 80%;
+  max-width: 95%;
 }
 
 .article-1 {
@@ -343,6 +344,7 @@ img {
 
 .artc-menu {
   flex-basis: 25%;
+  margin-top: 10%;
 }
 
 .menu-body {
@@ -351,16 +353,18 @@ img {
 }
 
 .menu-pnt {
-  border: 1px solid #4b4b4b;
+  background-color: #f2f2f2;
   border-radius: 100px;
-  padding: 8px 16px;
+  padding: 8px 32px 8px;
   line-height: 20px;
   font-size: 12px;
   margin: 5%;
   cursor: pointer;
   font-size: 14px;
-  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 .menu-pnt a {
   text-decoration: none;
   color: #333333;
@@ -410,6 +414,7 @@ img {
 .header-h3 {
   font-weight: 700;
   font-size: 36px;
+  margin-top: 10%;
 }
 
 .row-article-1 {
@@ -417,7 +422,7 @@ img {
   flex-direction: row;
   padding-top: 15px;
   padding-bottom: 15px;
-  margin-right: 7%;
+  margin-right: 12%;
 }
 
 .row-article-1 img {
