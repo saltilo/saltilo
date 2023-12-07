@@ -207,6 +207,10 @@
   .head-article-1 p {
     font-size: 10px;
   }
+
+  .row-article-1 img {
+  border-radius: 5px;
+  }
 }
 
 @media (max-width: 470px) {
