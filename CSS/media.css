@@ -10,6 +10,53 @@
   }
 }
 
+
+
+  @media screen and (max-width: 999px) {
+
+    .burger-nav {
+    
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-right: 0;
+
+    z-index: 1;
+  }
+
+    .header-module a:hover {
+    color: #333333;
+  }
+
+    .name-logo {
+          display: none;
+    }
+
+    .links-nav{
+          display: none;
+      
+    }
+
+    .burger-nav {
+      display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-right: 0;
+
+    z-index: 1;
+      
+    }
+}
+
+
+
+
 @media (max-width: 760px) {
   .header-title {
     font-size: 32px;
