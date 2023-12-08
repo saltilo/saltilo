@@ -45,9 +45,6 @@ img {
 .header-module a:hover {
   color: #ffcc00;
 
-  @media screen and (max-width: 999px) {
-    color: #333333;
-  }
 }
 
 .name-logo {
@@ -56,9 +53,7 @@ img {
   color: #fdfdfd;
   font-weight: 700;
 
-  @media screen and (max-width: 999px) {
-    display: none;
-  }
+
 }
 
 .links-nav {
@@ -83,17 +78,6 @@ img {
 .burger-nav {
   display: none;
 
-  @media screen and (max-width: 999px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin-right: 0;
-
-    z-index: 1;
-  }
 }
 
 #menu__toggle {
