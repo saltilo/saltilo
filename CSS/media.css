@@ -10,12 +10,8 @@
   }
 }
 
-
-
-  @media screen and (max-width: 999px) {
-
-    .burger-nav {
-    
+@media screen and (max-width: 999px) {
+  .burger-nav {
     display: block;
     position: absolute;
     top: 0;
@@ -27,21 +23,20 @@
     z-index: 1;
   }
 
-    .header-module a:hover {
+  .header-module a:hover {
     color: #333333;
   }
 
-    .name-logo {
-          display: none;
-    }
+  .name-logo {
+    display: none;
+  }
 
-    .links-nav{
-          display: none;
-      
-    }
+  .links-nav {
+    display: none;
+  }
 
-    .burger-nav {
-      display: block;
+  .burger-nav {
+    display: block;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -50,17 +45,18 @@
     margin-right: 0;
 
     z-index: 1;
-      
-    }
+  }
 }
-
-
-
 
 @media (max-width: 760px) {
   .header-title {
     font-size: 32px;
   }
+
+  .intro{
+    margin-bottom: 35%;
+  }
+
 
   .header-subtitle {
     font-size: 12px;
@@ -125,6 +121,14 @@
     padding-top: 20px;
   }
 
+  .header-h2-abt {
+margin-top: 50px;
+  }
+
+  .content {
+    margin-left: 7%;
+  }
+
   .text-text {
     font-size: 15px;
     padding-right: 0;
@@ -153,7 +157,7 @@
     max-width: 150px;
     max-height: 150px;
     margin-bottom: 35px;
-    margin-left: 25%;
+    margin-left: 7%;
   }
 
   .auf {
@@ -184,7 +188,6 @@
   .text-text {
     padding-right: 15px;
   }
-  
 
   .animation {
     display: none;
@@ -198,6 +201,11 @@
     max-width: 200px;
     max-height: 100px;
   }
+
+  .quote img {
+    max-width: 170px;
+    max-height: 170px;
+
 }
 
 @media (max-width: 620px) {
@@ -210,14 +218,46 @@
   }
 
   .row-article-1 img {
-  border-radius: 5px;
+    border-radius: 8px;
   }
+
+  .content {
+    margin-right: 0;
+    margin-left: 2%;
+  }
+
+  .head-h2-row {
+    margin-left: 3%;
+  }
+
+  .btn-text {
+    margin-left: 0;
+    margin-right: 10%;
+  }
+  .text-text {
+    padding-right: 0;
+  }
+
+  .intro{
+    margin-bottom: 45%;
+  }
+
+  
 }
 
 @media (max-width: 470px) {
   .btn-abt {
     font-size: 25px;
     padding: 26px 12px 34px;
+  }
+  .intro{
+    margin-bottom: 68%;
+  }
+
+
+  .head-h2-row {
+    padding-top: 2%;
+    margin-left: 2%;
   }
 
   .row-article-1 {
@@ -246,4 +286,11 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+
+  .about-h3 {
+    padding-top: 10px;
+  }
+
+  .card-book {
+margin-left: 25%;
 }
