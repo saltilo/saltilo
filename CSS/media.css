@@ -182,8 +182,9 @@
 
 @media (max-width: 900px) {
   .text-text {
-    padding-right: 16px;
+    padding-right: 15px;
   }
+  
 
   .animation {
     display: none;
