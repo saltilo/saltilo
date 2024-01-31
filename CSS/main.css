@@ -44,7 +44,6 @@ img {
 
 .header-module a:hover {
   color: #ffcc00;
-
 }
 
 .name-logo {
@@ -52,8 +51,6 @@ img {
   text-decoration: none;
   color: #fdfdfd;
   font-weight: 700;
-
-
 }
 
 .links-nav {
@@ -77,7 +74,6 @@ img {
 
 .burger-nav {
   display: none;
-
 }
 
 #menu__toggle {
@@ -687,7 +683,6 @@ img {
 /* Редактура */
 .books-sect {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   max-width: 900px;
   gap: 15px;
