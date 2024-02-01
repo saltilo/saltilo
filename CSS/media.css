@@ -113,7 +113,11 @@
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
+  .row-article-1 {
+    max-width: 100%;
+  }
+
   .header-h2-abt {
     font-size: 28px;
     padding-top: 20px;
@@ -203,15 +207,23 @@
 }
 
 @media (max-width: 620px) {
+  .text-text {
+    max-width: 85%;
+  }
+
   .head-article-1 {
     font-weight: 500;
     font-size: 12px;
   }
+
   .head-article-1 p {
     font-size: 10px;
   }
 
   .row-article-1 img {
+    width: 120px;
+    aspect-ratio: auto 120 / 60;
+    height: 60px;
     border-radius: 8px;
   }
 
