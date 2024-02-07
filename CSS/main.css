@@ -533,6 +533,22 @@ img {
   line-height: 130%;
   color: #333333;
 }
+.head-construction {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+  margin-left: 20%;
+}
+
+.head-construction img {
+  margin-left: 4%;
+  max-width: 300px;
+  max-height: 300px;
+}
+.head-construction p {
+  font-size: 24px;
+  font-weight: 700;
+}
 
 .header-h3 {
   font-weight: 700;
