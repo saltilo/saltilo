@@ -17,7 +17,7 @@
   <header>
     <nav>
       <div class="header-module-pgs">
-        <a class="name-logo" href="about.html">Кристина Тульцева</a>
+        <a class="name-logo" href="index.html">Кристина Тульцева</a>
         <div class="links-nav">
           <a href="about.html">Обо мне</a>
           <a class=scroll-to-portfolio href="index.html#portfolio">Портфолио</a>
@@ -65,50 +65,130 @@
         </div>
       </div>
     </nav>
+  </header>
+  <article class="head-h2-row">
 
-    <div class="block">
+    <h2 class="header-h2-abt">HTML-верстальщик</h2>
 
-      <div class="head-h2-row">
-        <h2 class="header-h2-abt">HTML-верстальщик</h2>
+    <div class="head-h2-description">
+      <section class="text-text">
+        <p>Упущенное, конечно, не наверстаю, а вот симпатичный сайт — запросто. Например, этот сайт-портфолио
+          сверстан с нуля без использования конструкторов и фреймворков.</p>
 
-        <div class="head-h2-description">
-          <div class="text-text">
-            <p>Упущенное, конечно, не наверстаю, а вот симпатичный сайт — запросто. Например, этот сайт-портфолио
-              сверстан с нуля без использования конструкторов и фреймворков.</p>
+        <p>Если хотите такой же —
+          <a href="mailto:k.tultseva@gmail.com">пишите</a>, договоримся.
+        </p>
+        <p>Изучала современную верстку на курсах Йонаса Шмедтманна на Udemy, курсах «ВебКадеми» и других ресурсах.
+          Верстала сайты для друзей.</p>
+        <p>Сейчас учусь на фронтенд-разработчика.</p>
 
-            <p>Если хотите такой же —
-              <a href="mailto:k.tultseva@gmail.com">пишите</a>, договоримся.
-            </p>
-            <p>Изучала современную верстку на курсах Йонаса Шмедтманна на Udemy, курсах «ВебКадеми» и других ресурсах.
-              Верстала сайты для друзей.</p>
-            <p>Сейчас учусь на фронтенд-разработчика.</p>
-
-          </div>
-          <!--           <div class="animation">
-            <img src="./Img/html_anim.gif" alt="">
-          </div> -->
+      </section>
 
 
+
+
+    </div>
+  </article>
+
+  <h3 class="header-h3">Сайты и лендинги</h3>
+  <section class="container-web-projects">
+
+    <div class="card web-project">
+      <img class="card-img" src="./Img/html-dev/portfolio_mine.png" alt="site">
+      <div class="site-card-item-description">
+        <p>Многостраничный сайт-портфолио</p>
+        <ul>
+          <li>Реализован адаптив под планшеты и мобильные устройства</li>
+          <li>Плавная прокрутка на главной странице</li>
+          <li>Cемантическая верстка</li>
+          <li>Переменные в CSS</li>
+          <li>Не использованы сторонние фреймворки и конструкторы</li>
+          <li>Производительность страницы согласно PageSpeed Insights: 99% десктоп, 89% мобильная версия</li>
+        </ul>
+        <div class="card-item-buttons">
+          <a href="index.html" class="web-project-button" role="button">На сайт</a> <a
+            href="https://github.com/saltilo/saltilo" class="web-project-button" role="button">Код на
+            GitHub</a>
         </div>
       </div>
     </div>
-  </header>
+    <div class="card web-project">
+      <img class="card-img" src="./Img/html-dev/drunk_duck.png" alt="dd">
+      <div class="site-card-item-description">
+        <p>Лендинг бара Drunk Duck</p>
+        <ul>
+          <li>Реализован адаптив под планшеты и мобильные устройства</li>
+          <li>Семантическая верстка</li>
+          <li>Переменные в CSS</li>
+          <li>Реализована SVG-анимация</li>
+          <li>JS: в дескотоп-версии меняется сцена при наведении курсора на персонажа</li>
+          <li>Использование формата WebP для изображений</li>
+          <li>Используется Lazy Loading для изображений</li>
+          <li>Использование HTTPS для обеспечения безопасной передачи данных</li>
+          <li>Производительность сайта согласно PageSpeed Insights: % десктоп, % мобильная версия</li>
+        </ul>
+        <div class="card-item-buttons">
+          <a href="https://drunkduckbar.online/" class="web-project-button" role="button" target="_blank">На сайт</a> <a
+            href="#" class="web-project-button" role="button">Код на GitHub</a>
+        </div>
+      </div>
+    </div>
 
-  <div class="head-construction">
 
-    <img src="./Img/under-construction.svg" alt="cons">
-    <p>Скоро здесь будут новые проекты!</p>
-    <!-- <h3 class="header-h3">Сайты и лендинги</h3>
-    <h3 class="header-h3">Веб-проекты на JS</h3>
-    <h3 class="header-h3">Учебные проекты на Python</h3> -->
+    <div class="card web-project">
+      <div class="site-card-item-image">
+        <img src="./Img/html-dev/crypto-max.png" alt="">
+      </div>
+      <div class="site-card-item-description">
+        <p>Лендинг криптобиржи Cryptomax</p>
+        <ul>
+          <li>Реализован адаптив под планшеты и мобильные устройства</li>
+          <li>Семантическая верстка</li>
+          <li>Переменные в CSS</li>
+          <li>Не использованы сторонние фреймворки и конструкторы</li>
+          <li>Работа с API: отображаются актуальные курсы валют</li>
+          <li>Производительность сайта согласно PageSpeed Insights: 99% десктоп, 89% мобильная версия</li>
+        </ul>
+        <div class="card-item-buttons">
+          <a href="cryptomax.html" class="web-project-button" role="button">На сайт</a> <a href="#"
+            class="web-project-button" role="button">Код
+            на
+            GitHub</a> <a href="#" class="web-project-button" role="button">Макет Figma</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <h3 class="header-h3">Проекты на Python</h3>
+  <section class="container-web-projects">
 
 
-  </div>
+    <div class="card web-project">
+      <div class="site-card-item-image">
+        <img src="./Img/html-dev/python-casino.png" alt="Скриншот бара Drunk Duck">
+      </div>
+      <div class="site-card-item-description">
+        <p>Slot Machine</p>
+        <ul>
+          <li>Симулятор игрового автомата (слот-машины)</li>
+          <li>Начинает с запроса у пользователя депозита</li>
+          <li>В бесконечном цикле предлагает пользователю сделать ставку на следующий спин или выйти из игры</li>
+          <li>В зависимости от выбора пользователя, либо проводится спин, либо программа завершается</li>
+          <li>Функция <code>check_win</code> проверяет, выпала ли выигрышный комбинация символов на указанных линиях
+            после спина</li>
+          <li>Функция <code>get_spin</code> генерирует случайные комбинации символов для каждого из барабанов</li>
+          <li>Функция <code>print_spin</code> выводит результаты спина на экран</li>
+        </ul>
+        <div class="card-item-buttons">
+          <a href="https://github.com/saltilo/-training-projects/blob/main/Slot%20Machine/main.py"
+            class="web-project-button" role="button">Код на GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
 
 
-
-
-  </div>
   <section class="end">
     <a class="btn-port" href="index.html#portfolio">
       <div class="btn-abt">
@@ -118,6 +198,7 @@
         <span class="btn-text">→</span>
       </div>
     </a>
+
     <a class="btn-port" href="index.html">
       <div class="btn-abt">
 
@@ -131,7 +212,7 @@
 
 
   </section>
-  <div class="footer">
+  <footer class="footer">
     <div class="container">
 
       <div class="footer-row">
@@ -139,37 +220,35 @@
           <div class="footer-copyright-name">
             © Кристина Тульцева
           </div>
-          <p>Всесторонняя работа с текстами</p>
+          <p>Тексты, сайты и UX</p>
         </div>
         <div class="footer-icons">
-          <p>Мои профили в соцсетях</p>
+          <p>Ищите меня в соцсетях</p>
           <div class="footer-icons-row">
             <a href="https://vk.me/chris_tau">
-              <img src="./Img/icons/vk-25.svg" alt="VK">
+              <img src="./Img/icons/vk-25.svg" alt="VK icon">
             </a>
 
             <a href="https://habr.com/ru/users/k_tultseva/">
-              <img src="./Img/icons/habr.svg" alt="Habr">
+              <img src="./Img/icons/habr.svg" alt="Habr icon">
             </a>
 
             <a href="https://www.linkedin.com/in/tultseva/">
-              <img src="./Img/icons/linkedin.svg" alt="linkedin">
+              <img src="./Img/icons/linkedin.svg" alt="linkedin icon">
             </a>
 
             <a href="https://github.com/saltilo">
-              <img src="./Img/icons/github.svg" alt="github">
+              <img src="./Img/icons/github.svg" alt="github icon">
             </a>
 
           </div>
         </div>
-        <div class="footer-contact">
-          <a href="mailto:k.tultseva@gmail.com" class="footer-button"> Написать письмо</a>
-          <p>Узнайте стоимость работ по вашему проекту</p>
-
-        </div>
+        <address class="footer-contact">
+          <a href="mailto:k.tultseva@gmail.com" class="footer-button">Написать письмо</a>
+        </address>
       </div>
     </div>
-  </div>
+  </footer>
 
 </body>
 
