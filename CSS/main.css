@@ -581,6 +581,8 @@ address {
   font-weight: 700;
   font-size: 36px;
   margin-top: 10%;
+}
+.web-projects-head {
   margin-left: var(--left-margin);
 }
 
