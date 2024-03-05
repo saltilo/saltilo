@@ -166,9 +166,7 @@
 
 
 
-      <a href="thecode.html" id="article-link" class="btn-text-code"><span>Посмотреть все <span
-            id="article-counter"></span>
-          <span id="article-word"></span> для журнала «Код» →</span></a>
+      <a href="thecode.html" id="article-link" class="btn-text-code">Посмотреть все 11 статей для журнала «Код» →</span></a>
 
 
 
@@ -917,43 +915,6 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    // Функция для обновления счетчика
-    function updateArticleCounter() {
-      // Извлекаем количество статей из localStorage
-      var numberOfArticles = localStorage.getItem('numberOfArticles') || 0;
-
-      // Обновляем текст ссылки
-      document.getElementById('article-counter').textContent = numberOfArticles;
-      document.getElementById('article-word').textContent = getArticleWord(numberOfArticles);
-    }
-
-    // Обновляем счетчик при изменении статей в localStorage
-    window.addEventListener('storage', function (e) {
-      if (e.key === 'numberOfArticles') {
-        updateArticleCounter();
-      }
-    });
-
-    // Извлекаем количество статей из localStorage при загрузке страницы
-    updateArticleCounter();
-
-    function getArticleWord(number) {
-      if (number >= 11 && number <= 20) {
-        return 'статей';
-      }
-
-      var lastDigit = number % 10;
-      if (lastDigit === 1) {
-        return 'статью';
-      } else if (lastDigit >= 2 && lastDigit <= 4) {
-        return 'статьи';
-      } else {
-        return 'статей';
-      }
-    }
-  </script>
 
 </body>
 
