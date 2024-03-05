@@ -422,40 +422,6 @@
     </div>
   </footer>
 
-  <script>
-    // Передаем количество статей в localStorage
-    var numberOfArticles = document.querySelectorAll('.row-article-1').length;
-    localStorage.setItem('numberOfArticles', numberOfArticles);
-
-    // Обновляем текст ссылки на текущей странице
-    document.getElementById('article-counter').textContent = numberOfArticles;
-    document.getElementById('article-word').textContent = getArticleWord(numberOfArticles);
-
-    function getArticleWord(number) {
-      if (number >= 11 && number <= 20) {
-        return 'статей';
-      }
-
-      var lastDigit = number % 10;
-      if (lastDigit === 1) {
-        return 'статью';
-      } else if (lastDigit >= 2 && lastDigit <= 4) {
-        return 'статьи';
-      } else {
-        return 'статей';
-      }
-    }
-
-    // Устанавливаем интервал для проверки изменений
-    setInterval(function () {
-      var storedValue = localStorage.getItem('numberOfArticles');
-      if (storedValue !== null && storedValue !== numberOfArticles) {
-        numberOfArticles = storedValue;
-        document.getElementById('article-counter').textContent = numberOfArticles;
-        document.getElementById('article-word').textContent = getArticleWord(numberOfArticles);
-      }
-    }, 1000);
-  </script>
 
 
 </body>
