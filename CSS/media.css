@@ -312,6 +312,10 @@
     display: none;
   }
 
+  .btn-text-code {
+    font-size: 0.8em;
+  }
+
   .header-button-hbr {
     font-weight: 600;
     font-size: 12px;
