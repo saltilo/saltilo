@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var links = document.querySelectorAll('a');
+
+      for (var i = 0; i < links.length; i++) {
+        var link = links[i];
+        var href = link.getAttribute('href');
+
+        if (href.startsWith("http") || href.startsWith("www")) {
+          // Внешняя ссылка
+          link.setAttribute('target', '_blank');
+        } else {
+          // Внутренняя ссылка
+          link.setAttribute('target', '');
+        }
+      }
+    });
+  </script>
+
+</head>
+<title>Автор статей: Кристина Тульцева</title>
+<link rel="stylesheet" href="./CSS/main.css">
+<link rel="stylesheet" href="./CSS/media.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<body>
+
+  <header>
+    <nav class="header-module-pgs">
+      <a class="name-logo" href="about.html">Кристина Тульцева</a>
+      <div class="links-nav">
+        <a class=scroll-to-portfolio href="index.html#portfolio">Портфолио</a>
+        <a href="mailto:k.tultseva@gmail.com"><img src="./Img/header/email.png" alt="email"></a>
+
+      </div>
+
+      <div class="burger-nav">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+
+        <ul class="menu-box">
+          <p class="head-burger"><a href="index.html">Кристина Тульцева</a></p>
+          <li><a class="menu__item" href="about.html">🧑‍💻 Обо мне</a></li>
+          <p class="head-burger">Портфолио</p>
+          <li><a class="menu__item" href="author.html">📑 Автор
+              статей</a></li>
+          <li><a class="menu__item" href="editor.html">📙 Редактор</a>
+          </li>
+          <li><a class="menu__item" href="htmldev.html">💻 Верстальщик</a>
+          </li>
+          <li><a class="menu__item" href="uxwriting.html">📱 UX-writer</a></li>
+          <div class="footer-icons-row-menu">
+            <a href="https://vk.me/chris_tau">
+              <img src="./Img/icons/vk-25.svg" alt="VK">
+            </a>
+
+            <a href="https://habr.com/ru/users/k_tultseva/">
+              <img src="./Img/icons/habr.svg" alt="Habr">
+            </a>
+
+            <a href="https://www.linkedin.com/in/tultseva/">
+              <img src="./Img/icons/linkedin.svg" alt="linkedin">
+            </a>
+
+            <a href="https://github.com/saltilo">
+              <img src="./Img/icons/github.svg" alt="github">
+            </a>
+
+          </div>
+
+        </ul>
+
+      </div>
+    </nav>
+
+
+
+
+  </header>
+  <article class="head-h2-row">
+    <h2 class="header-h2-abt">Автор статей в «Код»</h2>
+
+    <div class="head-h2-description">
+      <section class="text-text">
+        <p>На этой страничке — все мои статьи для журнала <a href="https://thecode.media/">«Код»</a>.</p>
+
+        <p>Фронтенд, технологии и айтишный лайфстайл. Только польза человеческим языком.</p>
+
+        <p>Если хотите от меня статью —
+          <a href="mailto:k.tultseva@gmail.com">пишите</a>, договоримся!
+        </p>
+
+      </section>
+
+    </div>
+
+  </article>
+
+
+
+
+  <section class="content">
+
+
+    <section class="article-1">
+      <h3 class="header-h3"> </h3>
+
+      <div class="row-article-1">
+        <div class="head-article-1">
+          <a href="https://thecode.media/var-let-const/">Ликбез: чем различаются var, let и const в JavaScript
+
+            <p>в JavaScript это можно сделать с помощью трёх ключевых слов: var, const и let Разберёмся, чем они
+              различаются и в каких случаях что нужно использовать.
+            </p>
+            <p class="stats">
+              19 февр, 2024
+            </p>
+        </div>
+        <div class="img-article">
+          <img src="https://thecode.media/wp-content/uploads/2024/02/1.jpg" alt="var let const">
+          </a>
+        </div>
+      </div>
+
+      <div class="row-article-1">
+        <div class="head-article-1">
+          <a href="https://thecode.media/css-new-2024/">Что нового в современном CSS
+
+            <p>Обзор новых важных CSS-свойств, которые появились в 2023 году и продолжают расширяться до сих пор. С ними
+              можно верстать сайты проще, быстрее и круче.
+            </p>
+            <p class="stats">
+              26 февр, 2024
+            </p>
+        </div>
+        <div class="img-article">
+          <img src="https://thecode.media/wp-content/uploads/2024/02/1-8.jpg" alt="css new1">
+          </a>
+        </div>
+      </div>
+
+      <div class="row-article-1">
+        <div class="head-article-1">
+          <a href="https://thecode.media/new-jquery-4-0-0-beta/">Вышел jQuery 4.0.0 BETA: что нового и что изменилось
+
+            <p>Недавно вышла новая версия фреймворка jQuery — обещают, что всё стало современнее, производительнее
+              и безопаснее.
+            </p>
+            <p class="stats">
+              21 февр, 2024
+            </p>
+        </div>
+        <div class="img-article">
+          <img src="https://thecode.media/wp-content/uploads/2024/02/1-1-3.jpg" alt="jquery">
+          </a>
+        </div>
+      </div>
+
+      <div class="row-article-1">
+        <div class="head-article-1">
+          <a href="https://thecode.media/apple-vision-pro/">Разбор: как устроены технически очки Apple Vision Pro
+
+            <p>В начале февраля в продаже появились Apple Vision Pro — гарнитура смешанной реальности от Apple.
+              Разберемся, что там внутри.
+            </p>
+            <p class="stats">
+              28 февр, 2024
+            </p>
+        </div>
+        <div class="img-article">
+          <img src="https://thecode.media/wp-content/uploads/2024/02/1-2-1-1.jpg" alt="apple vision">
+          </a>
+        </div>
+      </div>
+
+      <div class="row-article-1">
+        <div class="head-article-1">
+          <a href="https://thecode.media/5-backpacks-for-programmers/">5 рюкзаков для программистов на все случаи жизни
+
+            <p>От похода в офис до похода в лес с ноутбуком. Чтобы сориентироваться, что именно выбрать для разных
+              ситуаций, собрали 5 рюкзаков на все случаи жизни.
+
+
+              <p class="stats">
+                04 марта, 2024
+              </p>
+        </div>
+        <div class="img-article">
+          <img src="https://thecode.media/wp-content/uploads/2024/03/1-4-1.jpg" alt="backpack">
+          </a>
+        </div>
+      </div>
+
+
+      <div class="row-article-1">
+        <div class="head-article-1">
+          <a href="https://thecode.media/this/">Что такое this в JavaScript: что означает это слово в зависимости от
+            контекста
+
+            <p>Ключевое слово this — одна из особенностей JavaScript. Изначально оно пришло из Java, чтобы помочь в
+              реализации объектно-ориентированного программирования.
+            </p>
+            <p class="stats">
+              29 янв, 2024
+            </p>
+        </div>
+        <div class="img-article">
+          <img src="https://thecode.media/wp-content/uploads/2024/01/1-3.jpg" alt="thisjs">
+          </a>
+        </div>
+      </div>
+
+      <div class="row-article-1">
+        <div class="head-article-1">
+          <a href="https://thecode.media/pure-2/">Что умеет Pure и за что его любят начинающие разработчики
+
+
+            <p>Pure CSS — фреймворк для вёрстки сайтов, который придумала компания Yahoo!. Технически это набор
+              небольших адаптивных CSS-модулей в минималистичном стиле, которые можно использовать в любом веб-проекте.
+            </p>
+            <p class="stats">
+              15 февр, 2024
+            </p>
+        </div>
+        <div class="img-article">
+          <img src="https://thecode.media/wp-content/uploads/2024/02/1-2-2.jpg" alt="pure">
+          </a>
+        </div>
+      </div>
+
+
+      <div class="row-article-1">
+        <div class="head-article-1">
+          <a href="https://thecode.media/headless-chrome/">Что такое «безголовый Хром» и за что его любят разработчики
+
+            <p>«Безголовый Хром» (Headless Chrome) — это полноценный браузер, только без графического интерфейса. С его
+              помощью тестируют сайты, проверяют качество и соответствие вёрстки.
+            </p>
+            <p class="stats">
+              5 февр, 2024
+            </p>
+        </div>
+        <div class="img-article">
+          <img src="https://thecode.media/wp-content/uploads/2024/02/1-3.jpg" alt="chrome">
+          </a>
+        </div>
+      </div>
+
+      <div class="row-article-1">
+        <div class="head-article-1">
+          <a href="https://thecode.media/pwm/">Почему устают глаза от телефона
+
+            <p>В современных смартфонах два типа дисплеев: жидкокристаллические IPS и светодиодные OLED. В ЖК-дисплеях
+              пиксели подсвечиваются, а в светодиодных светятся сами. Из-за этого светодиодные дисплеи
+              мерцают — это называется ШИМ.
+            </p>
+            <p class="stats">
+              8 февр, 2024
+            </p>
+        </div>
+        <div class="img-article">
+          <img src="https://thecode.media/wp-content/uploads/2024/02/1-6.jpg" alt="pws">
+          </a>
+        </div>
+      </div>
+
+
+      <div class="row-article-1">
+        <div class="head-article-1">
+          <a href="https://thecode.media/yandex-ops/">Ищем в Яндексе правильно: как сделать так, чтобы поисковик понял
+            нас сразу
+
+            <p>Операторы Яндекса — это специальные слова и символы, которые уточняют, расширяют или фильтруют результаты
+              выдачи.
+            </p>
+            <p class="stats">
+              12 февр, 2024
+            </p>
+        </div>
+        <div class="img-article">
+          <img src="https://thecode.media/wp-content/uploads/2024/02/1_1-1.jpg" alt="search">
+          </a>
+        </div>
+      </div>
+
+      <div class="row-article-1">
+        <div class="head-article-1">
+          <a href="https://thecode.media/this/">Почему иногда вместо сайтов мы видим разные ошибки сервера
+
+            <p>В процессе общения с сервером браузер получает от него короткие сообщения — коды состояния HTTP (HTTP
+              status code). Расскажем про самые часто встречающиеся ошибки состояний. </p>
+            <p class="stats">
+              31 янв, 2024
+            </p>
+        </div>
+        <div class="img-article">
+          <img src="https://thecode.media/wp-content/uploads/2024/01/1-5-1-1.jpg" alt="errors">
+          </a>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+  </section>
+
+
+
+  <section class="end">
+
+    <a class="btn-port" href="author.html">
+      <div class="btn-abt">
+
+        <span class="btn-text">←</span>
+        <span class="btn-text">
+          Назад
+        </span>
+      </div>
+    </a>
+
+    <a class="btn-port" href="index.html#portfolio">
+      <div class="btn-abt">
+        <span class="btn-text">
+          Портфолио
+        </span>
+        <span class="btn-text">→</span>
+      </div>
+    </a>
+    <a class="btn-port" href="index.html">
+      <div class="btn-abt">
+
+        <span class="btn-text">
+          На главную
+        </span>
+        <span class="btn-text">→</span>
+
+      </div>
+    </a>
+
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-row">
+        <div class="footer-copyright">
+          <div class="footer-copyright-name">
+            © Кристина Тульцева
+          </div>
+          <p>Тексты, сайты и UX</p>
+        </div>
+        <div class="footer-icons">
+          <div class="footer-icons-row">
+            <a href="https://vk.me/chris_tau">
+              <img src="./Img/icons/vk-25.svg" alt="VK icon">
+            </a>
+
+            <a href="https://habr.com/ru/users/k_tultseva/">
+              <img src="./Img/icons/habr.svg" alt="Habr icon">
+            </a>
+
+            <a href="https://www.linkedin.com/in/tultseva/">
+              <img src="./Img/icons/linkedin.svg" alt="linkedin icon">
+            </a>
+
+            <a href="https://github.com/saltilo">
+              <img src="./Img/icons/github.svg" alt="github icon">
+            </a>
+
+          </div>
+        </div>
+        <address class="footer-contact">
+          <a href="mailto:k.tultseva@gmail.com" class="footer-button">Написать письмо</a>
+        </address>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Передаем количество статей в localStorage
+    var numberOfArticles = document.querySelectorAll('.row-article-1').length;
+    localStorage.setItem('numberOfArticles', numberOfArticles);
+
+    // Обновляем текст ссылки на текущей странице
+    document.getElementById('article-counter').textContent = numberOfArticles;
+    document.getElementById('article-word').textContent = getArticleWord(numberOfArticles);
+
+    function getArticleWord(number) {
+      if (number >= 11 && number <= 20) {
+        return 'статей';
+      }
+
+      var lastDigit = number % 10;
+      if (lastDigit === 1) {
+        return 'статью';
+      } else if (lastDigit >= 2 && lastDigit <= 4) {
+        return 'статьи';
+      } else {
+        return 'статей';
+      }
+    }
+
+    // Устанавливаем интервал для проверки изменений
+    setInterval(function () {
+      var storedValue = localStorage.getItem('numberOfArticles');
+      if (storedValue !== null && storedValue !== numberOfArticles) {
+        numberOfArticles = storedValue;
+        document.getElementById('article-counter').textContent = numberOfArticles;
+        document.getElementById('article-word').textContent = getArticleWord(numberOfArticles);
+      }
+    }, 1000);
+  </script>
+
+
+</body>
+
+</html>
