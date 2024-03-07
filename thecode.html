@@ -23,28 +23,8 @@
     });
   </script>
 
-
-<title>Автор статей: Кристина Тульцева</title>
-    <meta name="title" content="Кристина Тульцева: UX-writer, HTML-верстальщик, автор статей про IT" />
-  <meta name="description"
-    content="Заказать HTML-верстку сайта, статью, UX-тексты для сайта или приложения. Напишите и узнайте стоимость работ по вашему проекту" />
-
-
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://saltilo.github.io/saltilo/thecode.html" />
-  <meta property="og:title" content="Кристина Тульцева: UX-writer, HTML-верстальщик, автор статей про IT" />
-  <meta property="og:description"
-    content="Заказать HTML-верстку сайта, статью, UX-тексты для сайта или приложения. Напишите и узнайте стоимость работ по вашему проекту" />
-  <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
-
-
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://saltilo.github.io/saltilo/index.html" />
-  <meta property="twitter:title" content="Кристина Тульцева: UX-writer, HTML-верстальщик, автор статей про IT" />
-  <meta property="twitter:description"
-    content="Заказать HTML-верстку сайта, статью, UX-тексты для сайта или приложения. Напишите и узнайте стоимость работ по вашему проекту" />
-  <meta property="twitter:image" content="./Img/site-og.png" />
 </head>
+<title>Автор статей: Кристина Тульцева</title>
 <link rel="stylesheet" href="./CSS/main.css">
 <link rel="stylesheet" href="./CSS/media.css">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -139,9 +119,26 @@
 
       <div class="row-article-1">
         <div class="head-article-1">
+          <a href="https://thecode.media/5-encrypts/">Алгоритмы шифрования, на которых держится мир
+
+            <p>Шифрование — основа безопасности при передаче данных. Но в разных ситуациях нужны разные подходы к
+              шифрованию. Поговорим о самых распространённых алгоритмах шифрования
+            </p>
+            <p class="stats">
+              06 марта 2024
+            </p>
+        </div>
+        <div class="img-article">
+          <img src="https://thecode.media/wp-content/uploads/2024/03/1-2.jpg" alt="chiphr">
+          </a>
+        </div>
+      </div>
+
+      <div class="row-article-1">
+        <div class="head-article-1">
           <a href="https://thecode.media/var-let-const/">Ликбез: чем различаются var, let и const в JavaScript
 
-            <p>в JavaScript это можно сделать с помощью трёх ключевых слов: var, const и let Разберёмся, чем они
+            <p>В JavaScript это можно сделать с помощью трёх ключевых слов: var, const и let Разберёмся, чем они
               различаются и в каких случаях что нужно использовать.
             </p>
             <p class="stats">
@@ -201,6 +198,24 @@
         </div>
         <div class="img-article">
           <img src="https://thecode.media/wp-content/uploads/2024/02/1-2-1-1.jpg" alt="apple vision">
+          </a>
+        </div>
+      </div>
+
+
+      <div class="row-article-1">
+        <div class="head-article-1">
+          <a href="https://thecode.media/wp-content/uploads/2024/03/1-5.jpg">Sora: что умеет самая продвинутая нейросеть
+
+            <p>Sora — нейросеть, которая создаёт гиперреалистичные видеоролики длиной до минуты по текстовым запросам.
+              Разберемся, как она работает.
+            </p>
+            <p class="stats">
+              05 марта, 2024
+            </p>
+        </div>
+        <div class="img-article">
+          <img src="https://thecode.media/wp-content/uploads/2024/03/1-5.jpg" alt="sora">
           </a>
         </div>
       </div>
@@ -442,6 +457,40 @@
     </div>
   </footer>
 
+  <script>
+    // Передаем количество статей в localStorage
+    var numberOfArticles = document.querySelectorAll('.row-article-1').length;
+    localStorage.setItem('numberOfArticles', numberOfArticles);
+
+    // Обновляем текст ссылки на текущей странице
+    document.getElementById('article-counter').textContent = numberOfArticles;
+    document.getElementById('article-word').textContent = getArticleWord(numberOfArticles);
+
+    function getArticleWord(number) {
+      if (number >= 11 && number <= 20) {
+        return 'статей';
+      }
+
+      var lastDigit = number % 10;
+      if (lastDigit === 1) {
+        return 'статью';
+      } else if (lastDigit >= 2 && lastDigit <= 4) {
+        return 'статьи';
+      } else {
+        return 'статей';
+      }
+    }
+
+    // Устанавливаем интервал для проверки изменений
+    setInterval(function () {
+      var storedValue = localStorage.getItem('numberOfArticles');
+      if (storedValue !== null && storedValue !== numberOfArticles) {
+        numberOfArticles = storedValue;
+        document.getElementById('article-counter').textContent = numberOfArticles;
+        document.getElementById('article-word').textContent = getArticleWord(numberOfArticles);
+      }
+    }, 1000);
+  </script>
 
 
 </body>
