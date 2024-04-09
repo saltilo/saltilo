@@ -1,6 +1,4 @@
-// запрос API-ключа с сервера и вывод курсов валют на странице
-
-function fetchAndDisplayPrice(symbol, containerId) {
+async function fetchAndDisplayPrice(symbol, containerId) {
   var alias;
 
   switch (symbol) {
@@ -19,9 +17,21 @@ function fetchAndDisplayPrice(symbol, containerId) {
 
   console.log(`Fetching data for symbol: ${symbol}`);
 
-  fetch(`http://localhost:3000/getCryptoPrice/${symbol}`)
-    .then((response) => response.json())
-    .then((result) => {
+  try {
+    const apiKey = "8sdMh+lOjcw0zSZ/oEXiTw==6erEa9PmhxsEHMsL"; // Ваш API-ключ
+
+    const response = await fetch(
+      `https://api.api-ninjas.com/v1/cryptoprice?symbol=${symbol}`,
+      {
+        headers: {
+          "X-Api-Key": apiKey,
+        },
+      }
+    );
+
+    if (response.ok) {
+      const result = await response.json();
+
       var priceAsNumber = parseFloat(result.price);
       var formattedPrice = priceAsNumber.toLocaleString("en-US", {
         style: "currency",
@@ -34,34 +44,17 @@ function fetchAndDisplayPrice(symbol, containerId) {
 
       document.getElementById(containerId).innerHTML = formattedResult;
       console.log(`Data fetched for symbol: ${symbol}`);
-    })
-    .catch((error) => {
-      console.error("Error fetching data:", error);
-    });
+    } else {
+      console.error("Failed to fetch data:", response.statusText);
+    }
+  } catch (error) {
+    console.error("Error fetching data:", error.message);
+  }
 }
 
 fetchAndDisplayPrice("BTCUSDT", "cryptoPriceBTC");
 fetchAndDisplayPrice("ETHUSDT", "cryptoPriceETH");
 fetchAndDisplayPrice("SOLUSDT", "cryptoPriceSOL");
-
-// скрипт для аккордеона
-
-document.addEventListener("DOMContentLoaded", function () {
-  var accordionButtons = document.querySelectorAll(".accordion-btn");
-
-  accordionButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      this.classList.toggle("open");
-      var content = this.nextElementSibling;
-
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    });
-  });
-});
 
 // генератор случайных чисел
 
