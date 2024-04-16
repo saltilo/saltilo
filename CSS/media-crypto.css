@@ -1,0 +1,253 @@
+:root {
+  --mobile-padding: 3%;
+}
+
+@media (max-width: 1350px) {
+  .navbar {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .burger-image {
+    display: block;
+    cursor: pointer;
+  }
+
+  .header-module {
+    justify-content: right;
+  }
+}
+@media (max-width: 1300px) {
+  .safety {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .cta-block {
+    width: 100%;
+  }
+
+  .phone-block {
+    margin-bottom: 2%;
+    padding: 0;
+  }
+
+  .cta-block-btn {
+    width: 85%;
+  }
+
+  .safety-advantage-cards {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 3%;
+  }
+
+  .safety-block {
+    padding-left: 3%;
+  }
+  .safety {
+    padding: 0 0 0 3%;
+  }
+
+  .faq {
+    margin-top: 4%;
+    padding: var(--mobile-padding);
+  }
+
+  .footer {
+    padding-left: 4%;
+  }
+
+  .intro-image img {
+    justify-content: center;
+    margin-top: 5%;
+    overflow: visible;
+    width: 100%;
+  }
+  .content {
+    width: 100%;
+  }
+
+  .button-reg.intro-btn {
+    display: block;
+    width: auto;
+  }
+
+  .colored-block-text {
+    transform: rotate(0);
+    width: 100%;
+  }
+  .marquee {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 1.5em;
+  }
+
+  .marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    animation: marquee 15s linear infinite;
+  }
+
+  .crypto-leader {
+    background-image: url("../Img/cryptomax/bg-united-shapes-rotate.png");
+    height: auto;
+    padding-top: 5rem;
+    padding-left: 3%;
+  }
+
+  .apps-images {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .apps-images-first {
+    position: relative;
+    margin-top: 25%;
+    height: 100%;
+  }
+
+  .apps-images-second {
+    position: relative;
+    right: 0;
+    height: 100%;
+  }
+
+  .apps-cards {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 2%;
+  }
+
+  .apps-description {
+    margin-top: 2rem;
+  }
+
+  @keyframes marquee {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 100%;
+    }
+  }
+
+  .apps {
+    flex-direction: column;
+  }
+
+  .apps-description {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1085px) {
+  .accordion-row {
+    display: block;
+  }
+
+  .accordion {
+    width: 95%;
+    margin-top: 1em;
+  }
+
+  .footer-col a {
+    font-size: calc(var(--regular-text) - 0.1em);
+  }
+
+  .footer-col {
+    flex: 1 1 48%;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 868px) {
+  .apps-cards {
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 35%;
+    bottom: 0;
+  }
+
+  .download-card {
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .download-card img {
+    padding-bottom: 1em;
+  }
+}
+
+@media (max-width: 800px) {
+  .crypto-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 568px) {
+  .faq h2 {
+    padding: 2% 0 0 3%;
+  }
+
+  .header-module {
+    display: flex;
+    flex-direction: column-reverse;
+    width: auto;
+  }
+
+  .apps-images-second {
+    right: 0;
+  }
+}
+
+@media (max-width: 531px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .safety-advantage-cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-col {
+    flex: 1 1 100%;
+  }
+
+  .safety {
+    padding: 1%;
+  }
+
+  .faq {
+    padding: 2%;
+  }
+}
