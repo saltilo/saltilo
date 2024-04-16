@@ -13,10 +13,8 @@
         var href = link.getAttribute('href');
 
         if (href.startsWith("http") || href.startsWith("www")) {
-          // Внешняя ссылка
           link.setAttribute('target', '_blank');
         } else {
-          // Внутренняя ссылка
           link.setAttribute('target', '');
         }
       }
