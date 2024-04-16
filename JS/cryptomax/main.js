@@ -18,7 +18,7 @@ async function fetchAndDisplayPrice(symbol, containerId) {
   console.log(`Fetching data for symbol: ${symbol}`);
 
   try {
-    const apiKey = "8sdMh+lOjcw0zSZ/oEXiTw==6erEa9PmhxsEHMsL"; // Ваш API-ключ
+    const apiKey = "8sdMh+lOjcw0zSZ/oEXiTw==6erEa9PmhxsEHMsL";
 
     const response = await fetch(
       `https://api.api-ninjas.com/v1/cryptoprice?symbol=${symbol}`,
