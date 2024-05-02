@@ -9,6 +9,7 @@
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  line-height: 1.4;
 }
 
 img {
@@ -20,7 +21,8 @@ address {
 }
 
 ul {
-  padding-left: 1em;
+  padding-left: 2em;
+  line-height: 1.55;
 }
 
 .container {
@@ -664,7 +666,8 @@ ul {
   transition: transform 0.8s ease;
 }
 
-.head-article-1 p {
+.head-article-1 p,
+span {
   font-size: 14px;
   color: #333333;
   font-weight: 300;
@@ -810,13 +813,22 @@ ul {
   margin-bottom: 20px;
 }
 
-.auf {
-  font-size: 18px;
-  line-height: 120%;
+.q-custom {
+  font-size: 1rem;
+  quotes: "❝ " " ❞";
 }
-.qt {
-  font-size: 38px;
-  font-family: "Times New Roman", Times, serif;
+
+.q-custom::before,
+.q-custom::after {
+  font-size: 1.5rem;
+}
+
+.q-custom::before {
+  content: open-quote;
+}
+
+.q-custom::after {
+  content: close-quote;
 }
 
 .header-h2-abt {
@@ -835,13 +847,14 @@ ul {
   color: #333333;
   justify-content: space-between;
   display: flex;
-  font-size: 55px;
-  font-weight: 400;
+
   transition: background 0.3s ease, color 0.3s ease;
 }
 .btn-text {
   margin-left: var(--left-margin);
   margin-right: 10%;
+  font-size: 55px;
+  font-weight: 400;
 }
 
 .btn-abt:hover {
@@ -908,4 +921,57 @@ ul {
 
 .end {
   margin-top: 10%;
+}
+
+.case-read-more-hidden-btn {
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: inset 0 -1px var(--primary-color-dark);
+}
+.case-read-show-btn {
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: inset 0 -1px var(--primary-color-dark);
+}
+
+h4 {
+  margin-top: 5%;
+}
+.case-text-showed {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, max-height 0.6s ease-in-out; /* Плавные переходы для opacity и max-height */
+}
+
+.case-text-showed p {
+  font-size: 14px;
+  color: #333333;
+  font-weight: 300;
+}
+
+.case-text-showed.active {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.head-article-1.ux-cases p,
+li {
+  width: 75%;
+}
+
+.case-text-showed img {
+  width: 20%;
+  border-style: solid;
+  border-width: 0.3px;
+  border-color: silver;
+}
+
+.ux-cases ul {
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+span.case-bold {
+  font-weight: 600;
 }
