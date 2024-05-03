@@ -511,6 +511,11 @@ ul {
   top: 0;
 }
 
+.menu-body a {
+  text-decoration: none;
+  color: #232323;
+}
+
 .menu-pnt {
   background-color: #f2f2f2;
   border-radius: 100px;
