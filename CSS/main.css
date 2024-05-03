@@ -492,6 +492,10 @@ ul {
   margin-right: 5%;
 }
 
+.content h3:not(:first-of-type) {
+  margin-top: 5em;
+}
+
 .artc-menu {
   flex-basis: 55%;
   margin-top: 10%;
@@ -511,6 +515,7 @@ ul {
   background-color: #f2f2f2;
   border-radius: 100px;
   padding: 10px 32px 10px;
+  padding-right: 50px;
   line-height: 20px;
   font-size: 12px;
   margin: 5%;
@@ -661,13 +666,21 @@ ul {
   color: #333333;
 }
 
-.head-article-1 a:hover {
-  color: var(--primary-color-dark);
-  transition: transform 0.8s ease;
+.head-article-1 p {
+  font-size: 14px;
+  font-weight: 400;
 }
 
-.head-article-1 p,
-span {
+.head-article-1 a:hover {
+  cursor: pointer;
+}
+
+/* .author-article-head:hover {
+  color: var(--primary-color-dark);
+  transition: transform 0.8s ease;
+} */
+
+p.head-article-1 {
   font-size: 14px;
   color: #333333;
   font-weight: 300;
@@ -722,11 +735,10 @@ span {
 }
 
 .text-text {
-  max-width: 65%;
+  max-width: 55%;
   font-size: 15px;
   line-height: 140%;
-  margin-right: 2%;
-  padding-right: 20px;
+  padding-right: 3em;
   color: #333333;
 }
 
@@ -738,6 +750,12 @@ span {
   color: #333333;
   text-decoration: none;
   box-shadow: inset 0 -1px var(--primary-color-dark);
+}
+
+.hero-foto {
+  margin-top: -7%;
+  width: 25%;
+  height: 25%;
 }
 
 .accordion-item {
@@ -850,6 +868,7 @@ span {
 
   transition: background 0.3s ease, color 0.3s ease;
 }
+
 .btn-text {
   margin-left: var(--left-margin);
   margin-right: 10%;
@@ -944,34 +963,38 @@ h4 {
   transition: opacity 0.4s ease-in-out, max-height 0.6s ease-in-out; /* Плавные переходы для opacity и max-height */
 }
 
-.case-text-showed p {
+.case-text-showed p,
+li {
   font-size: 14px;
   color: #333333;
   font-weight: 300;
 }
 
 .case-text-showed.active {
-  max-height: 1000px;
+  max-height: 100%;
   opacity: 1;
 }
 
 .head-article-1.ux-cases p,
 li {
+  line-height: 1.4;
+  font-size: 14px;
+}
+.head-article-1.ux-cases {
   width: 75%;
 }
 
 .case-text-showed img {
-  width: 20%;
+  width: 50%;
   border-style: solid;
   border-width: 0.3px;
   border-color: silver;
 }
 
-.ux-cases ul {
-  line-height: 1.4;
-  font-size: 14px;
-}
-
 span.case-bold {
   font-weight: 600;
+}
+
+.lost-page {
+  margin-top: 0;
 }

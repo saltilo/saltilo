@@ -146,8 +146,15 @@
   }
 
   .text-text {
+    max-width: 75%;
     font-size: 15px;
     padding-right: 0;
+  }
+
+  .hero-foto {
+    margin-top: 0;
+    width: 40%;
+    height: 40%;
   }
 
   .head-h3-row {
