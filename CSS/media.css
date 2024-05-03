@@ -336,7 +336,8 @@
     display: block;
   }
 
-  .case-read-show-btn {
+  .case-read-show-btn,
+  .case-read-more-hidden-btn {
     font-size: 1.7em;
   }
 
