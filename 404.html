@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var links = document.querySelectorAll('a');
+
+      for (var i = 0; i < links.length; i++) {
+        var link = links[i];
+        var href = link.getAttribute('href');
+
+        if (href.startsWith("http") || href.startsWith("www")) {
+          // Внешняя ссылка
+          link.setAttribute('target', '_blank');
+        } else {
+          // Внутренняя ссылка
+          link.setAttribute('target', '');
+        }
+      }
+    });
+  </script>
+
+
+  <title>Кристина Тульцева</title>
+  <link rel="stylesheet" href="./CSS/main.css">
+  <link rel="stylesheet" href="./CSS/media.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="title" content="Кристина Тульцева: UX-writer, HTML-верстальщик, автор статей про IT" />
+  <meta name="description"
+    content="Заказать HTML-верстку сайта, статью, UX-тексты для сайта или приложения. Напишите и узнайте стоимость работ по вашему проекту" />
+
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://saltilo.github.io/saltilo/author.html" />
+  <meta property="og:title" content="Кристина Тульцева: UX-writer, HTML-верстальщик, автор статей про IT" />
+  <meta property="og:description"
+    content="Заказать HTML-верстку сайта, статью, UX-тексты для сайта или приложения. Напишите и узнайте стоимость работ по вашему проекту" />
+  <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://saltilo.github.io/saltilo/index.html" />
+  <meta property="twitter:title" content="Кристина Тульцева: UX-writer, HTML-верстальщик, автор статей про IT" />
+  <meta property="twitter:description"
+    content="Заказать HTML-верстку сайта, статью, UX-тексты для сайта или приложения. Напишите и узнайте стоимость работ по вашему проекту" />
+  <meta property="twitter:image" content="./Img/site-og.png" />
+</head>
+
+
+<body>
+
+  <header>
+    <nav class="header-module-pgs">
+      <a class="name-logo" href="about.html">Кристина Тульцева</a>
+      <div class="links-nav">
+        <a class=scroll-to-portfolio href="index.html#portfolio">Портфолио</a>
+        <a href="mailto:k.tultseva@gmail.com"><img src="./Img/header/email.png" alt="email"></a>
+
+      </div>
+
+      <div class="burger-nav">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+
+        <ul class="menu-box">
+          <p class="head-burger"><a href="index.html">Кристина Тульцева</a></p>
+          <li><a class="menu__item" href="about.html">🧑‍💻 Обо мне</a></li>
+          <p class="head-burger">Портфолио</p>
+          <li><a class="menu__item" href="author.html">📑 Автор
+              статей</a></li>
+          <li><a class="menu__item" href="editor.html">📙 Редактор</a>
+          </li>
+          <li><a class="menu__item" href="htmldev.html">💻 Веб-разработчик</a>
+          </li>
+          <li><a class="menu__item" href="uxwriting.html">📱 UX-writer</a></li>
+          <div class="footer-icons-row-menu">
+            <a href="https://vk.me/chris_tau">
+              <img src="./Img/icons/vk-25.svg" alt="VK">
+            </a>
+
+            <a href="https://habr.com/ru/users/k_tultseva/">
+              <img src="./Img/icons/habr.svg" alt="Habr">
+            </a>
+
+            <a href="https://www.linkedin.com/in/tultseva/">
+              <img src="./Img/icons/linkedin.svg" alt="linkedin">
+            </a>
+
+            <a href="https://github.com/saltilo">
+              <img src="./Img/icons/github.svg" alt="github">
+            </a>
+
+          </div>
+
+        </ul>
+
+      </div>
+    </nav>
+
+
+
+
+  </header>
+  <main class="head-h2-row page-about">
+    <h1 class="header-h2-abt">Ошибка 404</h1>
+
+    <article class="head-h2-description">
+      <img src="./Img/404.png" width="20%" height="20%">
+    </article>
+    <h3>Такой страницы нет. А вот портфолио есть!👇</h3>
+  </main>
+
+  <section class="end lost-page">
+    <a class="btn-port" href="index.html#portfolio">
+      <div class="btn-abt">
+        <span class="btn-text">
+          Портфолио
+        </span>
+        <span class="btn-text">→</span>
+      </div>
+    </a>
+    <a class="btn-port" href="index.html">
+      <div class="btn-abt">
+
+        <span class="btn-text">
+          На главную
+        </span>
+        <span class="btn-text">→</span>
+
+      </div>
+    </a>
+
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-row">
+        <div class="footer-copyright">
+          <div class="footer-copyright-name">
+            © Кристина Тульцева
+          </div>
+          <p>Тексты, сайты и UX</p>
+        </div>
+        <div class="footer-icons">
+          <div class="footer-icons-row">
+            <a href="https://vk.me/chris_tau">
+              <img src="./Img/icons/vk-25.svg" alt="VK icon">
+            </a>
+
+            <a href="https://habr.com/ru/users/k_tultseva/">
+              <img src="./Img/icons/habr.svg" alt="Habr icon">
+            </a>
+
+            <a href="https://www.linkedin.com/in/tultseva/">
+              <img src="./Img/icons/linkedin.svg" alt="linkedin icon">
+            </a>
+
+            <a href="https://github.com/saltilo">
+              <img src="./Img/icons/github.svg" alt="github icon">
+            </a>
+
+          </div>
+        </div>
+        <address class="footer-contact">
+          <a href="mailto:k.tultseva@gmail.com" class="footer-button">Написать письмо</a>
+        </address>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

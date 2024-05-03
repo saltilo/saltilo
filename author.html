@@ -24,15 +24,15 @@
   </script>
 
 
-<title>Автор статей: Кристина Тульцева</title>
+  <title>Автор статей: Кристина Тульцева</title>
   <link rel="stylesheet" href="./CSS/main.css">
-<link rel="stylesheet" href="./CSS/media.css">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./CSS/media.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <meta name="title" content="Кристина Тульцева: UX-writer, HTML-верстальщик, автор статей про IT" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="title" content="Кристина Тульцева: UX-writer, HTML-верстальщик, автор статей про IT" />
   <meta name="description"
     content="Заказать HTML-верстку сайта, статью, UX-тексты для сайта или приложения. Напишите и узнайте стоимость работ по вашему проекту" />
 
@@ -79,7 +79,7 @@
               статей</a></li>
           <li><a class="menu__item" href="editor.html">📙 Редактор</a>
           </li>
-          <li><a class="menu__item" href="htmldev.html">💻 Верстальщик</a>
+          <li><a class="menu__item" href="htmldev.html">💻 Веб-разработчик</a>
           </li>
           <li><a class="menu__item" href="uxwriting.html">📱 UX-writer</a></li>
           <div class="footer-icons-row-menu">
@@ -110,11 +110,11 @@
 
 
   </header>
-  <article class="head-h2-row">
-    <h2 class="header-h2-abt">Автор статей</h2>
+  <section class="head-h2-row">
+    <h1 class="header-h2-abt">Автор статей</h1>
 
-    <div class="head-h2-description">
-      <section class="text-text">
+    <article class="head-h2-description">
+      <div class="text-text">
         <p>Пишу статьи на <a href="https://habr.com/">Habr.com</a> и с недавнего времени в журнал <a
             href="https://thecode.media/">«Код»</a>.</p>
 
@@ -127,22 +127,14 @@
           <a href="mailto:k.tultseva@gmail.com">пишите</a>, договоримся!
         </p>
 
-      </section>
-      <!--          <div class="animation">
-            <img src="./Img/author_anim.gif" alt="">
-          </div> -->
+      </div>
+      <img src="./Img/author/author-me.png" class="hero-foto">
+    </article>
+
+  </section>
 
 
-    </div>
-
-  </article>
-
-
-
-
-  <section class="content">
-
-
+  <main class="content">
     <section class="article-1">
 
       <h3 class="header-h3" id="Code">Статьи для журнала «Код»</h3>
@@ -151,9 +143,11 @@
 
       <div class="row-article-1">
         <div class="head-article-1">
-          <a href="https://thecode.media/var-let-const/">Ликбез: чем различаются var, let и const в JavaScript
+          <a href="https://thecode.media/var-let-const/">Ликбез: чем различаются var, let и
+            const в JavaScript
 
-            <p>В JavaScript это можно сделать с помощью трёх ключевых слов: var, const и let Разберёмся, чем они
+            <p>В JavaScript это можно сделать с помощью трёх ключевых слов: <code>var</code>, <code>let</code> и
+              <code>const</code>. Разберёмся, чем они
               различаются и в каких случаях что нужно использовать.
             </p>
             <p class="stats">
@@ -169,10 +163,12 @@
 
       <div class="row-article-1">
         <div class="head-article-1">
-          <a href="https://thecode.media/this/">Что такое this в JavaScript: что означает это слово в зависимости от
-            контекста
+          <a href="https://thecode.media/this/"><span class="author-article-head">Что такое this в JavaScript: что
+              означает это слово в зависимости от
+              контекста</span>
 
-            <p>Ключевое слово this — одна из особенностей JavaScript. Изначально оно пришло из Java, чтобы помочь в
+            <p>Ключевое слово <code>this</code> — одна из особенностей JavaScript. Изначально оно пришло из Java, чтобы
+              помочь в
               реализации объектно-ориентированного программирования.
             </p>
             <p class="stats">
@@ -187,7 +183,8 @@
 
 
 
-      <a href="thecode.html" id="article-link" class="btn-text-code">Посмотреть все статьи для журнала «Код» →</span></a>
+      <a href="thecode.html" id="article-link" class="btn-text-code">Посмотреть все статьи для журнала
+        «Код» →</span></a>
 
 
 
@@ -578,11 +575,13 @@
 
       <h3 class="header-h3" id="popular">Научно-популярное</h3>
 
-       <div class="row-article-1">
+      <div class="row-article-1">
         <div class="head-article-1">
-          <a href="https://habr.com/ru/companies/first/articles/803897/">Миф о «Парке Юрского периода»: почему воскрешение динозавров остаётся недостижимой мечтой
+          <a href="https://habr.com/ru/companies/first/articles/803897/">Миф о «Парке Юрского периода»: почему
+            воскрешение динозавров остаётся недостижимой мечтой
 
-            <p>Рассмотрим исследования, связанные с сохранением ДНК динозавров и их и белков в окаменелостях, и объясним, почему полное восстановление вымерших видов остается маловероятным. </p>
+            <p>Рассмотрим исследования, связанные с сохранением ДНК динозавров и их и белков в окаменелостях, и
+              объясним, почему полное восстановление вымерших видов остается маловероятным. </p>
             <p class="stats">
               29 март, 2024 · <img class="stats" src="./Img/author/eye.png" alt="views"> 5.9K · ➕23
             </p>
@@ -889,7 +888,7 @@
         <!-- <div class="menu-pnt"><a href="author.html#commercial">Маркетинг</a></div> -->
       </div>
     </aside>
-  </section>
+  </main>
 
 
 
