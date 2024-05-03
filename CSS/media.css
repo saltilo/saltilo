@@ -155,8 +155,11 @@
   }
 
   .btn-abt {
-    font-size: 35px;
     padding: 36px 22px 44px;
+  }
+
+  .btn-text {
+    font-size: 35px;
   }
 
   .head-h2-description {
@@ -286,8 +289,11 @@
   }
 
   .btn-abt {
-    font-size: 25px;
     padding: 26px 20px 30px;
+  }
+
+  .btn-text {
+    font-size: 25px;
   }
 
   .head-h2-row {
