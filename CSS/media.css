@@ -211,10 +211,6 @@
 }
 
 @media (max-width: 900px) {
-  .animation {
-    display: none;
-  }
-
   .artc-menu {
     display: none;
   }
@@ -327,6 +323,7 @@
     font-weight: 500;
     font-size: 8px;
   }
+
   .head-article-1 p.stats {
     display: block;
     font-size: 8px;
@@ -335,7 +332,15 @@
     display: none;
   }
 
-  .btn-text-code {
+  .head-article-1.ux-cases p {
+    display: block;
+  }
+
+  .case-read-show-btn {
+    font-size: 1.7em;
+  }
+
+  .head-article-1 .btn-text-code {
     font-size: 0.8em;
   }
 
