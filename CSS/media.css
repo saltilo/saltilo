@@ -235,6 +235,11 @@
     max-width: 85%;
   }
 
+  .hero-foto {
+    width: 70%;
+    height: 70%;
+  }
+
   .head-article-1 {
     font-weight: 500;
     font-size: 12px;
@@ -269,6 +274,11 @@
 @media (max-width: 470px) {
   .name-logo {
     display: none;
+  }
+
+  .hero-foto {
+    width: 90%;
+    height: 90%;
   }
 
   .name-mobile {
