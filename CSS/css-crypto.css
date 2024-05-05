@@ -25,6 +25,10 @@ h2 {
   font-weight: 800;
 }
 
+a:focus {
+  outline: 1px solid var(--hover-color);
+}
+
 .header-module {
   display: flex;
   flex-direction: row;
@@ -174,6 +178,11 @@ li {
   background-color: var(--white);
 }
 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:focus-within .dropdown-content,
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -649,6 +658,10 @@ li {
   text-align: left;
 }
 
+.accordion-btn:focus {
+  outline: 1px solid var(--hover-color);
+}
+
 .accordion-btn::before {
   content: url("../Img/cryptomax/open.svg");
   font-weight: 200;
@@ -680,9 +693,6 @@ li {
   font-size: var(--regular-text);
   line-height: 1.5;
   flex-grow: 0;
-}
-
-.accordion-content a {
 }
 
 .footer {
