@@ -70,6 +70,10 @@ ul {
   color: var(--primary-color-bright);
 }
 
+.header-module a:focus {
+  outline: 1px solid var(--primary-color-dark);
+}
+
 .name-logo {
   margin-left: var(--left-margin);
   text-decoration: none;
@@ -197,6 +201,10 @@ ul {
   background-color: #ffcc00;
 }
 
+.menu__item:focus {
+  outline: 1px solid var(--primary-color-dark);
+}
+
 #menu__toggle:checked ~ .menu__btn > span {
   transform: rotate(45deg);
 }
@@ -260,6 +268,10 @@ ul {
   border: 3px solid #ffcc00;
 }
 
+.header-button:focus {
+  outline: 1px solid var(--primary-color-dark);
+}
+
 .portfolio {
   padding-top: 80px;
   padding-bottom: 115px;
@@ -293,6 +305,11 @@ ul {
   box-shadow: 0 0 40px rgba(2, 59, 109, 0.1);
   transform: translateY(-5px);
 }
+
+.card:focus {
+  outline: 1px solid var(--primary-color-dark);
+}
+
 .web-project {
   max-width: 70%;
   margin-bottom: 8%;
@@ -312,6 +329,10 @@ ul {
 
 .card-link:hover {
   color: var(--primary-color-dark);
+}
+
+.card-link:focus {
+  outline: 2px solid var(--primary-color-dark);
 }
 
 .card:last-child,
@@ -416,6 +437,10 @@ ul {
   color: #cfcfcf;
 }
 
+.footer-button:focus {
+  outline: 1px solid var(--primary-color-dark);
+}
+
 .footer-contact p {
   margin: 15px 0;
   font-size: 14px;
@@ -460,6 +485,10 @@ ul {
 .project-btn-back:hover {
   background-color: var(--primary-color-dark);
   color: white;
+}
+
+.project-btn-back:focus {
+  outline: 1px solid var(--primary-color-dark);
 }
 
 .head-h2-row {
@@ -535,9 +564,17 @@ ul {
   transition: background-color 0.5s ease;
 }
 
+.menu-pnt:focus {
+  outline: 1px solid var(--primary-color-dark);
+}
+
 .menu-pnt a {
   text-decoration: none;
   color: #525252;
+}
+
+.menu-pnt a:focus {
+  outline: 1px solid var(--primary-color-dark);
 }
 
 .animation img {
@@ -647,6 +684,10 @@ ul {
   transition: color 0.5s ease, background-color 0.5s ease;
 }
 
+.web-project-button:focus {
+  outline: 1px solid var(--primary-color-dark);
+}
+
 .row-article-1 {
   display: flex;
   justify-content: flex-end;
@@ -739,6 +780,10 @@ p.head-article-1 {
   color: #5a5a5a;
 }
 
+.header-module-pgs a:focus {
+  outline: 1px solid var(--primary-color-dark);
+}
+
 .text-text {
   max-width: 55%;
   font-size: 15px;
@@ -789,6 +834,10 @@ p.head-article-1 {
   background-color: var(--primary-color-bright);
   border-radius: 20px;
   transition: background-color 0.5s ease;
+}
+
+.accordion-title:focus {
+  outline: 1px solid var(--primary-color-dark);
 }
 
 .accordion-title::after {
@@ -886,6 +935,10 @@ p.head-article-1 {
   color: #333333;
 }
 
+.btn-abt:focus {
+  outline: 2px solid var(--primary-color-dark);
+}
+
 .btn-text-code {
   text-decoration: none;
   color: #333333;
@@ -896,6 +949,10 @@ p.head-article-1 {
 
 .btn-text-code:hover {
   color: var(--primary-color-dark);
+}
+
+.btn-text-code:focus {
+  outline: 1px solid var(--primary-color-dark);
 }
 
 /* Редактура */
@@ -921,6 +978,9 @@ p.head-article-1 {
   box-shadow: 0 0 40px rgba(2, 59, 109, 0.1);
   transform: translateY(-5px);
 }
+.card-book:focus {
+  outline: 1px solid var(--primary-color-dark);
+}
 
 .card-book a {
   text-decoration: none;
@@ -929,6 +989,10 @@ p.head-article-1 {
 
 .card-book a:hover {
   color: #e48d03;
+}
+
+.card-book a:focus {
+  outline: 1px solid var(--primary-color-dark);
 }
 
 .card-book-link {
