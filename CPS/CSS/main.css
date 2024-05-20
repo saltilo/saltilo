@@ -35,7 +35,7 @@ body {
 }
 
 .header__logo::after {
-  content: url("./Img/icons/divider.svg");
+  content: url("/Img/icons/divider.svg");
   position: absolute;
   margin-left: 1em;
   top: 20%;
@@ -114,7 +114,7 @@ body {
 }
 
 .main__h1::before {
-  content: url("./Img/icons/highlight.svg");
+  content: url("/Img/icons/highlight.svg");
   position: absolute;
   top: 0;
   left: 2px;
