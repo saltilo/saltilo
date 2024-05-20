@@ -125,15 +125,13 @@ body {
 .slide-items {
   display: flex;
   flex-direction: row;
-  overflow: auto;
+  white-space: nowrap;
 
-  text-decoration: none;
-  list-style-type: none;
-
-  overflow: visible;
-
+  position: relative;
+  padding: 10px 20px;
   margin-bottom: 1.2em;
-  padding-left: 1em;
+
+  overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -145,7 +143,9 @@ body {
 .slide__item,
 .slide__link {
   color: inherit;
-  display: inline-block;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: visible;
 }
 
 .slide__link:focus,
@@ -155,7 +155,7 @@ body {
   background-color: #ffffff;
   outline: 2px solid #b8ffec;
   border-radius: 6px;
-  outline-offset: 0;
+  outline-offset: 2px;
 }
 
 .slide__link {
