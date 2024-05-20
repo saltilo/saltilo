@@ -35,7 +35,7 @@ body {
 }
 
 .header__logo::after {
-  content: url("/Img/icons/divider.svg");
+  content: url("./Img/icons/divider.svg");
   position: absolute;
   margin-left: 1em;
   top: 20%;
@@ -197,7 +197,7 @@ body {
   display: inline-block;
   width: 16px;
   height: 16px;
-  background: url("/Img/icons/arrow_down.svg") no-repeat;
+  background: url("./Img/icons/arrow_down.svg") no-repeat;
   margin-right: 8px;
   vertical-align: middle;
 }
