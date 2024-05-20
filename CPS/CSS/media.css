@@ -9,7 +9,7 @@
   }
 
   .header__burger::after {
-    content: url("/Img/icons/divider.svg");
+    content: url("./Img/icons/divider.svg");
     position: absolute;
     margin-left: 6em;
   }
@@ -21,7 +21,7 @@
   }
 
   .header__link--profile::after {
-    content: url("/Img/icons/divider.svg");
+    content: url("./Img/icons/divider.svg");
     position: absolute;
     margin-left: 4em;
     top: 4%;
