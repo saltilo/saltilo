@@ -1,0 +1,235 @@
+body {
+  font-family: "TT Lakes";
+  background-color: #f8f8f8;
+  margin: 0;
+}
+
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #b8ffec;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__mobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.8em;
+  padding: 1em;
+}
+
+.header__burger {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header__burger:focus .header__logo:focus {
+  outline: 2px solid #b8ffec;
+}
+
+.header__logo {
+  position: relative;
+}
+
+.header__logo::after {
+  content: url("/Img/icons/divider.svg");
+  position: absolute;
+  margin-left: 1em;
+  top: 20%;
+}
+
+.header__actions {
+  display: flex;
+  gap: 0.8em;
+  padding: 1em;
+}
+
+.header__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #1b1c21;
+}
+
+.header__icon {
+  width: 40px;
+  height: 40px;
+  background-color: #ff3e79;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.header__icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.header__text {
+  font-size: 16px;
+  text-align: center;
+  display: none;
+  padding-right: 0.5em;
+}
+
+.header__icon:hover,
+.header__burger:hover {
+  background-color: #ff1058;
+}
+
+.header__link:hover .header__text {
+  color: #ff1058;
+  transition: color 0.3s;
+}
+
+.header__link:focus {
+  outline: 2px solid #b8ffec;
+}
+
+.header__link--profile,
+.header__link--call,
+.header__link--chat {
+  display: none;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.main__h1 {
+  color: #1b1c21;
+  font-size: 28px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding-left: 20px;
+}
+
+.main__h1::before {
+  content: url("./Img/icons/highlight.svg");
+  position: absolute;
+  top: 0;
+  left: 2px;
+  transform: translateY(10%);
+  z-index: 2;
+}
+
+.slide-items {
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  text-decoration: none;
+  list-style-type: none;
+  margin-bottom: 1.2em;
+  padding-left: 1em;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.slide-items::-webkit-scrollbar {
+  display: none;
+}
+
+.slide__item,
+.slide__link {
+  color: inherit;
+  display: inline-block;
+}
+
+.slide__link:focus,
+.slide__link:focus-visible,
+.slide__link:active,
+.slide__link:hover {
+  background-color: #ffffff;
+  outline: 2px solid #b8ffec;
+  border-radius: 6px;
+  outline-offset: 0;
+}
+
+.slide__link {
+  text-decoration: none;
+  color: #7e7e82;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  padding: 10px 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content__text {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.2em 0.8em;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+}
+
+.content__read-more-checker {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.content__paragraph--2 {
+  display: none;
+}
+
+.content__read-more-checker:checked ~ .content__paragraph--2 {
+  display: inline;
+}
+
+.content__read-more-btn:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/Img/icons/arrow_down.svg") no-repeat;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.content__read-more-btn:after {
+  content: "Читать далее";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.content__read-more-checker:checked ~ .content__read-more-btn:after {
+  content: "Свернуть";
+}
+
+.content__read-more-checker:checked ~ .content__read-more-btn:before {
+  transform: rotate(180deg) scaleX(-1);
+  margin-top: -2%;
+}
+
+.content__read-more-btn {
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 0.5em;
+  margin-bottom: 1em;
+}
+
+.content p:first-child {
+  margin-top: 0;
+}
+
+.content__image {
+  display: block;
+  width: 100vw;
+}
