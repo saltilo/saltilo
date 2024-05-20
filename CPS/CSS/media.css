@@ -39,11 +39,15 @@
     flex-direction: row;
   }
 
-  .content__text {
-    width: 100%;
+  .content__text,
+  .content__image {
+    flex: 1 1 50%;
+    box-sizing: border-box;
+    padding: 10px;
   }
 
   .content__image img {
+    display: block;
     width: 100%;
     height: auto;
   }
@@ -80,7 +84,6 @@
   }
 
   .slide-items {
-    overflow: visible;
     display: flex;
     flex-wrap: wrap;
   }
@@ -98,5 +101,9 @@
   .content__read-more-btn {
     position: absolute;
     transform: translate(5px, 180px);
+  }
+
+  .content__read-more-checker:checked ~ .content__read-more-btn:before {
+    margin-top: -10%;
   }
 }

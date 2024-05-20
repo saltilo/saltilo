@@ -126,8 +126,12 @@ body {
   display: flex;
   flex-direction: row;
   overflow: auto;
+
   text-decoration: none;
   list-style-type: none;
+
+  overflow: visible;
+
   margin-bottom: 1.2em;
   padding-left: 1em;
   scrollbar-width: none;
@@ -229,7 +233,8 @@ body {
   margin-top: 0;
 }
 
-.content__image {
+.content__image img {
   display: block;
   width: 100vw;
+  height: auto;
 }
