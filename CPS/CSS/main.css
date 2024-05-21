@@ -51,6 +51,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: #1b1c21;
 }
@@ -59,8 +60,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  margin-bottom: 10px;
 
   width: 40px;
   height: 40px;
@@ -95,7 +94,6 @@ body {
 .header__link:hover .header__text {
   color: black;
 }
-
 
 .header__text:hover {
   color: black;
