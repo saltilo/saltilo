@@ -96,9 +96,6 @@ body {
   color: black;
 }
 
-.header__link:hover .header__icon img {
-  background-color: #ff1058;
-}
 
 .header__text:hover {
   color: black;
