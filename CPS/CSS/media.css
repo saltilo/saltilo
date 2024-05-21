@@ -39,7 +39,7 @@
   .content__image {
     flex: 1 1 50%;
     box-sizing: border-box;
-    padding: 10px 10px 10px 20px;
+    padding: 10px 20px;
   }
 
   .content__image img {
