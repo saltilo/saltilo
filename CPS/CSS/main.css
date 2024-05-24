@@ -1,7 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "TT Lakes";
   background-color: #f8f8f8;
   margin: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+button:focus {
+  outline: 2px solid #b8ffec;
 }
 
 .header {
