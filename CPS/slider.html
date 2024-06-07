@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <title>Ремонт техники различных брендов</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./CSS/main.css">
+  <link rel="stylesheet" href="./CSS/media.css">
+  <link rel="stylesheet" href="./CSS/brands.css">
+  <link rel="stylesheet" href="./CSS/brands-media.css">
+  <link rel="stylesheet" href="./fonts/font-stylesheet.css">
+
+</head>
+
+<body>
+  <section class="brands">
+    <header class="brands__title">
+      <h2>Ремонт техники различных брендов</h2>
+    </header>
+    <div class="swiper">
+      <div class="brands__list swiper-wrapper">
+        <div class="brands__card swiper-slide">
+          <a href="#" class="brands__link">
+            <img src="./Img/brands/samsung-logo.png" alt="Samsung" class="brands__logo">
+            <div class="brands__circle">
+              <div class="brands__arrow"></div>
+            </div>
+          </a>
+        </div>
+        <div class="brands__card swiper-slide">
+          <a href="#" class="brands__link">
+            <img src="./Img/brands/acer-logo.png" alt="Bosch" class="brands__logo">
+            <div href="#" class="brands__circle">
+              <div class="brands__arrow"></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="brands__card swiper-slide">
+          <a href="#" class="brands__link">
+            <img src="./Img/brands/apple-logo.png" alt="Apple" class="brands__logo">
+            <div class="brands__circle">
+              <div class="brands__arrow"></div>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="brands__card swiper-slide">
+          <a href="#" class="brands__link">
+            <img src="./Img/brands/lenovo-logo.png" alt="Lenovo" class="brands__logo">
+            <div class="brands__circle">
+              <div class="brands__arrow"></div>
+            </div>
+          </a>
+        </div>
+        <div class="brands__card swiper-slide">
+          <a href="#" class="brands__link">
+            <img src="./Img/brands/bosch-logo.png" alt="Bosch" class="brands__logo">
+            <div href="#" class="brands__circle">
+              <div class="brands__arrow"></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="brands__card swiper-slide">
+          <a href="#" class="brands__link">
+            <img src="./Img/brands/asus-logo.png" alt="Bosch" class="brands__logo">
+            <div class="brands__circle">
+              <div class="brands__arrow"></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="brands__card swiper-slide">
+          <a href="#" class="brands__link">
+            <img src="./Img/brands/dell-logo.png" alt="Bosch" class="brands__logo">
+            <div class="brands__circle">
+              <div class="brands__arrow"></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="brands__card swiper-slide">
+          <img src="./Img/brands/sharp-logo.png" alt="Bosch" class="brands__logo">
+          <div class="brands__circle">
+            <div class="brands__arrow"></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="brands__card swiper-slide">
+          <a href="#" class="brands__link">
+            <img src="./Img/brands/hp-logo.png" alt="Bosch" class="brands__logo">
+            <div class="brands__circle">
+              <div class="brands__arrow"></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="brands__card swiper-slide">
+          <a href="#" class="brands__link">
+            <img src="./Img/brands/panasonic-logo.png" alt="Bosch" class="brands__logo">
+            <div class="brands__circle">
+              <div class="brands__arrow"></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="brands__card swiper-slide">
+          <a href="#" class="brands__link">
+            <img src="./Img/brands/lg-logo.png" alt="Bosch" class="brands__logo">
+            <div class="brands__circle">
+              <div class="brands__arrow"></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="brands__card swiper-slide">
+          <a href="#" class="brands__link">
+            <img src="./Img/brands/sony-logo.png" alt="Bosch" class="brands__logo">
+            <div class="brands__circle">
+              <div class="brands__arrow"></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+      <div class="brands__pagination swiper-pagination"></div>
+
+      <button class="shw-more">Показать все</button>
+      <!--
+    https://www.youtube.com/watch?v=kpL31-6GVu8
+-->
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    let swiperInstance;
+
+    function handleSwiper() {
+      if (window.innerWidth < 768) {
+        if (!swiperInstance) {
+          swiperInstance = new Swiper('.swiper', {
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            spaceBetween: 20,
+            breakpoints: {
+
+              220: {
+                slidesPerView: 1.3,
+                spaceBetween: 20
+              },
+
+              400: {
+                slidesPerView: 2,
+                spaceBetween: 20
+              },
+
+              450: {
+                slidesPerView: 2.2,
+                spaceBetween: 20
+              },
+              640: {
+                slidesPerView: 3,
+                spaceBetween: 20
+              }
+            }
+          });
+        }
+      } else if (swiperInstance) {
+        swiperInstance.destroy(false, true);
+        swiperInstance = null;
+      }
+    }
+
+    handleSwiper();
+    window.addEventListener('resize', handleSwiper);
+
+  </script>
+</body>
+
+</html>
