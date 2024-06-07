@@ -1,0 +1,123 @@
+.brands {
+  justify-items: flex-start;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.brands__title {
+  background: linear-gradient(90deg, #f8f8f8 1.39%, #ffffff 100%);
+  padding: 1em;
+}
+.brands__title h2 {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.24px;
+  text-align: left;
+  font-weight: 400;
+  color: #7e7e82;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.brands__pagination {
+  position: relative;
+}
+
+.swiper-pagination-bullet {
+  background: #b5b6bc;
+  width: 12px;
+  height: 12px;
+}
+
+.brands__list {
+  padding: 1em;
+}
+
+.brands__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 230px;
+  height: 72px;
+  background-color: #ffffff;
+  padding: 10px;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: 0.2s all;
+  cursor: pointer;
+}
+
+.brands__card:hover {
+  box-shadow: 0 2px 10px rgba(63, 63, 63, 0.15);
+}
+
+.brands__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-decoration: none;
+}
+
+.brands__logo {
+  max-width: 100px;
+  max-height: 50px;
+}
+
+.brands__card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.brands__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ff3e79;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s all ease-in;
+  cursor: pointer;
+}
+
+.brands__arrow {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #ff3e79;
+  border-bottom: 2px solid #ff3e79;
+  border-radius: 1px;
+  transform: rotate(-45deg);
+  transition: 0.2s all ease-in;
+}
+
+.brands__circle:hover {
+  border: 2px solid #ff1058;
+}
+
+.brands__circle:hover .brands__arrow {
+  border-color: #ff1058;
+}
+
+.shw-more {
+  display: none;
+  background: none;
+  border: none;
+  padding-left: 1em;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-family: "TT Lakes";
+}
+
+.shw-more::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("../Img/icons/arrow_down.svg") no-repeat;
+  margin-right: 8px;
+  vertical-align: middle;
+}

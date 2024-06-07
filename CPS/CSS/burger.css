@@ -1,12 +1,21 @@
 .header__menu {
-  display: flex;
+  position: fixed;
+  top: 0;
   flex-direction: column;
   justify-content: space-between;
   background-color: #ffffff;
   width: 320px;
+  left: -320px;
   height: auto;
   padding: 1em;
 
+  overflow-y: auto;
+
+  z-index: 1000;
+}
+
+.header__menu.active {
+  left: 0;
   box-shadow: 10px 0px 52px 0px #0e185033;
 }
 

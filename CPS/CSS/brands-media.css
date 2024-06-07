@@ -1,0 +1,16 @@
+@media (min-width: 768px) {
+  .brands__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 1em;
+  }
+
+  .brands__pagination {
+    display: none;
+  }
+
+  .shw-more {
+    display: block;
+  }
+}
