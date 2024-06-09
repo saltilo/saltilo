@@ -9,10 +9,10 @@ document.getElementById("toggleText").addEventListener("click", function () {
 
   if (textContainer.classList.contains("content__text--show-more")) {
     button.innerHTML =
-      '<img src="../Img/icons/arrow_down.svg" alt="Arrow"> Скрыть';
+      '<img src="./Img/icons/arrow_down.svg" alt="Arrow"> Скрыть';
   } else {
     button.innerHTML =
-      '<img src="../Img/icons/arrow_down.svg" alt="Arrow"> Показать всё';
+      '<img src="./Img/icons/arrow_down.svg" alt="Arrow"> Показать всё';
   }
 });
 
@@ -26,10 +26,10 @@ document.getElementById("toggleBrands").addEventListener("click", function () {
 
   if (brandsContainer.classList.contains("shw-more")) {
     button.innerHTML =
-      '<img src="../Img/icons/arrow_down.svg" alt="Arrow"> Скрыть';
+      '<img src="./Img/icons/arrow_down.svg" alt="Arrow"> Скрыть';
   } else {
     button.innerHTML =
-      '<img src="../Img/icons/arrow_down.svg" alt="Arrow"> Показать всё';
+      '<img src="./Img/icons/arrow_down.svg" alt="Arrow"> Показать всё';
   }
 });
 
