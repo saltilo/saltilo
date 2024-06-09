@@ -15,13 +15,69 @@
 </head>
 
 <body>
+
   <header class="header">
     <nav class="header__mobile">
       <button class="burger-btn header__icon">
         <img src="./Img/icons/stripes.svg" alt="бургер меню">
       </button>
       <a href="#" class="header__logo"><img src="./Img/icons/logo.svg" alt="Логотип"></a>
+      <div class="header__menu">
 
+        <header class="header__menu-header">
+          <button class="burger-btn burger-btn-close header__icon">
+            <img src="./Img/icons/close-burger.svg" alt="закрыть бургер меню">
+          </button>
+          <a href="#" class="header__logo header__logo--mobile"><img src="./Img/icons/logo.svg" alt="Логотип"></a>
+
+          <a href="#" class="header__link header__icon--burger-search">
+            <div class="header__icon ">
+              <img src="./Img/icons/search-burger.svg" alt="Иконка поиска">
+            </div>
+          </a>
+
+        </header>
+        <ul class="header__menu-list">
+          <li class="header__menu-item"><a href="#" class="header__menu-link">Услуги и сервисы</a></li>
+          <li class="header__menu-item"><a href="#" class="header__menu-link">Корпоративным клиентам</a></li>
+          <li class="header__menu-item"><a href="#" class="header__menu-link">Продавцам техники</a></li>
+          <li class="header__menu-item"><a href="#" class="header__menu-link">Партнерам</a></li>
+          <li class="header__menu-item"><a href="#" class="header__menu-link">Производителям</a></li>
+          <li class="header__menu-item"><a href="#" class="header__menu-link">Наши сервисные центры</a></li>
+          <li class="header__menu-item"><a href="#" class="header__menu-link">Контакты</a></li>
+        </ul>
+        <footer class="header__menu-footer">
+          <div class="header__menu-icons">
+            <a href="#" class="header__link">
+              <div class="header__icon">
+                <img src="./Img/icons/call.svg" alt="Иконка телефона">
+              </div>
+            </a>
+            <a href="#" class="header__link">
+              <div class="header__icon">
+                <img src="./Img/icons/chat.svg" alt="Иконка чата">
+              </div>
+            </a>
+
+
+            <a href="#" class="header__link">
+              <div class="header__icon">
+                <img src="./Img/icons/profile.svg" alt="Иконка профиля">
+              </div>
+            </a>
+          </div>
+          <div class="header__menu-contact">
+            <a href="mailto:mail@cps.com" class="header__menu-email">mail@cps.com</a>
+            <a href="tel:88008908900" class="header__menu-phone">8 800 890 8900</a>
+          </div>
+
+          <div class="header__menu-languages">
+            <a href="#" class="header__menu-language">RU</a>
+            <a href="#" class="header__menu-language">EN</a>
+            <a href="#" class="header__menu-language">CH</a>
+          </div>
+        </footer>
+      </div>
 
     </nav>
 
@@ -101,7 +157,8 @@
     <article class="content">
       <div class="content__text">
         <p class="content__paragraph content__paragraph--1">Мы являемся авторизованным сервисным центром по ремонту
-          техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+          техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией
+          производителя.
         </p>
 
         <p class="content__paragraph content__paragraph--2">Мы успешно работаем
@@ -109,7 +166,8 @@
           клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным
           и близким.</p>
 
-        <button class="shw-more" id="toggleText"> <img src="../Img/icons/arrow_down.svg"> Показать всё</button>
+        <button class="shw-more shw-more--visible-text" id="toggleText"> <img
+            src="../Img/icons/arrow_down.svg"> Читать далее</button>
 
       </div>
       <picture class="content__image">
@@ -232,7 +290,8 @@
         </div>
         <div class="brands__pagination swiper-pagination"></div>
 
-        <button class="shw-more" id="toggleBrands"> <img src="../Img/icons/arrow_down.svg"> Показать всё</button>
+        <button class="shw-more shw-more--hidden-brands" id="toggleBrands"> <img
+            src="../Img/icons/arrow_down.svg"> Показать всё</button>
 
     </section>
   </main>
@@ -241,6 +300,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="/JS/swiper.js"> </script>
   <script src="/JS/main.js"> </script>
+
 </body>
 
 </html>
