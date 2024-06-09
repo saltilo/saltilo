@@ -13,9 +13,8 @@ button {
   cursor: pointer;
   background: none;
   border: none;
-  -webkit-appearance: none;
-  appearance: none;
-  text-decoration: none;
+color: 
+#1B1C21;
 }
 
 .header {
