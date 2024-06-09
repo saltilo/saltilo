@@ -5,20 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Услуги и сервисы</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./CSS/main.css">
   <link rel="stylesheet" href="./CSS/media.css">
   <link rel="stylesheet" href="./fonts/font-stylesheet.css">
+  <link rel="stylesheet" href="./CSS/burger.css">
+  <link rel="stylesheet" href="./CSS/brands.css">
+  <link rel="stylesheet" href="./CSS/brands-media.css">
 </head>
 
 <body>
   <header class="header">
     <nav class="header__mobile">
-      <button class="header__icon header__burger">
+      <button class="burger-btn header__icon">
         <img src="./Img/icons/stripes.svg" alt="бургер меню">
       </button>
       <a href="#" class="header__logo"><img src="./Img/icons/logo.svg" alt="Логотип"></a>
-    </nav>
 
+
+    </nav>
 
     <nav class="header__actions">
 
@@ -99,20 +104,143 @@
           техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
         </p>
 
-        <input type="checkbox" id="read-more" class="content__read-more-checker">
-        <label for="read-more" class="content__read-more-btn"></label>
         <p class="content__paragraph content__paragraph--2">Мы успешно работаем
           с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных
           клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным
           и близким.</p>
+
+        <button class="shw-more" id="toggleText"> <img src="../Img/icons/arrow_down.svg"> Показать всё</button>
+
       </div>
       <picture class="content__image">
         <img src="./Img/index/intro1120.jpg" alt="Компания CPS">
       </picture>
     </article>
+    <section class="brands">
+      <header class="brands__title">
+        <h2>Ремонт техники различных брендов</h2>
+      </header>
+      <div class="brands__swiper swiper">
+        <div class="brands__list swiper-wrapper">
+          <div class="brands__card swiper-slide">
+            <a href="#" class="brands__link">
+              <img src="./Img/brands/samsung-logo.png" alt="Samsung" class="brands__logo">
+              <div class="brands__circle">
+                <div class="brands__arrow"></div>
+              </div>
+            </a>
+          </div>
+          <div class="brands__card swiper-slide">
+            <a href="#" class="brands__link">
+              <img src="./Img/brands/acer-logo.png" alt="Bosch" class="brands__logo">
+              <div href="#" class="brands__circle">
+                <div class="brands__arrow"></div>
+              </div>
+            </a>
+          </div>
 
+          <div class="brands__card swiper-slide">
+            <a href="#" class="brands__link">
+              <img src="./Img/brands/apple-logo.png" alt="Apple" class="brands__logo">
+              <div class="brands__circle">
+                <div class="brands__arrow"></div>
+              </div>
+            </a>
+          </div>
+
+
+          <div class="brands__card swiper-slide">
+            <a href="#" class="brands__link">
+              <img src="./Img/brands/lenovo-logo.png" alt="Lenovo" class="brands__logo">
+              <div class="brands__circle">
+                <div class="brands__arrow"></div>
+              </div>
+            </a>
+          </div>
+          <div class="brands__card swiper-slide">
+            <a href="#" class="brands__link">
+              <img src="./Img/brands/bosch-logo.png" alt="Bosch" class="brands__logo">
+              <div href="#" class="brands__circle">
+                <div class="brands__arrow"></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="brands__card swiper-slide">
+            <a href="#" class="brands__link">
+              <img src="./Img/brands/asus-logo.png" alt="Bosch" class="brands__logo">
+              <div class="brands__circle">
+                <div class="brands__arrow"></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="brands__card swiper-slide">
+            <a href="#" class="brands__link">
+              <img src="./Img/brands/dell-logo.png" alt="Bosch" class="brands__logo">
+              <div class="brands__circle">
+                <div class="brands__arrow"></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="brands__card swiper-slide">
+            <a href="#" class="brands__link">
+              <img src="./Img/brands/sharp-logo.png" alt="Bosch" class="brands__logo">
+              <div class="brands__circle">
+                <div class="brands__arrow"></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="brands__card swiper-slide">
+            <a href="#" class="brands__link">
+              <img src="./Img/brands/hp-logo.png" alt="Bosch" class="brands__logo">
+              <div class="brands__circle">
+                <div class="brands__arrow"></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="brands__card swiper-slide">
+            <a href="#" class="brands__link">
+              <img src="./Img/brands/panasonic-logo.png" alt="Bosch" class="brands__logo">
+              <div class="brands__circle">
+                <div class="brands__arrow"></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="brands__card swiper-slide">
+            <a href="#" class="brands__link">
+              <img src="./Img/brands/lg-logo.png" alt="Bosch" class="brands__logo">
+              <div class="brands__circle">
+                <div class="brands__arrow"></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="brands__card swiper-slide">
+            <a href="#" class="brands__link">
+              <img src="./Img/brands/sony-logo.png" alt="Bosch" class="brands__logo">
+              <div class="brands__circle">
+                <div class="brands__arrow"></div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+        <div class="brands__pagination swiper-pagination"></div>
+
+        <button class="shw-more" id="toggleBrands"> <img src="../Img/icons/arrow_down.svg"> Показать всё</button>
+
+    </section>
   </main>
 
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="/JS/swiper.js"> </script>
+  <script src="/JS/main.js"> </script>
 </body>
 
 </html>
