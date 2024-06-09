@@ -11,10 +11,8 @@ body {
 button {
   border: none;
   cursor: pointer;
-}
-
-button:focus {
-  outline: 2px solid #b8ffec;
+  background: none;
+  border: none;
 }
 
 .header {
@@ -33,13 +31,13 @@ button:focus {
   padding: 1em;
 }
 
-.header__burger {
+.burger-btn {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-.header__burger:focus .header__logo:focus {
+.burger-btn:focus .header__logo:focus {
   outline: 2px solid #b8ffec;
 }
 
@@ -104,7 +102,7 @@ button:focus {
 }
 
 .header__icon:hover,
-.header__burger:hover {
+.burger-btn:hover {
   background-color: #ff1058;
 }
 
