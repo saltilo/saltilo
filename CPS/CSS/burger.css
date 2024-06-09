@@ -6,7 +6,7 @@
   background-color: #ffffff;
   width: 320px;
   left: -320px;
-  height: auto;
+  height: 100vh;
   padding: 1em;
 
   overflow-y: auto;
