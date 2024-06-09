@@ -14,7 +14,23 @@
   z-index: 1000;
 }
 
-.header__menu.active {
+.header__menu::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 320px;
+  width: calc(100vw - 320px);
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 500;
+  display: none;
+}
+
+.header__menu.open::before {
+  display: block;
+}
+
+.header__menu.open {
   left: 0;
   box-shadow: 10px 0px 52px 0px #0e185033;
 }
@@ -29,7 +45,7 @@
   margin-bottom: 2.5em;
 }
 
-.header__icon--burger-close {
+.burger-btn-close {
   margin-right: 1em;
 }
 
@@ -46,7 +62,6 @@
   padding: 0;
   margin: 0;
   flex-grow: 1;
-  margin-bottom: 10em;
 }
 
 .header__menu-item {

@@ -44,7 +44,7 @@
   padding: 10px;
   border: 1px solid #eaeaea;
   border-radius: 10px;
-  transition: 0.2s all;
+  transition: 0.3s all;
   cursor: pointer;
 }
 
@@ -101,22 +101,6 @@
   border-color: #ff1058;
 }
 
-.shw-more {
+.shw-more--hidden-brands {
   display: none;
-  padding-left: 2em;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  font-family: "TT Lakes";
-}
-
-.shw-more img {
-  margin-right: 1em;
-  vertical-align: middle;
-  transition: transform 0.3s;
-}
-
-.shw-more.shown img {
-  transform: rotate(180deg);
 }
