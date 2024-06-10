@@ -12,7 +12,7 @@ document.getElementById("toggleText").addEventListener("click", function () {
       '<img src="./Img/icons/arrow_down.svg" alt="Arrow"> Скрыть';
   } else {
     button.innerHTML =
-      '<img src="./Img/icons/arrow_down.svg" alt="Arrow"> Показать всё';
+      '<img src="./Img/icons/arrow_down.svg" alt="Arrow"> Читать далее';
   }
 });
 
