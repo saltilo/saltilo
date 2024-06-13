@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamster Game</title>
+  <link rel="stylesheet" href="bastik-tap.css">
+</head>
+
+<body>
+  <div class="game">
+    <div id="intro-popup" class="game__intro-popup">
+      <div class="game__intro-content">
+        <div class="game__intro-loader">
+          <div class="loader" style="--b: 5px;--c:rgb(255, 238, 0);width:80px;--n:6;--g:20deg"></div>
+          <p>Загрузка</p>
+        </div>
+        <div class="game__intro-text">
+          <h2>Bastik Kombat Token</h2>
+          <p>Первая тапалка, где вы гарантированно можете не заработать, а потратить деньги с пользой!</p>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <header class="game__header">
+      <a href=#>
+        <div class="game__card">Играть</div>
+      </a>
+      <a href=#>
+        <div class="game__card">Помощь</div>
+      </a>
+      <a href=#>
+        <div class="game__card">Ссылки</div>
+      </a>
+    </header>
+    <section class="game__section">
+
+      <div class="game__score"><img src="./img/coin-icon.png" class="game__icon" alt="">
+        <span id="score" class="game__score-count">0</span> Basticoins!
+      </div>
+      <div class="game__progress-bar" id="progress-bar"></div>
+    </section>
+    <main class="game__main">
+      <div class="game__hamster-container">
+        <img src="./img/coin.png" alt="Hamster" id="hamster" class="game__hamster-img">
+      </div>
+
+
+      <button id="withdraw-button" class="game__withdraw-button">Получить монетки</button>
+      <div class="game__counters">
+        <div class="game__counter game__counter--reverse">
+          <span id="reverse-counter"></span>
+        </div>
+        <div class="game__counter game__counter--boost">
+          🚀 Boost
+        </div>
+      </div>
+
+    </main>
+    <footer class="game__footer">
+      <div class="game__copyright"><a href="https://saltilo.github.io/saltilo/index.html">© Made by Saltilo</a>
+      </div>
+    </footer>
+  </div>
+  <div id="popup" class="game__popup" style="display: none;">
+    <div class="game__popup-content">
+      <p>Ура! Вы заработали виртуальные монетки!</p>
+      <p>Вы можете помочь бездомным животным, сделав донат реальными монетками. Любой вклад важен!</p>
+      <p>Все вырученные деньги пойдут на покупку препаратов, стерилизацию и корм животным.</p>
+      <button id="donate-button" class="game__donate-button">Помочь животным</button>
+      <button id="restart-button" class="game__restart-button">Играть cнова</button>
+    </div>
+  </div>
+
+
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
