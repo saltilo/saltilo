@@ -11,7 +11,7 @@ body {
   height: 100vh;
   margin: auto;
   padding: 20px;
-  background: linear-gradient(to top, #e16910, #ed9d3c, #000000);
+  background: linear-gradient(to top, #ff8000, #f7be5b, #7b5900, #000000);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   position: relative;
