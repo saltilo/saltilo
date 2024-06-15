@@ -210,6 +210,11 @@ body {
   background: linear-gradient(to left, #feb856, #ff8f17);
 }
 
+.game__donate-button a {
+  color: white;
+  text-decoration: none;
+}
+
 .game__restart-button {
   background: linear-gradient(to left, #0ac700, #016d05);
 }
