@@ -1,6 +1,6 @@
 let score = 0;
-const targetScore = 500;
-const hamsterImg = document.getElementById("hamster");
+const targetScore = 1000;
+const bastikImg = document.getElementById("bastik");
 const scoreDisplay = document.getElementById("score");
 const progressBar = document.getElementById("progress-bar");
 const container = document.querySelector(".game");
@@ -11,20 +11,25 @@ const reverseCounter = document.getElementById("reverse-counter");
 const introPopup = document.getElementById("intro-popup");
 let gameActive = true;
 let hasInteracted = false;
+let lastBoostTime = 0;
+let pointsPerClick = 3;
+let decreaseInterval = 1500;
+let decreaseIntervalId;
+let changeCoinBackground = false;
 
 window.addEventListener("load", () => {
   reverseCounter.textContent = `⚡ 0/${targetScore.toLocaleString()}`;
 
   setTimeout(() => {
     introPopup.remove();
-  }, 3500);
+  }, 3000);
 });
 
 document.addEventListener("touchstart", () => {
   hasInteracted = true;
 });
 
-hamsterImg.addEventListener("touchstart", (event) => {
+bastikImg.addEventListener("touchstart", (event) => {
   if (gameActive && hasInteracted) {
     event.preventDefault();
     handleTouch(event);
@@ -36,7 +41,7 @@ function handleTouch(event) {
   const touches = event.touches;
   for (let i = 0; i < touches.length; i++) {
     const touch = touches[i];
-    score += 3;
+    score += pointsPerClick;
     showClickScore(touch);
     triggerVibration();
   }
@@ -61,7 +66,7 @@ function updateProgressBar() {
 function showClickScore(touch) {
   const clickScore = document.createElement("div");
   clickScore.className = "game__click-score";
-  clickScore.textContent = "+3";
+  clickScore.textContent = `+${pointsPerClick}`;
   container.appendChild(clickScore);
 
   const containerRect = container.getBoundingClientRect();
@@ -101,9 +106,17 @@ function endGame() {
 function resetGame() {
   score = 0;
   gameActive = true;
+  pointsPerClick = 3;
+  decreaseInterval = 500;
+  clearInterval(decreaseIntervalId);
+  decreaseIntervalId = setInterval(decreaseScore, decreaseInterval);
+  fullEnergyActivated = false;
   updateScoreDisplay();
   progressBar.innerHTML = '<div style="width: 0;"></div>';
   withdrawButton.classList.remove("game__withdraw-button--visible");
+  bastikImg.src = "./img/bastik.png";
+  container.style.background =
+    "linear-gradient(to top, #ff8000, #f7be5b, #7b5900, #000000)";
 }
 
 function decreaseScore() {
@@ -117,26 +130,121 @@ function decreaseScore() {
   }
 }
 
-setInterval(decreaseScore, 500);
+decreaseIntervalId = setInterval(decreaseScore, decreaseInterval);
 
 function tiltImage(event) {
-  const imgRect = hamsterImg.getBoundingClientRect();
+  const imgRect = bastikImg.getBoundingClientRect();
   const x = event.touches[0].clientX - imgRect.left - imgRect.width / 2;
   const y = event.touches[0].clientY - imgRect.top - imgRect.height / 2;
 
   const rotateX = (y / (imgRect.height / 2)) * 20;
   const rotateY = (x / (imgRect.width / 2)) * 20;
 
-  hamsterImg.style.transition = "transform 0.2s";
+  bastikImg.style.transition = "transform 0.2s";
   if (Math.abs(rotateX) > Math.abs(rotateY)) {
-    hamsterImg.style.transform =
+    bastikImg.style.transform =
       rotateX > 0 ? "rotateX(25deg)" : "rotateX(-35deg)";
   } else {
-    hamsterImg.style.transform =
+    bastikImg.style.transform =
       rotateY > 0 ? "rotateY(42deg)" : "rotateY(-33deg)";
   }
 
   setTimeout(() => {
-    hamsterImg.style.transform = "";
+    bastikImg.style.transform = "";
   }, 200);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const boostButton = document.getElementById("boostButton");
+  const boostModal = document.getElementById("boostModal");
+  const closeButton = document.querySelector(".close-button");
+  const multitapButton = document.getElementById("multitapButton");
+  const fullEnergyButton = document.getElementById("fullEnergyButton");
+  const changeCoinButton = document.getElementById("changeCoinButton");
+  const currentScoreDisplay = document.getElementById("current-score");
+
+  boostButton.addEventListener("click", function () {
+    if (gameActive) {
+      gameActive = false;
+      currentScoreDisplay.textContent = score.toLocaleString();
+      boostModal.style.display = "block";
+    }
+  });
+
+  closeButton.addEventListener("click", function () {
+    boostModal.style.display = "none";
+    gameActive = true;
+  });
+
+  window.addEventListener("click", function (event) {
+    if (event.target == boostModal) {
+      boostModal.style.display = "none";
+      gameActive = true;
+    }
+  });
+
+  function canUseBoost() {
+    const now = Date.now();
+    if (now - lastBoostTime < 15000) {
+      alert("Вы не можете использовать этот буст чаще, чем раз в 15 секунд!");
+      return false;
+    }
+    lastBoostTime = now;
+    return true;
+  }
+
+  function showInsufficientFundsMessage() {
+    alert("У вас недостаточно монет для использования этого буста!");
+  }
+
+  multitapButton.addEventListener("click", function () {
+    if (score >= 200) {
+      if (canUseBoost()) {
+        score -= 200;
+        pointsPerClick += 1;
+        boostModal.style.display = "none";
+        gameActive = true;
+        updateScoreDisplay();
+      }
+    } else {
+      showInsufficientFundsMessage();
+    }
+  });
+
+  fullEnergyButton.addEventListener("click", function () {
+    if (score >= 300) {
+      if (canUseBoost()) {
+        score -= 300;
+        pointsPerClick += 2;
+        clearInterval(decreaseIntervalId);
+        decreaseInterval = 300;
+        decreaseIntervalId = setInterval(decreaseScore, decreaseInterval);
+        boostModal.style.display = "none";
+        gameActive = true;
+        updateScoreDisplay();
+      }
+    } else {
+      showInsufficientFundsMessage();
+    }
+  });
+
+  changeCoinButton.addEventListener("click", function () {
+    if (canUseBoost()) {
+      changeCoinBackground = !changeCoinBackground;
+      container.style.background = changeCoinBackground
+        ? "linear-gradient(to top, #599eff, #2132cd, #2c026c, #000000)"
+        : "linear-gradient(to top, #ff8000, #f7be5b, #7b5900, #000000)";
+      bastikImg.src = changeCoinBackground
+        ? "./img/boryan.png"
+        : "./img/bastik.png";
+      document
+        .querySelectorAll(".game__click-score")
+        .forEach(
+          (el) =>
+            (el.style.color = changeCoinBackground ? "#ffffff" : "#310303")
+        );
+      boostModal.style.display = "none";
+      gameActive = true;
+    }
+  });
+});

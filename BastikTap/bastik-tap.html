@@ -4,11 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bastik Kombat Token</title>
+  <title>Hamster Game</title>
   <link rel="stylesheet" href="bastik-tap.css">
 </head>
 
 <body>
+
+
   <div class="game">
     <div id="intro-popup" class="game__intro-popup">
       <div class="game__intro-content">
@@ -17,11 +19,9 @@
           <p>Загрузка</p>
         </div>
         <div class="game__intro-text">
-          <h2>Bastik Kombat Token</h2>
+          <h2>Sobaken Kombat Token</h2>
           <p>Первая тапалка, где вы гарантированно можете не заработать, а потратить деньги с пользой!</p>
         </div>
-
-
       </div>
 
     </div>
@@ -32,22 +32,23 @@
         <div class="game__card">Играть</div>
       </a>
       <a href=#>
-        <div class="game__card">Помощь</div>
+        <div class="game__card">Собакены</div>
       </a>
       <a href=#>
-        <div class="game__card">Ссылки</div>
+        <div class="game__card">Помощь</div>
       </a>
     </header>
+
     <section class="game__section">
 
       <div class="game__score"><img src="./img/coin-icon.png" class="game__icon" alt="">
-        <span id="score" class="game__score-count">0</span> Basticoins!
+        <span id="score" class="game__score-count">0</span> sobakens!
       </div>
       <div class="game__progress-bar" id="progress-bar"></div>
     </section>
     <main class="game__main">
       <div class="game__hamster-container">
-        <img src="./img/coin.png" alt="Hamster" id="hamster" class="game__hamster-img">
+        <img src="./img/bastik.png" alt="Bastik" id="bastik" class="game__hamster-img">
       </div>
 
 
@@ -57,7 +58,22 @@
           <span id="reverse-counter"></span>
         </div>
         <div class="game__counter game__counter--boost">
-          🚀 Boost
+          <button id="boostButton">🚀 Boost</button>
+        </div>
+      </div>
+      <div id="boostModal" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <p class="current-score">Баланс: <span id="current-score"></span></p>
+
+          <p>+1 за каждое касание. Стоимость: 200</p>
+          <button id="multitapButton" class="boost-option">Multitap</button>
+
+          <p>+2 за каждое касание, скорость сгорания монет увеличивается. Стоимость: 300</p>
+          <button id="fullEnergyButton" class="boost-option">Full Energy</button>
+          <p>Поменять фон и монету в игре</p>
+
+          <button id="changeCoinButton" class="boost-option">Change Coin</button>
         </div>
       </div>
 
@@ -70,7 +86,7 @@
   <div id="popup" class="game__popup" style="display: none;">
     <div class="game__popup-content">
       <p>Ура! Вы заработали виртуальные монетки!</p>
-      <p>Вы можете помочь бездомным животным, сделав донат реальными монетками. Любой вклад важен!</p>
+      <p>Вы можете помочь бездомным животным из Гюмри, сделав донат реальными монетками. Любой вклад важен!</p>
       <p>Все вырученные деньги пойдут на покупку препаратов, стерилизацию и корм животным.</p>
       <button id="donate-button" class="game__donate-button">Помочь животным</button>
       <button id="restart-button" class="game__restart-button">Играть cнова</button>
