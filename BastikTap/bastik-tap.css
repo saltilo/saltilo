@@ -1,3 +1,12 @@
+:root {
+  --modal-background: rgba(33, 33, 33, 1);
+  --modal-button: linear-gradient(to right, #ffea62, #ffe603, #fffb0b);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: black;
@@ -14,6 +23,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   position: relative;
+  overflow: hidden;
 }
 
 .game__main {
@@ -34,7 +44,8 @@ body {
 }
 
 .game__card {
-  padding: 0.6em 1.5em;
+  padding: 1em 1.7em;
+  padding-bottom: 2.2em;
   width: auto;
   height: 20px;
   background-color: #1f1f1f;
@@ -229,6 +240,13 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.game__click-score-default {
+  color: #310303;
+}
+.game__click-score-alternate {
+  color: #ffffff;
+}
+
 @keyframes game__fadeUp {
   0% {
     opacity: 1;
@@ -258,14 +276,11 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.9),
-      rgba(255, 255, 255, 0.1)
-    ),
-    url(./img/back.png);
+  background: url(./img/back.png), rgba(0, 0, 0, 1);
+
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -275,6 +290,9 @@ body {
 .game__intro-content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   position: fixed;
   bottom: 0;
   color: white;
@@ -285,6 +303,7 @@ body {
 h2 {
   color: #ff8f17;
   font-size: 28px;
+  margin-top: 0;
 }
 
 .game__intro-loader {
@@ -363,8 +382,9 @@ h2 {
   margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
-  height: 80vh;
+  height: 85vh;
   max-width: 400px;
+  overflow: auto;
 }
 
 .modal-content button {
@@ -378,6 +398,22 @@ h2 {
   border-radius: 20px;
   width: 200px;
   cursor: pointer;
+}
+
+.modal-content a {
+  text-decoration: underline;
+  color: #cdcdcd;
+}
+
+.modal-content li {
+  margin-bottom: 1em;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1em;
 }
 
 .current-score {
@@ -395,7 +431,7 @@ h2 {
 
 .close-button:hover,
 .close-button:focus {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   cursor: pointer;
 }
@@ -407,4 +443,14 @@ h2 {
   to {
     transform: translateY(0);
   }
+}
+
+.copyable {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.sobakens-modal__button a {
+  text-decoration: none;
+  color: #310303;
 }

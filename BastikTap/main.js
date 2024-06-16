@@ -1,14 +1,24 @@
 let score = 0;
 const targetScore = 1000;
-const bastikImg = document.getElementById("bastik");
-const scoreDisplay = document.getElementById("score");
-const progressBar = document.getElementById("progress-bar");
-const container = document.querySelector(".game");
-const withdrawButton = document.getElementById("withdraw-button");
-const popup = document.getElementById("popup");
-const restartButton = document.getElementById("restart-button");
-const reverseCounter = document.getElementById("reverse-counter");
-const introPopup = document.getElementById("intro-popup");
+const elements = {
+  bastikImg: document.getElementById("bastik"),
+  scoreDisplay: document.getElementById("score"),
+  progressBar: document.getElementById("progress-bar"),
+  container: document.querySelector(".game"),
+  withdrawButton: document.getElementById("withdraw-button"),
+  popup: document.getElementById("popup"),
+  restartButton: document.getElementById("restart-button"),
+  reverseCounter: document.getElementById("reverse-counter"),
+  introPopup: document.getElementById("intro-popup"),
+  boostButton: document.getElementById("boostButton"),
+  boostModal: document.getElementById("boostModal"),
+  closeButton: document.querySelector(".close-button"),
+  multitapButton: document.getElementById("multitapButton"),
+  fullEnergyButton: document.getElementById("fullEnergyButton"),
+  changeCoinButton: document.getElementById("changeCoinButton"),
+  currentScoreDisplay: document.getElementById("current-score"),
+};
+
 let gameActive = true;
 let hasInteracted = false;
 let lastBoostTime = 0;
@@ -18,18 +28,13 @@ let decreaseIntervalId;
 let changeCoinBackground = false;
 
 window.addEventListener("load", () => {
-  reverseCounter.textContent = `⚡ 0/${targetScore.toLocaleString()}`;
-
-  setTimeout(() => {
-    introPopup.remove();
-  }, 3000);
+  elements.reverseCounter.textContent = `⚡ 0/${targetScore.toLocaleString()}`;
+  setTimeout(() => elements.introPopup.remove(), 3000);
 });
 
-document.addEventListener("touchstart", () => {
-  hasInteracted = true;
-});
+document.addEventListener("touchstart", () => (hasInteracted = true));
 
-bastikImg.addEventListener("touchstart", (event) => {
+elements.bastikImg.addEventListener("touchstart", (event) => {
   if (gameActive && hasInteracted) {
     event.preventDefault();
     handleTouch(event);
@@ -37,214 +42,254 @@ bastikImg.addEventListener("touchstart", (event) => {
   }
 });
 
-function handleTouch(event) {
-  const touches = event.touches;
-  for (let i = 0; i < touches.length; i++) {
-    const touch = touches[i];
+const handleTouch = (event) => {
+  Array.from(event.touches).forEach((touch) => {
     score += pointsPerClick;
     showClickScore(touch);
     triggerVibration();
-  }
+  });
   updateScoreDisplay();
   updateProgressBar();
+  if (score >= targetScore) endGame();
+};
 
-  if (score >= targetScore) {
-    endGame();
-  }
-}
+const updateScoreDisplay = () => {
+  elements.scoreDisplay.textContent = score.toLocaleString();
+  elements.reverseCounter.textContent = `⚡ ${score.toLocaleString()}/${targetScore.toLocaleString()}`;
+};
 
-function updateScoreDisplay() {
-  scoreDisplay.textContent = score.toLocaleString();
-  reverseCounter.textContent = `⚡ ${score.toLocaleString()}/${targetScore.toLocaleString()}`;
-}
-
-function updateProgressBar() {
+const updateProgressBar = () => {
   const progress = (score / targetScore) * 100;
-  progressBar.innerHTML = `<div style="width: ${progress}%"></div>`;
-}
+  elements.progressBar.innerHTML = `<div style="width: ${progress}%"></div>`;
+};
 
-function showClickScore(touch) {
+const showClickScore = (touch) => {
   const clickScore = document.createElement("div");
-  clickScore.className = "game__click-score";
+  clickScore.className = `game__click-score ${
+    changeCoinBackground
+      ? "game__click-score-alternate"
+      : "game__click-score-default"
+  }`;
   clickScore.textContent = `+${pointsPerClick}`;
-  container.appendChild(clickScore);
+  elements.container.appendChild(clickScore);
 
-  const containerRect = container.getBoundingClientRect();
-  const x = touch.clientX - containerRect.left + container.scrollLeft;
-  const y = touch.clientY - containerRect.top + container.scrollTop;
-
-  clickScore.style.left = `${x}px`;
-  clickScore.style.top = `${y}px`;
+  const containerRect = elements.container.getBoundingClientRect();
+  clickScore.style.left = `${
+    touch.clientX - containerRect.left + elements.container.scrollLeft
+  }px`;
+  clickScore.style.top = `${
+    touch.clientY - containerRect.top + elements.container.scrollTop
+  }px`;
   clickScore.style.display = "block";
 
-  setTimeout(() => {
-    clickScore.remove();
-  }, 1000);
-}
+  setTimeout(() => clickScore.remove(), 1000);
+};
 
-function triggerVibration() {
-  if (navigator.vibrate && hasInteracted) {
-    navigator.vibrate(100);
-  }
-}
+const triggerVibration = () => {
+  if (navigator.vibrate && hasInteracted) navigator.vibrate(100);
+};
 
-withdrawButton.addEventListener("click", () => {
-  popup.style.display = "flex";
-});
-
-restartButton.addEventListener("click", () => {
-  popup.style.display = "none";
+elements.withdrawButton.addEventListener(
+  "click",
+  () => (elements.popup.style.display = "flex")
+);
+elements.restartButton.addEventListener("click", () => {
+  elements.popup.style.display = "none";
   resetGame();
 });
 
-function endGame() {
-  console.log("Game ended");
+const endGame = () => {
   gameActive = false;
-  withdrawButton.classList.add("game__withdraw-button--visible");
-}
+  elements.withdrawButton.classList.add("game__withdraw-button--visible");
+};
 
-function resetGame() {
+const resetGame = () => {
   score = 0;
   gameActive = true;
   pointsPerClick = 3;
-  decreaseInterval = 500;
+  decreaseInterval = 1000;
   clearInterval(decreaseIntervalId);
   decreaseIntervalId = setInterval(decreaseScore, decreaseInterval);
-  fullEnergyActivated = false;
   updateScoreDisplay();
-  progressBar.innerHTML = '<div style="width: 0;"></div>';
-  withdrawButton.classList.remove("game__withdraw-button--visible");
-  bastikImg.src = "./img/bastik.png";
-  container.style.background =
+  updateProgressBar();
+  elements.withdrawButton.classList.remove("game__withdraw-button--visible");
+  elements.bastikImg.src = "./img/bastik.png";
+  elements.container.style.background =
     "linear-gradient(to top, #ff8000, #f7be5b, #7b5900, #000000)";
-}
+};
 
-function decreaseScore() {
+const decreaseScore = () => {
   if (gameActive && score > 0) {
-    score -= 3;
-    if (score < 0) {
-      score = 0;
-    }
+    score = Math.max(0, score - 3);
     updateScoreDisplay();
     updateProgressBar();
   }
-}
+};
 
 decreaseIntervalId = setInterval(decreaseScore, decreaseInterval);
 
-function tiltImage(event) {
-  const imgRect = bastikImg.getBoundingClientRect();
+const tiltImage = (event) => {
+  const imgRect = elements.bastikImg.getBoundingClientRect();
   const x = event.touches[0].clientX - imgRect.left - imgRect.width / 2;
   const y = event.touches[0].clientY - imgRect.top - imgRect.height / 2;
-
   const rotateX = (y / (imgRect.height / 2)) * 20;
   const rotateY = (x / (imgRect.width / 2)) * 20;
 
-  bastikImg.style.transition = "transform 0.2s";
-  if (Math.abs(rotateX) > Math.abs(rotateY)) {
-    bastikImg.style.transform =
-      rotateX > 0 ? "rotateX(25deg)" : "rotateX(-35deg)";
-  } else {
-    bastikImg.style.transform =
-      rotateY > 0 ? "rotateY(42deg)" : "rotateY(-33deg)";
-  }
+  elements.bastikImg.style.transition = "transform 0.2s";
+  elements.bastikImg.style.transform =
+    Math.abs(rotateX) > Math.abs(rotateY)
+      ? `rotateX(${rotateX > 0 ? 25 : -35}deg)`
+      : `rotateY(${rotateY > 0 ? 42 : -33}deg)`;
 
-  setTimeout(() => {
-    bastikImg.style.transform = "";
-  }, 200);
-}
+  setTimeout(() => (elements.bastikImg.style.transform = ""), 200);
+};
 
-document.addEventListener("DOMContentLoaded", function () {
-  const boostButton = document.getElementById("boostButton");
-  const boostModal = document.getElementById("boostModal");
-  const closeButton = document.querySelector(".close-button");
-  const multitapButton = document.getElementById("multitapButton");
-  const fullEnergyButton = document.getElementById("fullEnergyButton");
-  const changeCoinButton = document.getElementById("changeCoinButton");
-  const currentScoreDisplay = document.getElementById("current-score");
-
-  boostButton.addEventListener("click", function () {
+document.addEventListener("DOMContentLoaded", () => {
+  elements.boostButton.addEventListener("click", () => {
     if (gameActive) {
       gameActive = false;
-      currentScoreDisplay.textContent = score.toLocaleString();
-      boostModal.style.display = "block";
+      elements.currentScoreDisplay.textContent = score.toLocaleString();
+      elements.boostModal.style.display = "block";
     }
   });
 
-  closeButton.addEventListener("click", function () {
-    boostModal.style.display = "none";
+  elements.closeButton.addEventListener("click", () => {
+    elements.boostModal.style.display = "none";
     gameActive = true;
   });
 
-  window.addEventListener("click", function (event) {
-    if (event.target == boostModal) {
-      boostModal.style.display = "none";
+  window.addEventListener("click", (event) => {
+    if (event.target === elements.boostModal) {
+      elements.boostModal.style.display = "none";
       gameActive = true;
     }
   });
 
-  function canUseBoost() {
-    const now = Date.now();
-    if (now - lastBoostTime < 15000) {
-      alert("Вы не можете использовать этот буст чаще, чем раз в 15 секунд!");
-      return false;
-    }
-    lastBoostTime = now;
-    return true;
+  elements.multitapButton.addEventListener("click", () => handleBoost(200, 1));
+  elements.fullEnergyButton.addEventListener("click", () =>
+    handleBoost(300, 2)
+  );
+  elements.changeCoinButton.addEventListener(
+    "click",
+    handleChangeCoinBackground
+  );
+});
+
+const canUseBoost = () => {
+  const now = Date.now();
+  if (now - lastBoostTime < 15000) {
+    alert("Бусты можно использовать не чаще, чем раз в 15 секунд!");
+    return false;
   }
+  lastBoostTime = now;
+  return true;
+};
 
-  function showInsufficientFundsMessage() {
-    alert("У вас недостаточно монет для использования этого буста!");
-  }
+const showInsufficientFundsMessage = () =>
+  alert("У вас недостаточно монет для буста!");
 
-  multitapButton.addEventListener("click", function () {
-    if (score >= 200) {
-      if (canUseBoost()) {
-        score -= 200;
-        pointsPerClick += 1;
-        boostModal.style.display = "none";
-        gameActive = true;
-        updateScoreDisplay();
-      }
-    } else {
-      showInsufficientFundsMessage();
-    }
-  });
-
-  fullEnergyButton.addEventListener("click", function () {
-    if (score >= 300) {
-      if (canUseBoost()) {
-        score -= 300;
-        pointsPerClick += 2;
-        clearInterval(decreaseIntervalId);
-        decreaseInterval = 300;
-        decreaseIntervalId = setInterval(decreaseScore, decreaseInterval);
-        boostModal.style.display = "none";
-        gameActive = true;
-        updateScoreDisplay();
-      }
-    } else {
-      showInsufficientFundsMessage();
-    }
-  });
-
-  changeCoinButton.addEventListener("click", function () {
+const handleBoost = (cost, clickIncrease) => {
+  if (score >= cost) {
     if (canUseBoost()) {
-      changeCoinBackground = !changeCoinBackground;
-      container.style.background = changeCoinBackground
-        ? "linear-gradient(to top, #599eff, #2132cd, #2c026c, #000000)"
-        : "linear-gradient(to top, #ff8000, #f7be5b, #7b5900, #000000)";
-      bastikImg.src = changeCoinBackground
-        ? "./img/boryan.png"
-        : "./img/bastik.png";
-      document
-        .querySelectorAll(".game__click-score")
-        .forEach(
-          (el) =>
-            (el.style.color = changeCoinBackground ? "#ffffff" : "#310303")
-        );
-      boostModal.style.display = "none";
+      score -= cost;
+      pointsPerClick += clickIncrease;
+      elements.boostModal.style.display = "none";
       gameActive = true;
+      updateScoreDisplay();
     }
+  } else {
+    showInsufficientFundsMessage();
+  }
+};
+
+const handleChangeCoinBackground = () => {
+  if (canUseBoost()) {
+    changeCoinBackground = !changeCoinBackground;
+    elements.container.style.background = changeCoinBackground
+      ? "linear-gradient(to top, #599eff, #2132cd, #2c026c, #000000)"
+      : "linear-gradient(to top, #ff8000, #f7be5b, #7b5900, #000000)";
+    elements.bastikImg.src = changeCoinBackground
+      ? "./img/boryan.png"
+      : "./img/bastik.png";
+    elements.container.classList.toggle("game__click-score-alternate");
+    elements.boostModal.style.display = "none";
+    gameActive = true;
+  }
+};
+
+const openModal = (modal) => {
+  pauseGame();
+  modal.style.display = "flex";
+};
+
+const closeModal = (modal) => {
+  modal.style.display = "none";
+  resumeGame();
+};
+
+const pauseGame = () => {
+  gameActive = false;
+  clearInterval(decreaseIntervalId);
+};
+
+const resumeGame = () => {
+  gameActive = true;
+  decreaseIntervalId = setInterval(decreaseScore, decreaseInterval);
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const rulesLink = document.getElementById("rules-link");
+  const sobakensLink = document.getElementById("sobakens-link");
+  const helpLink = document.getElementById("help-link");
+
+  const rulesModal = document.getElementById("rules-modal");
+  const sobakensModal = document.getElementById("sobakens-modal");
+  const helpModal = document.getElementById("help-modal");
+
+  const closeModalButtons = document.querySelectorAll(".close-button");
+
+  rulesLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    openModal(rulesModal);
+  });
+
+  sobakensLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    openModal(sobakensModal);
+  });
+
+  helpLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    openModal(helpModal);
+  });
+
+  closeModalButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      closeModal(button.closest(".modal"));
+    });
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target.classList.contains("modal")) {
+      closeModal(event.target);
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const copyableElements = document.querySelectorAll(".copyable");
+
+  copyableElements.forEach((element) => {
+    element.addEventListener("click", () => {
+      const textToCopy = element.textContent;
+      navigator.clipboard
+        .writeText(textToCopy)
+        .then(() => {
+          alert("Скопировано в буфер обмена: " + textToCopy);
+        })
+        .catch((err) => {
+          console.error("Ошибка копирования: ", err);
+        });
+    });
   });
 });
