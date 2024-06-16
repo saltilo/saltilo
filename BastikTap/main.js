@@ -41,6 +41,13 @@ elements.bastikImg.addEventListener("touchstart", (event) => {
     tiltImage(event);
   }
 });
+elements.bastikImg.addEventListener("click", (event) => {
+  if (gameActive) {
+    event.preventDefault();
+    handleClick(event);
+    tiltImage(event);
+  }
+});
 
 const handleTouch = (event) => {
   Array.from(event.touches).forEach((touch) => {
@@ -48,6 +55,14 @@ const handleTouch = (event) => {
     showClickScore(touch);
     triggerVibration();
   });
+  updateScoreDisplay();
+  updateProgressBar();
+  if (score >= targetScore) endGame();
+};
+
+const handleClick = (event) => {
+  score += pointsPerClick;
+  showClickScore(event);
   updateScoreDisplay();
   updateProgressBar();
   if (score >= targetScore) endGame();
@@ -63,7 +78,7 @@ const updateProgressBar = () => {
   elements.progressBar.innerHTML = `<div style="width: ${progress}%"></div>`;
 };
 
-const showClickScore = (touch) => {
+const showClickScore = (event) => {
   const clickScore = document.createElement("div");
   clickScore.className = `game__click-score ${
     changeCoinBackground
@@ -74,11 +89,13 @@ const showClickScore = (touch) => {
   elements.container.appendChild(clickScore);
 
   const containerRect = elements.container.getBoundingClientRect();
+  const clientX = event.clientX || event.touches[0].clientX;
+  const clientY = event.clientY || event.touches[0].clientY;
   clickScore.style.left = `${
-    touch.clientX - containerRect.left + elements.container.scrollLeft
+    clientX - containerRect.left + elements.container.scrollLeft
   }px`;
   clickScore.style.top = `${
-    touch.clientY - containerRect.top + elements.container.scrollTop
+    clientY - containerRect.top + elements.container.scrollTop
   }px`;
   clickScore.style.display = "block";
 
@@ -130,8 +147,10 @@ decreaseIntervalId = setInterval(decreaseScore, decreaseInterval);
 
 const tiltImage = (event) => {
   const imgRect = elements.bastikImg.getBoundingClientRect();
-  const x = event.touches[0].clientX - imgRect.left - imgRect.width / 2;
-  const y = event.touches[0].clientY - imgRect.top - imgRect.height / 2;
+  const clientX = event.clientX || event.touches[0].clientX;
+  const clientY = event.clientY || event.touches[0].clientY;
+  const x = clientX - imgRect.left - imgRect.width / 2;
+  const y = clientY - imgRect.top - imgRect.height / 2;
   const rotateX = (y / (imgRect.height / 2)) * 20;
   const rotateY = (x / (imgRect.width / 2)) * 20;
 
