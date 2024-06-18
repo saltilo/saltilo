@@ -13,10 +13,10 @@
         var href = link.getAttribute('href');
 
         if (href.startsWith("http") || href.startsWith("www")) {
-        
+          // Внешняя ссылка
           link.setAttribute('target', '_blank');
         } else {
-        
+          // Внутренняя ссылка
           link.setAttribute('target', '');
         }
       }
@@ -115,8 +115,8 @@
 
     <article class="head-h2-description">
       <div class="text-text">
-        <p>Пишу статьи на <a href="https://habr.com/ru/users/k_tultseva/">Habr.com</a> и в журнал <a
-            href="https://thecode.media/authors/kristina-tultseva/">«Код»</a>.</p>
+        <p>Пишу статьи на <a href="https://habr.com/">Habr.com</a> и с недавнего времени в журнал <a
+            href="https://thecode.media/">«Код»</a>.</p>
 
         <p>Самое интересное при написании статьи — это поиск материала и работа над структурой. Постепенно из хаоса
           у
@@ -143,23 +143,40 @@
 
       <div class="row-article-1">
         <div class="head-article-1">
-          <a href="https://thecode.media/var-let-const/">Ликбез: чем различаются var, let и
-            const в JavaScript
+          <a href="https://thecode.media/assembler-na-praktike-zachem-v-nyom-razbiratsya/">Ассемблер на практике: зачем
+            в нём разбираться в 2024 году
 
-            <p>В JavaScript это можно сделать с помощью трёх ключевых слов: <code>var</code>, <code>let</code> и
-              <code>const</code>. Разберёмся, чем они
-              различаются и в каких случаях что нужно использовать.
-            </p>
+
+            <p>Нужно ли учиться писать на ассемблере в 2024 году? Да, если хотите войти в высшую лигу и делать то, что
+              почти никто не может, например создавать программы для микроконтроллеров. А вот читать ассемблер, чтобы
+              понимать принципы работы высокоуровневого кода, будет полезно многим программистам.</p>
             <p class="stats">
-              19 февр, 2024
+              18 июня, 2024
             </p>
         </div>
         <div class="img-article">
-          <img src="https://thecode.media/wp-content/uploads/2024/02/1.jpg" alt="var let const">
+          <img src="https://thecode.media/wp-content/uploads/2024/06/1-5.png" alt="assembly">
           </a>
         </div>
       </div>
+      <div class="row-article-1">
+        <div class="head-article-1">
+          <a href="https://thecode.media/chto-vliyaet-na-frontend-proizvoditelnost/">Что влияет на
+            фронтенд-производительность
 
+            <p>Фронтенд — это то, что видит пользователь: интерфейс сайта или веб-приложения. А производительность
+              фронтенда — это скорость, с которой сайт или веб-приложение загружается и реагирует на действия
+              пользователя.</p>
+            <p class="stats">
+              27 мая, 2024
+            </p>
+          </a>
+        </div>
+        <div class="img-article">
+          <img src="https://thecode.media/wp-content/uploads/2024/05/1-3-2.png" alt="Производительность">
+          </a>
+        </div>
+      </div>
 
       <div class="row-article-1">
         <div class="head-article-1">
