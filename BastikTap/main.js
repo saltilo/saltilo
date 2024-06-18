@@ -124,7 +124,7 @@ const resetGame = () => {
   score = 0;
   gameActive = true;
   pointsPerClick = 3;
-  decreaseInterval = 1000;
+  decreaseInterval = 1500;
   clearInterval(decreaseIntervalId);
   decreaseIntervalId = setInterval(decreaseScore, decreaseInterval);
   updateScoreDisplay();
@@ -185,9 +185,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   elements.multitapButton.addEventListener("click", () => handleBoost(200, 1));
-  elements.fullEnergyButton.addEventListener("click", () =>
-    handleBoost(300, 2)
-  );
+  elements.fullEnergyButton.addEventListener("click", () => {
+    handleBoost(300, 2);
+    decreaseInterval = Math.max(500, decreaseInterval - 500);
+    clearInterval(decreaseIntervalId);
+    decreaseIntervalId = setInterval(decreaseScore, decreaseInterval);
+  });
   elements.changeCoinButton.addEventListener(
     "click",
     handleChangeCoinBackground
