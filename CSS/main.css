@@ -335,8 +335,7 @@ ul {
   outline: 2px solid var(--primary-color-dark);
 }
 
-.card:last-child,
-.card:nth-child(3) {
+.card:last-child {
   margin-bottom: 0;
 }
 
