@@ -1,0 +1,80 @@
+.prices__swiper {
+  position: relative;
+  display: flex;
+  top: 0;
+  bottom: 0;
+}
+
+.prices__list {
+  display: flex;
+  padding: 1em;
+}
+
+.prices__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 240px;
+  height: auto;
+  padding: 1em;
+  background-color: $card-background;
+  border: 1px solid $card-border;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.prices__card--tablet {
+  display: none;
+}
+
+.prices__service {
+  display: flex;
+  flex-direction: column;
+}
+
+.prices__service-title {
+  margin-top: 1em;
+  color: $light-text;
+}
+
+.prices__service-title--first {
+  margin-top: 0;
+}
+
+.prices__service-description {
+  color: $regular-text;
+}
+
+.prices__service--flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.prices__commercial {
+  padding: 1em;
+  margin-bottom: 2em;
+}
+
+.prices__commercial-text {
+  width: 90%;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.24px;
+  text-align: left;
+}
+
+.prices__get-commercial {
+  display: inline;
+  text-decoration: none;
+  line-height: 24px;
+  letter-spacing: -0.24px;
+  color: $regular-text;
+  font-weight: 500;
+  transform: all 0.4s ease-in-out;
+}
+
+.prices__get-commercial:hover {
+  color: $icon-hover;
+}

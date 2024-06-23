@@ -1,0 +1,18 @@
+@media (min-width: 768px) {
+  .shw-more--hidden-brands {
+    display: inline-block;
+  }
+
+  .brands__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+    padding-left: 1em;
+  }
+}
+
+@media (min-width: 1140px) {
+  .brands__list {
+    width: calc(100vw - 430px);
+  }
+}

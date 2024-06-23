@@ -1,0 +1,19 @@
+@media (min-width: 1440px) {
+  .modal {
+    width: 440px;
+    overflow-y: visible;
+  }
+
+  .modal::before {
+    right: 440px;
+    width: calc(100vw - 430px);
+  }
+
+  #callback-modal .modal-btn-close,
+  #feedback-modal .modal-btn-close {
+    position: absolute;
+    top: 5em;
+    left: -5em;
+    z-index: 2000;
+  }
+}

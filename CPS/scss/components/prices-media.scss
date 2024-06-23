@@ -1,0 +1,71 @@
+@media (min-width: 768px) {
+  .prices__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .prices__card {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 98%;
+    height: auto;
+    border: none;
+    border-radius: 0;
+  }
+
+  .prices__card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+    border-bottom: 1px solid $card-border;
+  }
+
+  .prices__card:first-child::after {
+    content: none;
+  }
+  .prices__card:last-child::after {
+    content: none;
+  }
+
+  .prices__service-title {
+    display: none;
+  }
+
+  .prices__service,
+  .prices__service--flex {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+  }
+  .prices__service--flex {
+    align-items: center;
+  }
+
+  .prices__service-description {
+    margin-right: 2em;
+  }
+
+  .prices__button {
+    margin-left: 3em;
+  }
+
+  .prices__card--tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $main-background;
+  }
+
+  .prices__service-title--tablet {
+    display: inline-block;
+  }
+
+  .prices__commercial-text {
+    width: 60%;
+  }
+}

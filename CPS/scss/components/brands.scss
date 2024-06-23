@@ -1,0 +1,67 @@
+.brands {
+  width: 100vw;
+  justify-items: flex-start;
+  overflow: hidden;
+}
+
+.brands__card.hidden {
+  display: none;
+}
+
+.brands__pagination {
+  position: relative;
+}
+
+.swiper-pagination-bullet {
+  background: $pagination-bullet;
+  width: 12px;
+  height: 12px;
+}
+
+.brands__list {
+  padding: 1em;
+}
+
+.brands__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 230px;
+  height: 72px;
+  background-color: $card-background;
+  padding: 10px;
+  border: 1px solid $card-border;
+  border-radius: 10px;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+
+.brands__card {
+  display: block;
+}
+
+.brands__card:hover {
+  box-shadow: $card-shadow-hover;
+}
+
+.brands__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-decoration: none;
+}
+
+.brands__logo {
+  max-width: 100px;
+  max-height: 50px;
+}
+
+.brands__card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.shw-more--hidden-brands {
+  display: none;
+}

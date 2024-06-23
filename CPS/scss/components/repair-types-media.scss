@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+  .repair-types__list {
+    flex-wrap: wrap;
+  }
+
+  .shw-more--hidden-repair-types {
+    display: block;
+  }
+
+  .repair-types__list.show-all .repair-types__card {
+    display: flex;
+  }
+}

@@ -1,0 +1,40 @@
+.repair-types__list {
+  padding: 1em;
+}
+
+.repair-types__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 240px;
+  height: 160px;
+  background-color: $card-background;
+  padding: 1em;
+  border: 1px solid $card-border;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  transform: all 0.3s;
+}
+
+.repair-types__card.hidden {
+  display: none;
+}
+
+.repair-types__card:hover {
+  box-shadow: $card-shadow-hover;
+}
+
+.repair-types__text {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-align: left;
+}
+.repair-types__link {
+  margin-left: auto;
+}
+
+.shw-more--hidden-repair-types {
+  display: none;
+}

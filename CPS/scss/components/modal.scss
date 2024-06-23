@@ -1,0 +1,102 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: -600px;
+  background: $card-background;
+  padding: 1.5em;
+  width: 320px;
+  height: 100%;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  overflow-x: visible;
+}
+
+.modal.open {
+  right: 0;
+  box-shadow: -18px 3px 95px -5px $modal-shadow;
+  -webkit-box-shadow: -18px 3px 95px -5px $modal-shadow;
+  -moz-box-shadow: -18px 3px 95px -5px $modal-shadow;
+}
+
+.modal::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  right: 320px;
+  width: calc(100vw - 310px);
+  height: 100%;
+  background-color: $modal-overlay;
+  z-index: 1000;
+  display: none;
+}
+
+.modal.open::before {
+  display: block;
+}
+
+.modal__close-btn {
+  cursor: pointer;
+}
+
+.modal__title {
+  position: relative;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.69px;
+  font-weight: 600;
+  margin: 2em 0 1.5em 0;
+}
+
+.modal__title::before {
+  content: url('../Img/icons/highlight.svg');
+  position: absolute;
+  top: -0.3em;
+  left: -1em;
+  z-index: 11;
+}
+
+.modal__form-group {
+  margin-bottom: 1em;
+}
+
+.modal__input,
+.modal__textarea {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid $card-border;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'TT Lakes';
+  display: block;
+}
+
+.modal__input:focus,
+.modal__textarea:focus {
+  border-color: $focus-outline;
+  outline: none;
+}
+
+.modal__textarea {
+  height: 100px;
+  resize: none;
+}
+
+.modal__privacy-policy {
+  font-size: 14px;
+  color: $light-text;
+  margin-bottom: 1em;
+}
+
+.modal__privacy-highlight {
+  color: $icon-color;
+}
+
+.modal__privacy-link {
+  color: $icon-color;
+  text-decoration: none;
+}
+
+.modal__privacy-link:hover {
+  color: $icon-hover;
+}
