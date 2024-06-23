@@ -349,7 +349,8 @@ button {
   cursor: pointer;
   background: none;
   border: none;
-  font-family: 'TT Lakes'; }
+  font-family: 'TT Lakes';
+  color: #1b1c21; }
 
 a:focus {
   outline: 2px solid #b8ffec; }
