@@ -19,17 +19,17 @@ document.getElementById('toggleText').addEventListener('click', function () {
 document.addEventListener('DOMContentLoaded', function () {
   const toggleButton = document.getElementById('toggleBrands')
   const brandCards = document.querySelectorAll('.brands__card')
-  const cardsPerRow = 3 // Количество карточек в одном ряду
-  const rowsToShow = 2 // Количество видимых рядов
-  let cardsToShow = cardsPerRow * rowsToShow // Карточек для показа по умолчанию
+  const cardsPerRow = 3
+  const rowsToShow = 2
+  let cardsToShow = cardsPerRow * rowsToShow
 
-  const updateCardsVisibility = () => {
+  function updateCardsVisibility() {
     const screenWidth = window.innerWidth
 
     if (screenWidth < 768) {
-      cardsToShow = brandCards.length // Показываем все карточки при ширине экрана < 768
+      cardsToShow = brandCards.length
     } else {
-      cardsToShow = cardsPerRow * rowsToShow // Показываем два ряда карточек при ширине экрана >= 768
+      cardsToShow = cardsPerRow * rowsToShow
     }
 
     for (let i = 0; i < brandCards.length; i++) {
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
       '<img src="img/icons/arrow_down.svg" alt="Стрелка показать"> Показать всё'
   }
 
-  const toggleCards = () => {
+  function toggleCards() {
     const isShowingAll = toggleButton.classList.toggle('shown')
 
     if (isShowingAll) {
