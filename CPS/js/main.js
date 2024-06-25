@@ -16,6 +16,7 @@ document.getElementById('toggleText').addEventListener('click', function () {
 })
 
 // кнопка для карточек Бренды
+// кнопка для карточек Бренды
 document.addEventListener('DOMContentLoaded', function () {
   const toggleButton = document.getElementById('toggleBrands')
   const brandCards = document.querySelectorAll('.brands__card')
@@ -40,8 +41,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    toggleButton.style.display =
-      cardsToShow < brandCards.length ? 'flex' : 'none'
+    if (cardsToShow < brandCards.length) {
+      toggleButton.style.display = 'flex'
+    } else {
+      toggleButton.style.display = 'none'
+    }
     toggleButton.classList.remove('shown')
     toggleButton.innerHTML =
       '<img src="img/icons/arrow_down.svg" alt="Стрелка показать"> Показать всё'
