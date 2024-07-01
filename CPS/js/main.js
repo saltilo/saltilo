@@ -16,12 +16,11 @@ document.getElementById('toggleText').addEventListener('click', function () {
 })
 
 // кнопка для карточек Бренды
-// кнопка для карточек Бренды
 document.addEventListener('DOMContentLoaded', function () {
   const toggleButton = document.getElementById('toggleBrands')
   const brandCards = document.querySelectorAll('.brands__card')
-  const cardsPerRow = 3
   const rowsToShow = 2
+  let cardsPerRow = 3
   let cardsToShow = cardsPerRow * rowsToShow
 
   function updateCardsVisibility() {
@@ -29,7 +28,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (screenWidth < 768) {
       cardsToShow = brandCards.length
+    } else if (screenWidth > 1120) {
+      cardsPerRow = 4
+      cardsToShow = cardsPerRow * rowsToShow
     } else {
+      cardsPerRow = 3
       cardsToShow = cardsPerRow * rowsToShow
     }
 
