@@ -335,10 +335,6 @@ ul {
   outline: 2px solid var(--primary-color-dark);
 }
 
-.card:last-child {
-  margin-bottom: 0;
-}
-
 .card-img {
   margin-bottom: 20px;
 }
@@ -690,14 +686,22 @@ ul {
 .row-article-1 {
   display: flex;
   justify-content: flex-end;
-  padding: 15px 0;
-  padding-right: 50px;
+  border-radius: 2em;
+  padding: 1em;
+  padding-left: 0;
+  margin-right: 50px;
+  margin-top: 2em;
+  transition: transform 0.3s ease;
+}
+
+.row-article-1:hover {
+  cursor: pointer;
+  transform: scale(1.02);
 }
 
 .row-article-1 img {
   width: 200px;
   aspect-ratio: auto 200 / 134;
-  height: 134px;
   border-radius: 20px;
   border-style: solid;
   border-width: 1px;
@@ -805,6 +809,8 @@ p.head-article-1 {
   margin-top: -7%;
   width: 25%;
   height: 25%;
+  background-color: #f0f0f000;
+  display: block;
 }
 
 .accordion-item {
