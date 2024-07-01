@@ -789,17 +789,24 @@ a:focus {
 @media (min-width: 1440px) {
   body {
     display: flex;
-    width: 100vw; }
-  .burger-menu {
-    left: 0; }
+    justify-content: center; }
   .burger-menu__header {
     margin-top: 2em; }
+  .burger-menu {
+    left: 0; }
+  .burger-btn {
+    display: none; }
   .wrapper {
     margin-left: 320px;
-    width: calc(100vw - 320px);
-    flex-grow: 1; }
-  .burger-btn {
-    display: none; } }
+    max-width: 1120px;
+    flex-grow: 1; } }
+
+@media (min-width: 1441px) {
+  .burger-menu {
+    position: relative;
+    height: auto; }
+  .wrapper {
+    margin-left: 0; } }
 
 .brands {
   width: 100vw;
@@ -868,7 +875,7 @@ a:focus {
 
 @media (min-width: 1140px) {
   .brands__list {
-    width: calc(100vw - 430px); } }
+    max-width: 1140px; } }
 
 .repair-types__list {
   padding: 1em; }
