@@ -9,7 +9,7 @@
   }
 
   .header__burger::after {
-    content: url("../Img/icons/divider.svg");
+    content: url('../Img/icons/divider.svg');
     position: absolute;
     margin-left: 6em;
   }
@@ -23,7 +23,7 @@
   }
 
   .btn-link--with-divider::after {
-    content: url("../Img/icons/divider.svg");
+    content: url('../Img/icons/divider.svg');
     position: absolute;
     margin-left: 5em;
     top: 10%;
@@ -143,24 +143,34 @@
 @media (min-width: 1440px) {
   body {
     display: flex;
-    width: 100vw;
-  }
-
-  .burger-menu {
-    left: 0;
+    justify-content: center;
   }
 
   .burger-menu__header {
     margin-top: 2em;
   }
 
-  .wrapper {
-    margin-left: 320px;
-    width: calc(100vw - 320px);
-    flex-grow: 1;
+  .burger-menu {
+    left: 0;
   }
-
   .burger-btn {
     display: none;
+  }
+
+  .wrapper {
+    margin-left: 320px;
+    max-width: 1120px;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 1441px) {
+  .burger-menu {
+    position: relative;
+    height: auto;
+  }
+
+  .wrapper {
+    margin-left: 0;
   }
 }

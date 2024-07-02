@@ -13,6 +13,6 @@
 
 @media (min-width: 1140px) {
   .brands__list {
-    width: calc(100vw - 430px);
+    max-width: 1140px;
   }
 }
