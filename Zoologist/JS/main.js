@@ -144,9 +144,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     resultsSection.classList.remove("hidden");
     perfumeResult.innerHTML = `
-      <h3>${bestMatch.title}</h3>
-      <p>${bestMatch.description}</p>
-    `;
+        <h3><a href="${bestMatch.url}" target="_blank">${bestMatch.title}</a></h3>
+        <div class="result-container">
+          <div class="result-image">
+            <img src="${bestMatch.thumbnail_url}" alt="${bestMatch.title}">
+          </div>
+          <div class="result-description">
+            <p>${bestMatch.description}</p>
+          </div>
+        </div>
+      `;
 
     const submitButton = testForm.querySelector('button[type="submit"]');
     if (submitButton) {
@@ -173,9 +180,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     resultsSection.classList.remove("hidden");
     perfumeResult.innerHTML = `
-      <h3>${bestMatch.title}</h3>
-      <p>${bestMatch.description}</p>
-    `;
+        <h3><a href="${bestMatch.url}" target="_blank">${bestMatch.title}</a></h3>
+        <div class="result-container">
+          <div class="result-image">
+            <img src="${bestMatch.thumbnail_url}" alt="${bestMatch.title}">
+          </div>
+          <div class="result-description">
+            <p>${bestMatch.description}</p>
+          </div>
+        </div>
+      `;
 
     criteriaSection.classList.add("hidden");
     const submitButton = criteriaForm.querySelector('button[type="submit"]');

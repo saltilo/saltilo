@@ -35,7 +35,9 @@
       "intensity": ["light"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "special"]
-    }
+    },
+    "url": "https://www.zoologistperfumes.com/products/hummingbird",
+    "thumbnail_url": "https://www.zoologistperfumes.com/cdn/shop/products/60mL-Front-Hummingbird-Shopify-2000_1200x.jpg?v=1682275138"
   },
   {
     "title": "Zoologist Macaque Yuzu",
@@ -60,7 +62,9 @@
       "intensity": ["moderate"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "special"]
-    }
+    },
+    "thumbnail_url": "https://www.zoologistperfumes.com/cdn/shop/products/60mL-Front-Macaque-Yuzu-Shopify-2000_1200x.jpg?v=1682275229",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-macaque-yuzu-edition-deluxe-bottle"
   },
   {
     "title": "Zoologist Sacred Scarab",
@@ -95,7 +99,9 @@
       "intensity": ["intense"],
       "time_of_day": ["evening"],
       "occasion": ["special"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/products/60mL-Front-Sacred-Scarab-Shopify-2000.jpg?v=1682275555",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-sacred-scarab-deluxe-bottle"
   },
   {
     "title": "Zoologist Civet",
@@ -144,7 +150,9 @@
       "intensity": ["intense"],
       "time_of_day": ["evening"],
       "occasion": ["special", "formal"]
-    }
+    },
+    "thumbnail_url": "https://www.zoologistperfumes.com/cdn/shop/products/60mL-Front-Civet-Shopify-2000_1200x.jpg?v=1682274953",
+    "url": "https://www.zoologistperfumes.com/products/civet"
   },
   {
     "title": "Zoologist Squid",
@@ -165,7 +173,9 @@
       "intensity": ["moderate"],
       "time_of_day": ["evening"],
       "occasion": ["special"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/products/60mL-Front-Squid-Shopify-2000.jpg?v=1682275622",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-squid-deluxe-bottle"
   },
   {
     "title": "Zoologist Musk Deer",
@@ -196,7 +206,9 @@
       "intensity": ["intense"],
       "time_of_day": ["evening"],
       "occasion": ["special"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/products/60ml-Front-Musk-Deer-Shopify-2000.jpg?v=1682275284",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-musk-deer-deluxe-bottle"
   },
   {
     "title": "Zoologist Panda",
@@ -232,7 +244,9 @@
       "intensity": ["light"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "casual"]
-    }
+    },
+    "thumbnail_url": "",
+    "url": ""
   },
   {
     "title": "Zoologist Dodo",
@@ -264,7 +278,9 @@
       "intensity": ["moderate"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "casual"]
-    }
+    },
+    "thumbnail_url": "https://www.zoologistperfumes.com/cdn/shop/files/60mL-Front-Dodo2-Exclusive_1200x.jpg?v=1704946496",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-dodo-2020-deluxe-bottle?_pos=5&_sid=6a3e0bad5&_ss=r"
   },
   {
     "title": "Zoologist Beaver",
@@ -297,7 +313,9 @@
       "intensity": ["moderate"],
       "time_of_day": ["evening"],
       "occasion": ["special", "casual"]
-    }
+    },
+    "thumbnail_url": "https://www.zoologistperfumes.com/cdn/shop/products/60mL-Front-Beaver-Shopify-2000_1200x.jpg?v=1682274818",
+    "url": "https://www.zoologistperfumes.com/products/beaver?_pos=3&_sid=c67c8911e&_ss=r"
   },
   {
     "title": "Zoologist Northern Cardinal",
@@ -318,7 +336,9 @@
       "intensity": ["moderate"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "special"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/products/60mL-Front-Northern-Cardinal-Shopify-2000.jpg?v=1682275320",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-northern-cardinal-deluxe-bottle"
   },
   {
     "title": "Zoologist Macaque Fuji Apple",
@@ -343,7 +363,9 @@
       "intensity": ["moderate"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "special"]
-    }
+    },
+    "thumbnail_url": "https://www.zoologistperfumes.com/cdn/shop/products/60mL-Front-Macaque-Fuji-Shopify-2000_1200x.jpg?v=1682275212",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-macaque-fuji-apple-edition-deluxe-bottle?_pos=3&_sid=47f64969f&_ss=r"
   },
   {
     "title": "Zoologist Bee",
@@ -371,7 +393,9 @@
       "intensity": ["moderate"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "special"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/products/60mL-Front-Bee-Shopify-2000.jpg?v=1682274863",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-bee-deluxe-bottle"
   },
   {
     "title": "Zoologist Koala",
@@ -392,7 +416,9 @@
       "intensity": ["light"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "casual"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/products/60mL-Front-Koala-Shopify-2000.jpg?v=1682275187",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-koala-deluxe-bottle"
   },
   {
     "title": "Zoologist Cow",
@@ -419,7 +445,9 @@
       "intensity": ["light"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "casual"]
-    }
+    },
+    "thumbnail_url": "https://www.zoologistperfumes.com/cdn/shop/products/60mL-Front-Cow-Shopify-2000_1200x.jpg?v=1682274988",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-bat-2020-deluxe-bottle?_pos=2&_sid=3a0ec97fd&_ss=r"
   },
   {
     "title": "Zoologist Rabbit",
@@ -447,7 +475,9 @@
       "intensity": ["light"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "casual"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/files/60mL-Front-Rabbit-Special-Shopify-2000.jpg?v=1716508467",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-rabbit-deluxe-bottle"
   },
   {
     "title": "Zoologist Penguin",
@@ -468,7 +498,9 @@
       "intensity": ["moderate"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "special"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/files/60mL-Front-Penguin-Shopify-2000.jpg?v=1717007312",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-penguin-deluxe-bottle"
   },
   {
     "title": "Zoologist Moth",
@@ -508,7 +540,9 @@
       "intensity": ["intense"],
       "time_of_day": ["evening"],
       "occasion": ["special", "formal"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/products/60mL-Front-Moth-Shopify-2000.jpg?v=1682275263",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-moth-deluxe-bottle"
   },
   {
     "title": "Zoologist Tyrannosaurus Rex",
@@ -553,7 +587,9 @@
       "intensity": ["intense"],
       "time_of_day": ["evening"],
       "occasion": ["special", "formal"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/products/60mL-Front-T-Rex-Shopify-2000.jpg?v=1682275888",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-tyrannosaurus-rex-deluxe-bottle"
   },
   {
     "title": "Zoologist Bat",
@@ -580,7 +616,9 @@
       "intensity": ["moderate"],
       "time_of_day": ["evening"],
       "occasion": ["everyday", "special"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/products/60mL-Front-Bat2-Shopify-2000.jpg?v=1682274782",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-bat-deluxe-bottle"
   },
   {
     "title": "Zoologist Chameleon",
@@ -627,7 +665,9 @@
       "intensity": ["moderate"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "special"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/products/60mL-Front-Chameleon-Shopify-2000.jpg?v=1682274915",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-chameleon-deluxe-bottle"
   },
   {
     "title": "Zoologist Hyrax",
@@ -656,7 +696,9 @@
       "intensity": ["intense"],
       "time_of_day": ["evening"],
       "occasion": ["special", "formal"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/products/60mL-Front-Hyrax-Shopify-2000.jpg?v=1682275156",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-hyrax-deluxe-bottle"
   },
   {
     "title": "Zoologist King Cobra",
@@ -684,10 +726,12 @@
       "intensity": ["intense"],
       "time_of_day": ["evening"],
       "occasion": ["special", "formal"]
-    }
+    },
+    "thumbnail_url": "https://www.zoologistperfumes.com/cdn/shop/files/sample-JD-king-cobra-shopify-2000_1200x.jpg?v=1718755746",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-king-cobra-sample?_pos=1&_sid=ba3ed498c&_ss=r"
   },
   {
-    "title": "Zoologist Dragonfly (2021)",
+    "title": "Zoologist Dragonfly",
     "description": "Giant lotus pads part to make way for buds that pierce the surface of the jade green pond. They raise their faces to the sun, their delicate fragrance floating around them. In the shadow of the flowers, tiny dragonfly nymphs also emerge from the shallows. They spread their fragile wings and shyly take flight, ready to explore a world beyond the water. Shimmering pools of nearby golden rice fields call to the dragonflies. Their long, quivering bodies flit across the cascading terraces to alight upon swaying stalks, sparkling with sunlight caught in droplets on iridescent wings.\nLike a lotus spreading its petals, Zoologist Dragonfly opens with a rush of beautiful aquatic florals. Hints of rice, powdery iris, and mimosa diffuse from within a lush shroud of green, beneath the intimate aroma of an imminent summer shower. Dragonfly encapsulates the richness and romance of impressionism, a canvas of florals under a watery veil.",
     "notes": {
       "top": ["Grapefruit", "Basil", "Angelica Seed", "Ginger", "Rice"],
@@ -721,7 +765,9 @@
       "intensity": ["light"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "special"]
-    }
+    },
+    "thumbnail_url": "https://www.zoologistperfumes.com/cdn/shop/products/60mL-Front-Dragonfly2-Shopify-2000_1200x.jpg?v=1682275023",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-dragonfly-2021-deluxe-bottle?_pos=2&_sid=5b304ad5d&_ss=r"
   },
   {
     "title": "Zoologist Elephant",
@@ -742,7 +788,9 @@
       "intensity": ["moderate"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "special"]
-    }
+    },
+    "thumbnail_url": "https://www.zoologistperfumes.com/cdn/shop/products/60mL-Front-Elephant-Shopify-2000_1200x.jpg?v=1682275043",
+    "url": "https://www.zoologistperfumes.com/products/elephant?_pos=3&_sid=dbf58f398&_ss=r"
   },
   {
     "title": "Zoologist Sloth",
@@ -778,7 +826,9 @@
       "intensity": ["light"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "casual"]
-    }
+    },
+    "thumbnail_url": "https://www.zoologistperfumes.com/cdn/shop/products/60mL-Front-Sloth-Shopify-2000_1200x.jpg?v=1682275591",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-sloth-deluxe-bottle?_pos=2&_sid=25e5f1c71&_ss=r"
   },
   {
     "title": "Zoologist Dodo Jackfruit",
@@ -805,7 +855,9 @@
       "intensity": ["moderate"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "special"]
-    }
+    },
+    "thumbnail_url": "https://www.zoologistperfumes.com/cdn/shop/files/60mL-Front-Dodo-Jackfruit-Special-Shopify-2000_1200x.jpg?v=1692550549",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-dodo-jackfruit-edition-deluxe-bottle?_pos=2&_sid=df24ceffb&_ss=r"
   },
   {
     "title": "Zoologist Harvest Mouse",
@@ -840,7 +892,9 @@
       "intensity": ["moderate"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "casual"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/files/60mL-Front-Harvest-Mouse-Shopify-2000.jpg?v=1715266145",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-harvest-mouse-deluxe-bottle"
   },
   {
     "title": "Zoologist Nightingale",
@@ -870,7 +924,9 @@
       "intensity": ["moderate"],
       "time_of_day": ["day"],
       "occasion": ["special", "formal"]
-    }
+    },
+    "thumbnail_url": "https://www.zoologistperfumes.com/cdn/shop/products/60mL-Front-Nightingale-Shopify-2000_1200x.jpg?v=1682275305",
+    "url": "https://www.zoologistperfumes.com/products/nightingale?_pos=3&_sid=514231616&_ss=r"
   },
   {
     "title": "Zoologist Camel",
@@ -907,7 +963,9 @@
       "intensity": ["intense"],
       "time_of_day": ["evening"],
       "occasion": ["special", "formal"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/products/60mL-Front-Camel-Shopify-2000.jpg?v=1682274877",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-camel-deluxe-bottle"
   },
   {
     "title": "Zoologist Tiger",
@@ -928,7 +986,9 @@
       "intensity": ["intense"],
       "time_of_day": ["evening"],
       "occasion": ["special", "formal"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/products/60mL-Front-Tiger-Shopify-2000.jpg?v=1682275839",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-tiger-deluxe-bottle"
   },
   {
     "title": "Zoologist Cockatiel",
@@ -949,7 +1009,9 @@
       "intensity": ["moderate"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "casual"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/products/60mL-Front-Cockatiel-Shopify-2000.jpg?v=1682274968",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-cockatiel-deluxe-bottle"
   },
   {
     "title": "Zoologist Rhinoceros",
@@ -976,7 +1038,9 @@
       "intensity": ["intense"],
       "time_of_day": ["evening"],
       "occasion": ["special", "formal"]
-    }
+    },
+    "thumbnail_url": "https://www.zoologistperfumes.com/cdn/shop/products/60mL-Front-Rhinoceros2-Shopify-2000_1200x.jpg?v=1682275531",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-rhinoceros-deluxe-bottle-2020?_pos=2&_sid=ddc2e1a59&_ss=r"
   },
   {
     "title": "Zoologist Snowy Owl",
@@ -1012,7 +1076,9 @@
       "intensity": ["light"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "special"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/products/60mL-Front-Snowy-Owl-Shopify-2000.jpg?v=1682275610",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-snowy-owl-deluxe-bottle"
   },
   {
     "title": "Zoologist Chipmunk",
@@ -1048,7 +1114,9 @@
       "intensity": ["moderate"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "casual"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/products/60mL-Front-Chipmunk-Shopify-2000.jpg?v=1682274941",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-chipmunk-deluxe-bottle"
   },
   {
     "title": "Zoologist Seahorse",
@@ -1069,6 +1137,8 @@
       "intensity": ["light"],
       "time_of_day": ["day"],
       "occasion": ["everyday", "casual"]
-    }
+    },
+    "thumbnail_url": "//cdn.shopify.com/s/files/1/0396/9165/products/60mL-Front-Seahorse-Shopify-2000.jpg?v=1682275572",
+    "url": "https://www.zoologistperfumes.com/products/zoologist-seahorse-deluxe-bottle"
   }
 ]

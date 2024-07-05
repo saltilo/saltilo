@@ -36,7 +36,7 @@ header {
   border-bottom: solid 1px #dddddd;
 }
 
-header img {
+.header__logo {
   height: 100px;
 }
 
@@ -50,6 +50,10 @@ main {
 
 section {
   margin-bottom: 20px;
+}
+
+#options > img {
+  height: 250px;
 }
 
 button {
@@ -113,6 +117,33 @@ input[type="radio"] {
   display: none;
 }
 
+.result-container {
+  display: flex;
+  align-items: flex-start;
+}
+.result-image {
+  flex: 1;
+  max-width: 33%;
+  margin-right: 20px;
+}
+.result-image img {
+  width: 100%;
+  height: auto;
+}
+.result-description {
+  flex: 2;
+}
+
+#perfumeResult > h3 > a {
+  font-size: 24px;
+  color: #000000;
+  text-decoration: none;
+}
+
+#perfumeResult > h3 > a:hover {
+  color: #806921;
+}
+
 .question {
   margin: 20px 0;
 }
@@ -174,7 +205,7 @@ label {
   font-size: 14px;
   line-height: 1.7em;
   color: #4b4f54;
-  padding: 30px 0;
+  padding: 30px;
   margin-top: 2em;
 }
 
