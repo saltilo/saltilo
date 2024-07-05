@@ -189,4 +189,22 @@ document.addEventListener("DOMContentLoaded", () => {
   retakeButton.addEventListener("click", () => {
     location.reload();
   });
+
+  // New code to disable the Next button until a radio option is selected
+  const questions = testForm.querySelectorAll(".question");
+  questions.forEach((question) => {
+    const radioButtons = question.querySelectorAll('input[type="radio"]');
+    const nextButton = question.querySelector(".next-btn");
+
+    radioButtons.forEach((radioButton) => {
+      radioButton.addEventListener("change", () => {
+        if (question.querySelector('input[type="radio"]:checked')) {
+          nextButton.disabled = false;
+        }
+      });
+    });
+
+    // Initially disable the Next button
+    nextButton.disabled = true;
+  });
 });
