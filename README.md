@@ -8,6 +8,7 @@
 - [Сайт бара Drunk Duck](https://drunkduckbar.online/)
 - [Лендинг криптобиржи Cryptomax с актуальными курсами валют](https://saltilo.github.io/saltilo/Cryptomax/cryptomax.html)
 - [Лендинг фирмы CPS с динамическим слайдером](https://saltilo.github.io/saltilo/CPS/index.html)
+- [Сайт-портфолио](https://saltilo.github.io/saltilo/index.html)
 
 ## Статьи про IT 
 - [Хабр](https://habr.com/ru/users/k_tultseva/)
