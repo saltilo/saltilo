@@ -1,19 +1,17 @@
 
-Здесь вы найдете мои веб-проекты, UX-кейсы и ссылки на статьи.
+# Ссылки на мои веб-проекты, UX-кейсы и статьи
 
-О сайте:
-- Адаптив под планшеты и мобильные устройства
-- Cемантическая верстка
-- Переменные в CSS
-- Без сторонних фреймворков и конструкторов
-- Производительность страницы согласно PageSpeed Insights: 99% десктоп, 89% мобильная версия
-  
 
-### Реализованы наиболее часто встречающиеся UI-компоненты:
+## Веб-проекты
+- [Мобильная игра Bastik Tap](https://saltilo.github.io/saltilo/BastikTap/bastik-tap.html)
+- [Сервис подбора парфюмерии Zoologist](https://saltilo.github.io/saltilo/Zoologist/index.html)
+- [Сайт бара Drunk Duck](https://drunkduckbar.online/)
+- [Лендинг криптобиржи Cryptomax с актуальными курсами валют](https://saltilo.github.io/saltilo/Cryptomax/cryptomax.html)
+- [Лендинг фирмы CPS с динамическим слайдером](https://saltilo.github.io/saltilo/CPS/index.html)
 
-- Аккордеон на чистом CSS
-- Адаптивное бургер-меню
-- Модальные окна с увеличенным изображением
-- Сайд-бар с навигацией по темам
-- Кастомные кнопки
-- Адаптивные карточки
+## Статьи про IT 
+- [Хабр](https://habr.com/ru/users/k_tultseva/)
+- [Журнал «Код»](https://thecode.media/authors/kristina-tultseva/)
+
+## UX-кейсы
+- [Сайт компании, которая проводит конференции для программистов](https://saltilo.github.io/saltilo/uxwriting.html)
