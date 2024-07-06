@@ -42,15 +42,15 @@ document.addEventListener("DOMContentLoaded", () => {
   function combineCriteria(selectedValues) {
     const combinedCriteria = {
       floral: ["floral", "green", "herbal"],
-      woody: ["woody", "earthy"],
-      freshScent: ["fresh", "citrus", "marine"],
+      woody: ["woody", "earthy", "smoky", "animalic"],
+      freshScent: ["fresh", "citrus", "marine", "aquatic"],
       relaxed: ["relaxed", "calm"],
       cheerful: ["cheerful", "playful", "carefree"],
-      mysterious: ["mysterious", "meditative", "melancholic"],
+      mysterious: ["mysterious", "meditative", "melancholic", "exotic"],
       sophisticated: ["sophisticated", "cozy", "comforting"],
       intenseMood: ["intenseMood", "bold", "exotic"],
       friendly: ["friendly", "easygoing"],
-      confident: ["confident", "assertive"],
+      confident: ["confident", "assertive", "fearless"],
       imaginative: ["imaginative", "independent"],
       fruitJuice: ["fruitJuice", "apple juice", "fruit punch"],
       special: ["special", "formal", "night out", "evening"],
@@ -71,22 +71,85 @@ document.addEventListener("DOMContentLoaded", () => {
     return [...new Set(combinedValues)];
   }
 
+  function getCriteriaWeight(value) {
+    const criteriaWeights = {
+      // Тип аромата
+      floral: 5,
+      green: 5,
+      herbal: 5,
+      woody: 5,
+      earthy: 5,
+      smoky: 5,
+      fresh: 5,
+      citrus: 5,
+      marine: 5,
+      aquatic: 5,
+
+      // Интенсивность
+      intenseMood: 4,
+      bold: 4,
+      exotic: 4,
+
+      // Стиль одежды
+      sophisticated: 3,
+      cozy: 3,
+      comforting: 3,
+
+      // Событие
+      special: 3,
+      formal: 3,
+      night_out: 3,
+      evening: 3,
+      outdoor: 2,
+      casual: 2,
+      daytime: 2,
+      indoor: 2,
+      evening: 2,
+      everyday: 2,
+
+      // Настроение
+      relaxed: 2,
+      calm: 2,
+      cheerful: 2,
+      playful: 2,
+      carefree: 2,
+      mysterious: 2,
+      meditative: 2,
+      melancholic: 2,
+
+      // Характер
+      friendly: 1,
+      easygoing: 1,
+      confident: 1,
+      assertive: 1,
+      imaginative: 1,
+      independent: 1,
+
+      // Напиток
+      fruitJuice: 1,
+      apple_juice: 1,
+      fruit_punch: 1,
+    };
+
+    return criteriaWeights[value] || 1;
+  }
+
   function findBestMatch(perfumes, selectedValues) {
     let bestMatch = null;
-    let highestMatchCount = 0;
+    let highestMatchScore = 0;
 
     perfumes.forEach((perfume) => {
-      let matchCount = 0;
+      let matchScore = 0;
       const criteria = Object.values(perfume.criteria).flat();
 
       selectedValues.forEach((value) => {
         if (criteria.includes(value)) {
-          matchCount++;
+          matchScore += getCriteriaWeight(value);
         }
       });
 
-      if (matchCount > highestMatchCount) {
-        highestMatchCount = matchCount;
+      if (matchScore > highestMatchScore) {
+        highestMatchScore = matchScore;
         bestMatch = perfume;
       }
     });
@@ -144,16 +207,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     resultsSection.classList.remove("hidden");
     perfumeResult.innerHTML = `
-        <h3><a href="${bestMatch.url}" target="_blank">${bestMatch.title}</a></h3>
-        <div class="result-container">
-          <div class="result-image">
-            <img src="${bestMatch.thumbnail_url}" alt="${bestMatch.title}">
-          </div>
-          <div class="result-description">
-            <p>${bestMatch.description}</p>
-          </div>
+      <h3><a href="${bestMatch.url}" target="_blank">${bestMatch.title}</a></h3>
+      <div class="result-container">
+        <div class="result-image">
+          <img src="${bestMatch.thumbnail_url}" alt="${bestMatch.title}">
         </div>
-      `;
+        <div class="result-description">
+          <p>${bestMatch.description}</p>
+        </div>
+      </div>
+    `;
 
     const submitButton = testForm.querySelector('button[type="submit"]');
     if (submitButton) {
@@ -180,16 +243,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     resultsSection.classList.remove("hidden");
     perfumeResult.innerHTML = `
-        <h3><a href="${bestMatch.url}" target="_blank">${bestMatch.title}</a></h3>
-        <div class="result-container">
-          <div class="result-image">
-            <img src="${bestMatch.thumbnail_url}" alt="${bestMatch.title}">
-          </div>
-          <div class="result-description">
-            <p>${bestMatch.description}</p>
-          </div>
+      <h3><a href="${bestMatch.url}" target="_blank">${bestMatch.title}</a></h3>
+      <div class="result-container">
+        <div class="result-image">
+          <img src="${bestMatch.thumbnail_url}" alt="${bestMatch.title}">
         </div>
-      `;
+        <div class="result-description">
+          <p>${bestMatch.description}</p>
+        </div>
+      </div>
+    `;
 
     criteriaSection.classList.add("hidden");
     const submitButton = criteriaForm.querySelector('button[type="submit"]');
@@ -204,7 +267,6 @@ document.addEventListener("DOMContentLoaded", () => {
     location.reload();
   });
 
-  // New code to disable the Next button until a radio option is selected
   const questions = testForm.querySelectorAll(".question");
   questions.forEach((question) => {
     const radioButtons = question.querySelectorAll('input[type="radio"]');
@@ -218,7 +280,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Initially disable the Next button
     nextButton.disabled = true;
   });
 });
