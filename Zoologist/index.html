@@ -23,8 +23,6 @@
 
   </header>
   <main>
-
-
     <section id="options">
       <h2>I know what I want</h2>
       <button id="criteriaBtn">Choose by Criteria</button>
@@ -38,7 +36,7 @@
       <form id="criteriaForm">
         <label for="mood">Mood:
           <select id="mood" name="mood">
-            <option value="" selected disabled hidden></option>
+            <option value="" selected disabled hidden>Select an option</option>
             <option value="relaxed">Relaxed</option>
             <option value="cheerful">Cheerful</option>
             <option value="mysterious">Mysterious</option>
@@ -47,7 +45,7 @@
         </label>
         <label for="style">Style of Clothing:
           <select id="style" name="style">
-            <option value="" selected disabled hidden></option>
+            <option value="" selected disabled hidden>Select an option</option>
             <option value="casual">Casual</option>
             <option value="elegant">Elegant</option>
             <option value="sporty">Sporty</option>
@@ -56,7 +54,7 @@
         </label>
         <label for="character">Character:
           <select id="character" name="character">
-            <option value="" selected disabled hidden></option>
+            <option value="" selected disabled hidden>Select an option</option>
             <option value="introverted">Introverted</option>
             <option value="extroverted">Extroverted</option>
             <option value="adventurous">Adventurous</option>
@@ -65,7 +63,7 @@
         </label>
         <label for="intensity">Intensity:
           <select id="intensity" name="intensity">
-            <option value="" selected disabled hidden></option>
+            <option value="" selected disabled hidden>Select an option</option>
             <option value="light">Light</option>
             <option value="moderate">Moderate</option>
             <option value="intense">Intense</option>
@@ -73,7 +71,7 @@
         </label>
         <label for="timeOfDay">Time of Day:
           <select id="timeOfDay" name="timeOfDay">
-            <option value="" selected disabled hidden></option>
+            <option value="" selected disabled hidden>Select an option</option>
             <option value="day">Day</option>
             <option value="evening">Evening</option>
           </select>
@@ -302,7 +300,6 @@
     </section>
 
     <section id="results" class="hidden">
-      <h2>Results</h2>
       <div id="perfumeResult"></div>
       <button id="retakeTestBtn" class="hidden">Retake Test</button>
     </section>
@@ -312,9 +309,9 @@
     © 2024 Made by <a href="https://saltilo.github.io/saltilo/index.html" target="_blank">Saltilo</a>
   </footer>
 
-
+  <script src="./JS/main.js"></script>
 
 </body>
-<script src="./JS/main.js"></script>
+
 
 </html>
