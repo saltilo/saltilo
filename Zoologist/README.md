@@ -24,7 +24,7 @@
 
 [➡️ Попробовать](https://saltilo.github.io/saltilo/Zoologist/index.html)
 
-<img width="500" alt="image" src="https://github.com/saltilo/saltilo/assets/115881786/47c004dd-f3d7-4995-ba3a-8639f1edcc50">
+<img width="330" alt="image" src="https://github.com/saltilo/saltilo/assets/115881786/47c004dd-f3d7-4995-ba3a-8639f1edcc50">
 
 <img width="400" alt="image" src="https://github.com/saltilo/saltilo/assets/115881786/38ee396b-2a96-4dbd-97b4-56ffe1114622">
 
