@@ -245,8 +245,8 @@
       "time_of_day": ["day"],
       "occasion": ["everyday", "casual"]
     },
-    "thumbnail_url": "",
-    "url": ""
+    "thumbnail_url": "https://www.zoologistperfumes.com/cdn/shop/products/60mL-Front-Panda2-Shopify-2000_1200x.jpg?v=1682275514",
+    "url": "https://www.zoologistperfumes.com/products/panda?_pos=3&_sid=c8d337ef0&_ss=r"
   },
   {
     "title": "Zoologist Dodo",
@@ -981,7 +981,7 @@
       "mood": ["intense", "bold"],
       "style_of_clothing": ["elegant", "bold"],
       "character": ["confident", "assertive"],
-      "drink": ["whiskey", "dark roast coffee"],
+      "drink": ["whiskey", "coffee"],
       "event": ["evening", "special"],
       "intensity": ["intense"],
       "time_of_day": ["evening"],
