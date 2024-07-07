@@ -184,83 +184,60 @@ document.addEventListener("DOMContentLoaded", () => {
     showQuestion(nextQuestionNumber);
   }
 
+  async function submitForm(form) {
+    const formData = new FormData(form);
+    let selectedValues = [];
+
+    for (let value of formData.values()) {
+      selectedValues.push(value);
+    }
+
+    selectedValues = combineCriteria(selectedValues);
+
+    const perfumes = await fetchPerfumes();
+    const bestMatch = findBestMatch(perfumes, selectedValues);
+
+    resultsSection.classList.remove("hidden");
+    perfumeResult.innerHTML = `
+      <h3><a href="${bestMatch.url}" target="_blank">${bestMatch.title}</a></h3>
+      <div class="result-container">
+        <div class="result-image">
+          <img src="${bestMatch.thumbnail_url}" alt="${bestMatch.title}">
+        </div>
+        <div class="result-description">
+          <p>${bestMatch.description}</p>
+        </div>
+      </div>
+    `;
+
+    if (form === testForm) {
+      testSection.classList.add("hidden");
+    } else if (form === criteriaForm) {
+      criteriaSection.classList.add("hidden");
+    }
+
+    retakeButton.classList.remove("hidden");
+  }
+
   testForm.addEventListener("click", (e) => {
     if (e.target.classList.contains("next-btn")) {
-      goToNextQuestion();
+      const currentQuestionEl = testForm.querySelector(
+        ".question:not(.hidden)"
+      );
+      const currentQuestionNumber = parseInt(
+        currentQuestionEl.dataset.question
+      );
+      if (currentQuestionNumber === 9) {
+        submitForm(testForm);
+      } else {
+        goToNextQuestion();
+      }
     }
   });
 
-  testForm.addEventListener("submit", async (event) => {
+  criteriaForm.addEventListener("submit", (event) => {
     event.preventDefault();
-
-    const formData = new FormData(testForm);
-    let selectedValues = [];
-
-    for (let value of formData.values()) {
-      selectedValues.push(value);
-    }
-
-    selectedValues = combineCriteria(selectedValues);
-
-    const perfumes = await fetchPerfumes();
-    const bestMatch = findBestMatch(perfumes, selectedValues);
-
-    resultsSection.classList.remove("hidden");
-    perfumeResult.innerHTML = `
-      <h3><a href="${bestMatch.url}" target="_blank">${bestMatch.title}</a></h3>
-      <div class="result-container">
-        <div class="result-image">
-          <img src="${bestMatch.thumbnail_url}" alt="${bestMatch.title}">
-        </div>
-        <div class="result-description">
-          <p>${bestMatch.description}</p>
-        </div>
-      </div>
-    `;
-
-    const submitButton = testForm.querySelector('button[type="submit"]');
-    if (submitButton) {
-      submitButton.classList.add("hidden");
-    }
-
-    retakeButton.classList.remove("hidden");
-  });
-
-  criteriaForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(criteriaForm);
-    let selectedValues = [];
-
-    for (let value of formData.values()) {
-      selectedValues.push(value);
-    }
-
-    selectedValues = combineCriteria(selectedValues);
-
-    const perfumes = await fetchPerfumes();
-    const bestMatch = findBestMatch(perfumes, selectedValues);
-
-    resultsSection.classList.remove("hidden");
-    perfumeResult.innerHTML = `
-      <h3><a href="${bestMatch.url}" target="_blank">${bestMatch.title}</a></h3>
-      <div class="result-container">
-        <div class="result-image">
-          <img src="${bestMatch.thumbnail_url}" alt="${bestMatch.title}">
-        </div>
-        <div class="result-description">
-          <p>${bestMatch.description}</p>
-        </div>
-      </div>
-    `;
-
-    criteriaSection.classList.add("hidden");
-    const submitButton = criteriaForm.querySelector('button[type="submit"]');
-    if (submitButton) {
-      submitButton.classList.add("hidden");
-    }
-
-    retakeButton.classList.remove("hidden");
+    submitForm(criteriaForm);
   });
 
   retakeButton.addEventListener("click", () => {
