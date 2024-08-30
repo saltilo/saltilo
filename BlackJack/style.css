@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background: radial-gradient(circle at center, #345d3a, #1b3120, #050c05);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+h2 {
+  color: aliceblue;
+  margin-bottom: 0;
+}
+
+#dealer-cards img {
+  height: 175px;
+  width: 125px;
+  margin: 1em;
+}
+
+#your-cards img {
+  height: 175px;
+  width: 125px;
+  margin: 1em;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+button {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #c5c5c5;
+  border: 1px solid #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button img {
+  width: 30px;
+  height: 30px;
+}
+
+button::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #343434;
+  color: white;
+  padding: 0.5em;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+button:hover::after {
+  opacity: 1;
+}
