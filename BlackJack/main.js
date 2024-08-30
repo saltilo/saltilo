@@ -7,7 +7,7 @@ let yourAceCount = 0;
 let hidden;
 let deck;
 
-let canHit = true;
+let canHit = true; //allows the player (you) to draw while yourSum <= 21
 
 window.onload = function () {
   buildDeck();
@@ -51,26 +51,29 @@ function shuffleDeck() {
   console.log(deck);
 }
 
+function createCard(cardSrc) {
+  let cardImg = document.createElement("img");
+  cardImg.src = cardSrc;
+  cardImg.classList.add("card-img"); // Добавляем класс card-img
+  return cardImg;
+}
+
 function startGame() {
   hidden = deck.pop();
   dealerSum += getValue(hidden);
   dealerAceCount += checkAce(hidden);
 
   while (dealerSum < 17) {
-    let cardImg = document.createElement("img");
-    let card = deck.pop();
-    cardImg.src = "./img/" + card + ".png";
-    dealerSum += getValue(card);
-    dealerAceCount += checkAce(card);
+    let cardImg = createCard("./img/" + deck.pop() + ".png");
+    dealerSum += getValue(cardImg.src);
+    dealerAceCount += checkAce(cardImg.src);
     document.getElementById("dealer-cards").append(cardImg);
   }
 
   for (let i = 0; i < 2; i++) {
-    let cardImg = document.createElement("img");
-    let card = deck.pop();
-    cardImg.src = "./img/" + card + ".png";
-    yourSum += getValue(card);
-    yourAceCount += checkAce(card);
+    let cardImg = createCard("./img/" + deck.pop() + ".png");
+    yourSum += getValue(cardImg.src);
+    yourAceCount += checkAce(cardImg.src);
     document.getElementById("your-cards").append(cardImg);
   }
 
@@ -85,11 +88,9 @@ function hit() {
     return;
   }
 
-  let cardImg = document.createElement("img");
-  let card = deck.pop();
-  cardImg.src = "./img/" + card + ".png";
-  yourSum += getValue(card);
-  yourAceCount += checkAce(card);
+  let cardImg = createCard("./img/" + deck.pop() + ".png");
+  yourSum += getValue(cardImg.src);
+  yourAceCount += checkAce(cardImg.src);
   document.getElementById("your-cards").append(cardImg);
 
   document.getElementById("your-sum").innerText = yourSum;
@@ -135,7 +136,7 @@ function restartGame() {
   canHit = true;
 
   document.getElementById("dealer-cards").innerHTML =
-    '<img id="hidden" src="./img/back.png">';
+    '<img id="hidden" src="./img/back.png" class="card-img">';
   document.getElementById("your-cards").innerHTML = "";
   document.getElementById("dealer-sum").innerText = "0";
   document.getElementById("your-sum").innerText = "0";
@@ -148,8 +149,8 @@ function restartGame() {
   document.getElementById("restart").style.display = "none";
 }
 
-function getValue(card) {
-  let data = card.split("-"); // "4-C" -> ["4", "C"]
+function getValue(cardSrc) {
+  let data = cardSrc.split("/").pop().split("-"); // "4-C.png" -> ["4", "C.png"]
   let value = data[0];
 
   if (isNaN(value)) {
@@ -161,8 +162,8 @@ function getValue(card) {
   return parseInt(value);
 }
 
-function checkAce(card) {
-  if (card[0] == "A") {
+function checkAce(cardSrc) {
+  if (cardSrc[0] == "A") {
     return 1;
   }
   return 0;
