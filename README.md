@@ -15,4 +15,4 @@
 - [Журнал «Код»](https://thecode.media/authors/kristina-tultseva/)
 
 ## UX-кейсы
-- [Сайт компании, которая проводит конференции для программистов](https://saltilo.github.io/saltilo/uxwriting.html)
+- [Работа над сайтом компании-организатора конференций для программистов](https://saltilo.github.io/saltilo/uxwriting.html)
