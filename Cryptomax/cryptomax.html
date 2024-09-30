@@ -364,7 +364,6 @@
 
       </div>
 
-
       <div class="accordion">
         <button class="accordion-btn">Как взимаются комиссии за обработку вывода средств? Где можно посмотреть
           правила? </button>
@@ -454,20 +453,16 @@
       var menu = document.querySelector('.menubox');
       var burgerIcon = document.querySelector('.burger-icon');
 
-      // Переключаем состояние меню
       if (menu.classList.contains('visible')) {
         menu.classList.remove('visible');
-        burgerIcon.src = './Img/burger.svg'; // Меняем на исходную иконку меню
+        burgerIcon.src = './Img/burger.svg';
         burgerIcon.alt = 'Меню';
       } else {
         menu.classList.add('visible');
-        burgerIcon.src = './Img/burger-close.svg'; // Меняем на иконку закрытия
+        burgerIcon.src = './Img/burger-close.svg';
         burgerIcon.alt = 'Закрыть меню';
       }
     });
-
-    console.log('Menu is now:', menu.classList.contains('visible') ? 'Open' : 'Closed');
-    console.log('Image source:', burgerIcon.src);
 
     document.addEventListener("DOMContentLoaded", function () {
       var accordionButtons = document.querySelectorAll(".accordion-btn");
