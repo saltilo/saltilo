@@ -34,10 +34,6 @@ a:focus {
   outline: 1px solid var(--hover-color);
 }
 
-.button {
-  color: black;
-}
-
 .header-module {
   display: flex;
   flex-direction: row;
@@ -566,7 +562,7 @@ li {
 
 .advantage-card p {
   color: #b7b7b7;
-  font-size: 0.875em; /* Например, установка размера шрифта в 0.875em относительно базового размера */
+  font-size: 0.875em;
   line-height: 1.5;
 }
 
@@ -616,6 +612,7 @@ li {
 }
 
 .accordion button {
+  color: #101010;
   font-size: var(--regular-text);
   font-weight: 600;
   line-height: 1.5;

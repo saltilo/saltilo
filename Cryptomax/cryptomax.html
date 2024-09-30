@@ -128,7 +128,7 @@
 
       <div class="burger-menu">
         <button class="burger-btn">
-          <img src="./Img/burger.svg" alt="Меню">
+          <img src="./Img/burger.svg" alt="Меню" class="burger-icon">
         </button>
 
         <ul class="menubox">
@@ -452,12 +452,22 @@
   <script>
     document.querySelector('.burger-btn').addEventListener('click', function () {
       var menu = document.querySelector('.menubox');
+      var burgerIcon = document.querySelector('.burger-icon');
+
+      // Переключаем состояние меню
       if (menu.classList.contains('visible')) {
         menu.classList.remove('visible');
+        burgerIcon.src = './Img/burger.svg'; // Меняем на исходную иконку меню
+        burgerIcon.alt = 'Меню';
       } else {
         menu.classList.add('visible');
+        burgerIcon.src = './Img/burger-close.svg'; // Меняем на иконку закрытия
+        burgerIcon.alt = 'Закрыть меню';
       }
     });
+
+    console.log('Menu is now:', menu.classList.contains('visible') ? 'Open' : 'Closed');
+    console.log('Image source:', burgerIcon.src);
 
     document.addEventListener("DOMContentLoaded", function () {
       var accordionButtons = document.querySelectorAll(".accordion-btn");

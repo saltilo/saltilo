@@ -248,6 +248,10 @@
   .apps-images-second {
     right: 3em;
   }
+
+  .footer {
+    padding: 2% 7% 7%;
+  }
 }
 
 @media (max-width: 568px) {
