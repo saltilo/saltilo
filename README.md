@@ -1,7 +1,7 @@
 
 ## 🚧 Веб-проекты
 - [Мобильная игра Bastik Tap](https://github.com/saltilo/saltilo/tree/main/BastikTap)
-- [Сервис подбора парфюмерии Zoologist](https://github.com/saltilo/saltilo/tree/main/Zoologist)
+- [Сервис подбора парфюмерии Zoologist](https://saltilo.github.io/saltilo/Zoologist/index.html)
 - [Сайт бара Drunk Duck](https://drunkduckbar.online/)
 - [Лендинг криптобиржи Cryptomax с актуальными курсами валют](https://github.com/saltilo/saltilo/tree/main/Cryptomax)
 - [Лендинг фирмы CPS с динамическим слайдером](https://github.com/saltilo/saltilo/tree/main/CPS)
