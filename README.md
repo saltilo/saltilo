@@ -10,7 +10,7 @@
 ## 🎰 Игры
 - [Мобильная игра Bastik Tap](https://github.com/saltilo/saltilo/tree/main/BastikTap)
 - [Блэк джек с компьютером](https://github.com/saltilo/saltilo/tree/main/BlackJack)
-- [Шашки на двоих]
+- [Шашки на двоих](https://thecode.media/delaem-prostuyu-brauzernuyu-igru-v-shashki-na-dvoikh/)
 
 ## 📚 Статьи про IT 
 - [Хабр](https://habr.com/ru/users/k_tultseva/)
