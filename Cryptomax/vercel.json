@@ -1,4 +1,9 @@
 {
   "version": 2,
-  "builds": [{ "src": "api/*.js", "use": "@vercel/node" }]
+  "builds": [
+    {
+      "src": "Cryptomax/api/*.js",
+      "use": "@vercel/node"
+    }
+  ]
 }
