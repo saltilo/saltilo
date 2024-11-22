@@ -6,6 +6,7 @@
 - [Лендинг фирмы CPS с динамическим слайдером](https://github.com/saltilo/saltilo/tree/main/CPS)
 - [Сайт-портфолио](https://saltilo.github.io/saltilo/index.html)
 - [GitHub Repo Finder](https://saltilo.github.io/github-api-autocomplete/)
+- [Приложение TODO на React](https://react-todo-app-iota-six.vercel.app/)
 
 ## 🎰 Игры
 - [Мобильная игра Bastik Tap](https://github.com/saltilo/saltilo/tree/main/BastikTap)
