@@ -7,6 +7,7 @@
 - [Сайт-портфолио](https://saltilo.github.io/saltilo/index.html)
 - [GitHub Repo Finder](https://saltilo.github.io/github-api-autocomplete/)
 - [Приложение TODO на React](https://react-todo-app-iota-six.vercel.app/)
+- [Приложение поиска и оценки фильмов на React](https://react-movie-app-rose-theta.vercel.app/)
 
 ## 🎰 Игры
 - [Мобильная игра Bastik Tap](https://github.com/saltilo/saltilo/tree/main/BastikTap)
